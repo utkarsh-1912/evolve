@@ -42,7 +42,7 @@ flowchart LR
   VA --> CG
   VB --> CG
 ```
-Code does all the math, set logic and consent checks. Language models only write words, and only from locked JSON (AGENTS.md §2; source §4). LLM paraphrase is **hard-off**. Every patient message is a pre-approved template filled with locked values, and it still passes the gate (DECISIONS #37, #49).
+Code does all the math, set logic and consent checks. Language models only write words, and only from locked JSON (source §4; docs/02 §4). LLM paraphrase is **hard-off**. Every patient message is a pre-approved template filled with locked values, and it still passes the gate (DECISIONS #37, #49).
 
 ## How the privacy works, in plain words
 1. The screening authority signs each partner's carrier gene list. A partner cannot invent genes to probe the other's genome (source §3.2; DECISIONS #5).
@@ -50,7 +50,7 @@ Code does all the math, set logic and consent checks. Language models only write
 3. If nothing matches, both partners see only **"Compatible"**. If something matches, they see only the shared gene, in a couple workspace that both of them consented to.
 4. The check runs only with two valid, unexpired consents. Withdrawing consent purges the couple workspace (P-07), and this is tested.
 
-What it does **not** protect against: a partner who cheats inside the protocol; the two list sizes, which are revealed; key custody, since keys live in memory and are lost on restart (THREAT_MODEL.md; DONE-P1-PA).
+What it does **not** protect against: a partner who cheats inside the protocol; the two list sizes, which are revealed; key custody, since keys live in memory and are lost on restart (services/privacy/THREAT_MODEL.md).
 
 ## The seven runtime agents (fixed roster, G-03)
 | Agent | Does | Never does |
@@ -77,7 +77,8 @@ What it does **not** protect against: a partner who cheats inside the protocol; 
   - citizen app (11 surfaces, EN/AR)
   - counselor workbench
   - eval dashboard with the live gate probe
-  - backend for API contract v1.2.1
+  - backend for API contract v1.3.0
+  - deployment for two targets (VM or Vercel + Render), see [Deployment](#deployment)
 - **G2 passed as redefined** (DECISIONS #37, #51). Patients receive only pre-approved templates. Template closure: 25,692 template × record combinations, 0 failures. 17 tests prove there is no free-text path to patients. The free-text gate's held-out score is tracked honestly (see the test matrix).
 
 ## Quickstart (one command)
@@ -90,30 +91,61 @@ This starts the backend (:8000), citizen (:3000), counselor workbench (:3001) an
 
 Manual start: `uvicorn evolve_api.main:app --app-dir services/api --port 8000`, then `npm run dev` in each app with `NEXT_PUBLIC_API=http://localhost:8000`.
 
-Docker: `deploy/docker-compose.yml`. Its config validates, but the images have not been built or tested, and it does not yet include the eval dashboard.
+Local Docker (dev servers): `deploy/docker-compose.yml`. For a real deployment see below.
+
+## Deployment
+Two targets with one switch (DECISIONS #62, #64). Full steps and a post-deploy smoke checklist: [docs/demo/DEPLOY.md](docs/demo/DEPLOY.md).
+```bash
+powershell -ExecutionPolicy Bypass -File scripts\deploy\deploy.ps1 -Target vm -DryRun            # or -Target vercel-render
+scripts/deploy/deploy.sh --target vm|vercel-render [--dry-run]
+```
+- **`vm`**: one Linux VM running Docker Compose with Caddy (automatic HTTPS) on `app.` / `counselor.` / `eval.` / `api.<your domain>`. A one-shot job resets the demo on every start.
+- **`vercel-render`**: the backend on Render (`deploy/vercel-render/render.yaml`), the three apps as Vercel projects (`deploy/vercel-render/vercel-projects.md`). The script only validates settings and prints the dashboard steps; it runs no cloud CLI.
+- **Settings:**
+  - copy `deploy/<target>/env.example` to `deploy/<target>/.env` and fill it in
+  - `.env` files are git-ignored; never commit a key
+  - on Vercel/Render, paste values into the dashboards
+  - the backend reads `CORS_ORIGINS`, `SARVAM_*` and `DEPLOY_TARGET`; each app's `NEXT_PUBLIC_API` is fixed at build time (contracts/api.md v1.3.0)
+- **Before every deploy:** `npm run sync -w evolve-eval-dashboard` and commit. The builds skip the eval app's Python prebuild and ship the committed `apps/eval-dashboard/data/*.json`.
+- **Render free tier:** the instance sleeps after about 15 min idle and restarts with empty in-memory state (sessions, consents, keys). Right before a demo, run `python deploy/vm/reset_on_start.py <API_URL>`. It waits for the wake-up, reseeds V1–V5 and pre-stages V3.
+- Verified only locally: `docker compose config` and the script dry runs. No image has been built and no cloud deploy has been made by the build agents.
+
+## Counselor AI draft (Sarvam): built, paused
+- **What:** an "AI draft" case summary in the counselor workbench, built from the consented-scope brief (no partner IDs, no free-text notes) (contracts/api.md v1.3.0, `POST /api/counselor/cases/{id}/summary-draft`).
+- **Constraints:**
+  - counselor-side only, English only
+  - gate-checked and labelled AI-generated
+  - never stored on the case, **never sent to a patient**
+- **Patients are unaffected:** they still receive only the closed, pre-approved templates (DECISIONS #37). The guardrail is P-21 (docs/01).
+- **Status: PAUSED.** `GET /api/config` returns `ai_draft_enabled=false` (DECISIONS #63, #64). Without a key the backend uses an offline stub.
+- **To enable it later:** both `SARVAM_API_KEY` (your own key, set as an env/dashboard secret) and the code switch that un-pauses the feature are needed (DECISIONS #62–#64).
+- Sarvam's data-retention policy is unverified, so only synthetic, minimised input is sent (TODO(verify)).
 
 Demo materials: [DEMO-SCRIPT](docs/demo/DEMO-SCRIPT.md) · [PITCH-OUTLINE](docs/demo/PITCH-OUTLINE.md) · [JUDGE-QA](docs/demo/JUDGE-QA.md) · [CLAIMS-LEDGER](docs/demo/CLAIMS-LEDGER.md) · [RUNBOOK](docs/demo/RUNBOOK.md).
 
-## Test matrix (real results; source = evidence pack `services/eval/out/evidence.json` build 2026-11-15T06:03Z unless noted)
+## Test matrix (real results; `pack` = evidence pack `apps/eval-dashboard/data/evidence.json`, build 2026-11-16T02:09:47Z, a copy of the generated `services/eval/out/evidence.json`)
 | Suite | Result | Source |
 |---|---|---|
-| risk_engine | 76/76 | pack `tests` |
+| risk_engine | 85/85 | pack `tests`; DECISIONS #61 |
 | Arithmetic calibration (2 independent oracles) | **0 mismatches / 629 records**, 1,000 synthetic couples + V1–V5 | pack `dimensions.calibration` |
 | privacy (APSI, consent, audit, cascade) | 44/44 | pack `tests` |
 | fhir | 49/49; 0 errors on our harness over 1,000 couples. HL7 validator CLI: 8 errors, all tx.fhir.org timeouts (inconclusive, not rejections) | pack; DECISIONS #42 |
-| synth | 21/21; cohort concordance 3.40% (8-gene floor, not tuned) | pack; DONE-P1-DS2 |
-| agents / api / loop | 341/341 · 27/27 · 8/8 in the pack; later runs api 28, agents 369 | pack; DECISIONS #53 |
-| Template closure (G2 a) | **25,692 template × record combinations, 0 failures** (EN + AR, full cohort) | DONE-P4-GATE; DECISIONS #51 |
-| No free-text path to patients (G2 b) | 17/17 | DONE-P4-GATE; DECISIONS #51 |
-| Red-team regression corpus | 540/540 (433/433 adversarial, 0/93 FP) after gate round 3; the pack predates it (518/540) | DECISIONS #51 |
-| **Red-team held-out v2 (unseen)** | **113/181 = 62.4% caught, 2/43 = 4.7% FP**, below the ≥95% / ≤5% target. Tracked, not a blocker, because patient text is closed templates | pack `redteam`; DONE-P4-QA-HOLDOUT2 |
-| Held-out v1 (retired) | round 1: 65.3% / 15.9% FP → final: 89.6% / 2.3% FP | DONE-P2-QA-HOLDOUT; DONE-P4-QA-HOLDOUT2 |
+| synth | 21/21; cohort concordance 3.40% (8-gene floor, not tuned) | pack; DECISIONS #22 |
+| agents | 369 passed (default run) + the slow full-cohort closure, run separately | DECISIONS #61 |
+| api | 32 passed + 8 skipped (the paused AI-draft tests) | DECISIONS #64 |
+| loop | 8/8 | pack `tests` |
+| Template closure (G2 a) | **25,692 template × record combinations, 0 failures** (EN + AR, full cohort) | DECISIONS #45, #51; `services/agents/tests/test_templates_closure.py` |
+| No free-text path to patients (G2 b) | 17/17 | DECISIONS #45, #51; `services/agents/tests/test_templates_no_free_text.py` |
+| Red-team regression corpus | 433/433 adversarial, 0/93 FP | pack `redteam`; DECISIONS #51 |
+| Red-team interception, v1 + held-out | 88.9% (546/614); 15 leakage drafts passed the gate | pack `dimensions.privacy` |
+| **Red-team held-out v2 (unseen)** | **113/181 = 62.4% caught, 2/43 = 4.7% FP**, below the ≥95% / ≤5% target. Tracked, not a blocker, because patient text is closed templates | pack `g2`; `tests/guardrails/reports/holdout_last_run.json` |
+| Held-out v1 (retired) | round 1: 65.3% / 15.9% FP → final: 89.6% / 2.3% FP | `tests/guardrails/reports/retired/holdout_v1_round1and2_final.json` |
 | Live leakage scan | 0 leaks / 2,491 partner-addressed API responses | pack `dimensions.privacy` |
 | Integration / eval / guardrail-script | 28/28 · 20/20 · 3/3; `guardrail_check: OK` | pack |
-| Citizen app | live e2e 21 passed; axe 0 serious on every route EN + AR. **JS budget ≤180 kB not met (210–264 kB); Lighthouse not run** | DONE-P3-UI-CIT |
-| Counselor workbench | 27 Playwright (mock) + 2 live; 48 axe checks, 0 serious | DONE-P3-UI-CNS |
-| Eval dashboard | 17 Playwright; axe 0 | DONE-P4-UI-EVAL |
-| **Gate 3 E2E: PASSED, 0 P0** | citizen live 21 passed; counselor 27 + 2 live; eval 17; cross-app smoke (V1 result → counselor trigger-(a) case → eval gate probe holds a V4B leak) 1 passed | DONE-G3-QA (2026-11-16) |
+| Citizen app | live e2e 21 passed; axe 0 serious on every route EN + AR. **JS budget ≤180 kB not met (210–265 kB); Lighthouse not run** | DECISIONS #57, #59 |
+| Counselor workbench | 27 Playwright (mock) + 2 live; 48 axe checks, 0 serious | DECISIONS #50, #57 |
+| Eval dashboard | 17 Playwright incl. live gate probe; axe 0 | DECISIONS #57 |
+| **Gate 3 E2E: PASSED, 0 P0** | citizen live 21 passed; counselor 27 + 2 live; eval 17; cross-app smoke (V1 result → counselor trigger-(a) case → eval gate probe holds a V4B leak) 1 passed | `tests/e2e/reports/gate3_last_run.json`; DECISIONS #57 |
 | Persona metrics (**SIMULATED**) | teach-back first attempt 62.1% (target 85%), after re-explanation 92.1%; SURE 4/4 87.1% (target 90%); 39/39 booked ≤48 h; 98.9% confirmatory done; GCOS-24/GOS not instrumented | pack `dimensions` |
 
 Run them:
@@ -132,18 +164,21 @@ python -m services.eval                              # rebuild the evidence pack
 - **8 genes, not 570.** The demo panel is the source's gene table. Couple concordance on 8 genes is a floor, not the program's 4.8% (DECISIONS #10, #22).
 - **Arabic:** the patient copy (71 strings) is real Arabic, marked TODO(native-review), and has not yet been reviewed by a native clinician. Counselor and eval-dashboard Arabic are English placeholders (DECISIONS #48, #50).
 - **FHIR conformance:** our harness reports 0 errors. The HL7 validator has 8 remaining errors, all terminology-server timeouts (inconclusive). phenopacket-tools has not been run on our files (DECISIONS #42).
-- **UI quality bars not met:** the citizen JS budget and Lighthouse (DONE-P3-UI-CIT). The eval dashboard shows a stale evidence copy until REQUEST-DD-1 lands.
+- **UI quality bars not met:** the citizen JS budget and Lighthouse (DECISIONS #59).
 - **Legal statements** describe what the gate is designed to enforce. They are not legal advice and are pending review by counsel.
 - There is no clinical validation of any kind. See the roadmap (docs/05 §4, S0–S4).
 
-## Repository map
-| Path | Owner |
+## Repository layout
+| Path | What |
 |---|---|
-| `docs/` (charter, guardrails, design, testing, rollout, build plan, math spec, decisions) | orchestrator |
-| `services/risk_engine`, `services/privacy`, `services/fhir`, `services/synth` | risk-engine, privacy-apsi, fhir-interop, data-synth |
-| `services/api`, `services/agents`, `services/loop` | agent-runtime |
-| `apps/`, `packages/ui`, `design/` | ui-frontend |
-| `tests/`, `services/eval` | qa-redteam |
-| `docs/demo/`, this README | docs-demo |
+| `apps/` | `citizen` (:3000), `counselor` (:3001) and `eval-dashboard` (:3002): Next.js apps |
+| `packages/` | `ui`: shared design system (tokens, primitives, patterns, CSP helper) |
+| `services/` | `api` (FastAPI monolith), `agents` (seven runtime agents + BioethicsSupervisor gate), `risk_engine`, `privacy` (APSI, consent, audit), `fhir`, `synth`, `loop`, `eval` |
+| `contracts/` | frozen JSON schemas, gene panel, API contract (`api.md`) |
+| `tests/` | golden vectors, red-team corpora and reports, integration, eval, cross-app e2e |
+| `deploy/` | local compose, `vm/` (Compose + Caddy), `vercel-render/` (render.yaml, Vercel settings) |
+| `scripts/` | `guardrail_check.py`, `demo/` (run_local, reset, gate probe), `deploy/` (target switch) |
+| `docs/` | charter, guardrails, design, testing, rollout, math spec, decisions, `demo/` (script, Q&A, ledger, runbook, deploy) |
+| `design/` | brand tokens and logo |
 
-Operating contract for every AI build agent: [AGENTS.md](AGENTS.md). Source of truth: `docs/source/architecture-source.txt`.
+Source of truth: `docs/source/architecture-source.txt`. Scope and rules: [docs/00-CHARTER.md](docs/00-CHARTER.md), [docs/01-GUARDRAILS.md](docs/01-GUARDRAILS.md), [docs/DECISIONS.md](docs/DECISIONS.md).

@@ -1,0 +1,163 @@
+{
+  "synthetic": true,
+  "seed": 42,
+  "couples": 1000,
+  "carrier_rates": [
+    {
+      "gene": "CYP21A2",
+      "hgnc_id": 2600,
+      "target": 0.106,
+      "carriers": 204,
+      "individuals": 2000,
+      "realized": 0.102,
+      "ci95": [
+        0.0895,
+        0.116
+      ],
+      "target_in_ci95": true
+    },
+    {
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "target": 0.096,
+      "carriers": 176,
+      "individuals": 2000,
+      "realized": 0.088,
+      "ci95": [
+        0.0764,
+        0.1012
+      ],
+      "target_in_ci95": true
+    },
+    {
+      "gene": "MEFV",
+      "hgnc_id": 6998,
+      "target": 0.059,
+      "carriers": 114,
+      "individuals": 2000,
+      "realized": 0.057,
+      "ci95": [
+        0.0477,
+        0.068
+      ],
+      "target_in_ci95": true
+    },
+    {
+      "gene": "ABCA4",
+      "hgnc_id": 34,
+      "target": 0.043,
+      "carriers": 71,
+      "individuals": 2000,
+      "realized": 0.0355,
+      "ci95": [
+        0.0282,
+        0.0445
+      ],
+      "target_in_ci95": true
+    },
+    {
+      "gene": "HBA2",
+      "hgnc_id": 4824,
+      "target": 0.018,
+      "carriers": 33,
+      "individuals": 2000,
+      "realized": 0.0165,
+      "ci95": [
+        0.0118,
+        0.0231
+      ],
+      "target_in_ci95": true
+    },
+    {
+      "gene": "SMN1",
+      "hgnc_id": 11117,
+      "target": 0.013,
+      "carriers": 27,
+      "individuals": 2000,
+      "realized": 0.0135,
+      "ci95": [
+        0.0093,
+        0.0196
+      ],
+      "target_in_ci95": true
+    },
+    {
+      "gene": "DONSON",
+      "hgnc_id": 2993,
+      "target": 0.01,
+      "carriers": 19,
+      "individuals": 2000,
+      "realized": 0.0095,
+      "ci95": [
+        0.0061,
+        0.0148
+      ],
+      "target_in_ci95": true
+    },
+    {
+      "gene": "ALDH3A2",
+      "hgnc_id": 403,
+      "target": 0.006,
+      "carriers": 14,
+      "individuals": 2000,
+      "realized": 0.007,
+      "ci95": [
+        0.0042,
+        0.0117
+      ],
+      "target_in_ci95": true
+    }
+  ],
+  "concordance": {
+    "concordant_couples": 34,
+    "rate": 0.034,
+    "ci95": [
+      0.0244,
+      0.0471
+    ],
+    "note": "8-gene floor; reported, not targeted (DECISIONS #10)",
+    "reference_band_570_genes": [
+      0.048,
+      0.131
+    ]
+  },
+  "by_relationship": {
+    "double_first_cousins": {
+      "couples": 67,
+      "share": 0.067,
+      "concordant": 7,
+      "concordance_rate": 0.1045
+    },
+    "first_cousins": {
+      "couples": 342,
+      "share": 0.342,
+      "concordant": 11,
+      "concordance_rate": 0.0322
+    },
+    "second_cousins": {
+      "couples": 97,
+      "share": 0.097,
+      "concordant": 5,
+      "concordance_rate": 0.0515
+    },
+    "unrelated": {
+      "couples": 494,
+      "share": 0.494,
+      "concordant": 11,
+      "concordance_rate": 0.0223
+    }
+  },
+  "novelty_gap": {
+    "plp_calls": 658,
+    "absent_gnomad": 95,
+    "absent_gnomad_rate": 0.1444,
+    "absent_gnomad_target": 0.52,
+    "absent_clinvar": 45,
+    "absent_clinvar_rate": 0.0684,
+    "absent_clinvar_target": 0.3,
+    "note": "founder variants never flagged (DECISIONS #12); targets apply to synthetic variants",
+    "synthetic_calls": 193,
+    "synthetic_absent_gnomad_rate": 0.4922,
+    "synthetic_absent_clinvar_rate": 0.2332
+  }
+}

@@ -1,11 +1,13 @@
 # évolvé: 5-minute demo script (R-DEMO-1)
 
 Status: **P5 final.** Every surface named here is built:
-- citizen: DONE-P3-UI-CIT
-- counselor workbench: DONE-P3-UI-CNS
-- eval dashboard + gate probe: DONE-P4-UI-EVAL
+- citizen (`apps/citizen`)
+- counselor workbench (`apps/counselor`)
+- eval dashboard + gate probe (`apps/eval-dashboard`)
 
-UI strings are from the current `messages/en.json` of each app. Backend numbers come from live runs (2026-11-09 and 2026-11-16) and from `services/eval/out/evidence.json` (build 2026-11-15T06:03Z). Every number is in [CLAIMS-LEDGER.md](CLAIMS-LEDGER.md).
+Gate 3 E2E covered this path: `tests/e2e/reports/gate3_last_run.json`, DECISIONS #57.
+
+UI strings are from the current `messages/en.json` of each app. Backend numbers come from live runs (2026-11-09 and 2026-11-16) and from the evidence pack `apps/eval-dashboard/data/evidence.json` (build 2026-11-16T02:09:47Z). Every number is in [CLAIMS-LEDGER.md](CLAIMS-LEDGER.md).
 
 Rules for the presenter:
 - Say "decision support, not a diagnosis".
@@ -26,7 +28,7 @@ Rules for the presenter:
    - **T4** `localhost:3000/en/sign-in`: **Sign in as V3A** → `/en/results/explainer` (already staged)
    - **T5** `localhost:3001/en/sign-in`: **Sign in (simulated)** → turn **On shift** on
    - **T6** `localhost:3002/en`: eval dashboard, scrolled to **Gate probe**
-3. **Known issue, eval dashboard:** its evidence copy is stale (2026-11-09). It shows the old held-out 65.3%. Until REQUEST-DD-1 lands, **do not point at the held-out panel**; say the current numbers in the 4:10 beat instead.
+3. Eval dashboard: check that the header shows pack build 2026-11-16 and the held-out panel lists retired v1 (89.6%) and current v2 (62.4%). If it shows an older build, re-sync (`npm run sync -w evolve-eval-dashboard`) and restart it.
 
 Partner IDs: V1A/V1B (first cousins, shared finding) · V3A/V3B (first cousins, SMA carrier and screen-negative partner) · V4A/V4B (unrelated, privacy test) · V2 and V5 spare. Reset at any time with `scripts\demo\reset_demo.ps1` (it re-stages V3).
 
@@ -120,7 +122,6 @@ Point at, in order:
 - "Arithmetic and privacy are measured on real code: zero mismatches, zero leaks in 2,491 live responses."
 - "Comprehension and SURE come from simulated personas with fixed assumptions. 62% pass the teach-back first time and 92% after a counselor re-explains, and 87% reach SURE 4/4. Both are below target, and we report that."
 - "The gate on unseen drafts: 62.4% caught, 4.7% false positives, below our 95% target. That's why the guarantee is the closed templates, not the filter."
-- (Say the held-out figure aloud; the panel is stale until REQUEST-DD-1.)
 
 There is no marriage-outcome metric anywhere.
 
@@ -151,5 +152,5 @@ There is no marriage-outcome metric anywhere.
 - All data is synthetic; integrations are simulated.
 - Arabic is pending native clinical review.
 - Persona metrics are simulated.
-- The citizen JS budget is not met, and Lighthouse has not run (DONE-P3-UI-CIT).
+- The citizen JS budget is not met, and Lighthouse has not run (DECISIONS #59).
 - HL7 validation has 8 errors, all inconclusive terminology-server timeouts (DECISIONS #42).

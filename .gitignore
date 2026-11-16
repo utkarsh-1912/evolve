@@ -1,9 +1,12 @@
 # ---- AI agent workflow files (not part of the product) ----
-.claude/
-agents/
-handoffs/
-AGENTS.md
-CLAUDE.md
+/.claude/
+/agents/
+/handoffs/
+/AGENTS.md
+/CLAUDE.md
+**/AGENTS.md
+**/CLAUDE.md
+!services/agents/**
 
 # ---- Secrets: never commit; copy env.example -> .env locally / paste in dashboards ----
 .env
@@ -17,7 +20,7 @@ node_modules/
 .next/
 .next-live/
 **/dist/
-out/
+/out/
 *.tsbuildinfo
 next-env.d.ts
 

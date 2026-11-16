@@ -3,7 +3,7 @@
 ## The day before
 - [ ] `npm ci` at the repo root has been run once (the scripts never install anything).
 - [ ] `python scripts/guardrail_check.py` → `guardrail_check: OK`.
-- [ ] REQUEST-DD-1 has landed (the eval dashboard shows the 2026-11-15 pack: held-out v2 62.4%). If not, don't point at its held-out panel.
+- [ ] The eval dashboard shows pack build 2026-11-16 (held-out v1 retired 89.6%, v2 62.4%). If not: `npm run sync -w evolve-eval-dashboard`.
 - [ ] One full human run-through of docs/demo/DEMO-SCRIPT.md, timed. Automated rehearsals were not done (lean P5); human rehearsal is the team's job.
 - [ ] Fallback screenshots are at hand: `apps/citizen/screenshots/p3/cit/`, `apps/counselor/screenshots/`, `apps/eval-dashboard/screenshots/`.
 
