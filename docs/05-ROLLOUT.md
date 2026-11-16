@@ -27,7 +27,7 @@ Two meanings of "rollout": (1) **hackathon build schedule** (what we ship, when)
 - [ ] All mocks labelled SIMULATED
 
 ## 2. Daily rhythm
-09:00 orchestrator posts day plan (task cards in `handoffs/`) · build agents work in parallel on disjoint paths · 14:00 integration merge window · 18:00 gate review + drift checklist · P0 bugs preempt everything.
+09:00 orchestrator posts day plan (internal task cards, not published) · build agents work in parallel on disjoint paths · 14:00 integration merge window · 18:00 gate review + drift checklist · P0 bugs preempt everything.
 
 ## 3. Environments
 `local` (docker compose, stub LLM) → `demo` (single VM/laptop, real LLM through gate, seeded synthetic data, reset script `scripts/reset_demo.sh`) → recorded fallback video.

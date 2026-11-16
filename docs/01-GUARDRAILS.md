@@ -11,7 +11,7 @@ Three layers: **(A) Scope guardrails** keep us on the project. **(B) Product inv
 | G-04 | Contracts (`contracts/*`) change only via orchestrator-approved PR with version bump. | CODEOWNERS + golden-vector check |
 | G-05 | Each build agent edits only its owned paths. | CODEOWNERS; `guardrail_check.py --owned-paths` |
 | G-06 | Dependencies: allow-list in `scripts/allowed_deps.txt`; new dep needs a one-line justification in PR. | CI diff check |
-| G-07 | The source architecture doc outranks all other docs. Conflicts → `handoffs/QUESTION-*.md`, not silent decisions. | Process |
+| G-07 | The source architecture doc outranks all other docs. Conflicts → a written question to the orchestrator (internal task cards, not published), not silent decisions. | Process |
 | G-08 | Timebox: a task exceeding its estimate by 2× is escalated to orchestrator, not extended. | Orchestrator |
 | G-09 | No "while I'm here" refactors or features. | Reviewer |
 
@@ -49,9 +49,9 @@ Three layers: **(A) Scope guardrails** keep us on the project. **(B) Product inv
 1. `scripts/guardrail_check.py` (run locally, in pre-commit, and in CI). Checks: agent roster, forbidden phrases in source/copy, banned patterns (`patient/*`, real-looking IDs, secrets), `risk*` arithmetic outside risk_engine, contracts version, unlabelled mocks. Exit ≠ 0 blocks merge.
 2. `tests/guardrails/` red-team corpus (qa-redteam): directive prompts, leakage probes, donor-gamete probes, anomaly-termination probes, number-tampering. Must be 100% intercepted; CI gate.
 3. Golden vectors (`tests/golden/risk_vectors.json`): changing any value requires orchestrator sign-off.
-4. CODEOWNERS + branch protection: orchestrator + qa-redteam approval required for `contracts/`, `agents/bioethics*`, `services/risk_engine/`, `services/privacy/`.
-5. Claude Code project config (`.claude/settings.json`, `.claude/agents/*`) restricts tools per build agent; read-only for reviewers.
+4. CODEOWNERS + branch protection: orchestrator + qa-redteam approval required for `contracts/`, the BioethicsSupervisor gate (`services/agents/runtime/bioethics*`), `services/risk_engine/`, `services/privacy/`.
+5. Claude Code project config (internal build-agent settings, not published) restricts tools per build agent; read-only for reviewers.
 6. Drift review ritual: at each phase gate the orchestrator runs the **Drift Checklist** (docs/05 §Gates): requirements traced? any unowned file changes? any new dependency/agent/metric? any invariant weakened?
 
 ## Deviation protocol
-Spot a conflict, ambiguity, or tempting extra? → stop → `handoffs/QUESTION-<n>.md` (what, which rule, options) → orchestrator decides → decision recorded in `docs/DECISIONS.md`. Silent deviation = revert.
+Spot a conflict, ambiguity, or tempting extra? → stop → a written question (internal task card, not published: what, which rule, options) → orchestrator decides → decision recorded in `docs/DECISIONS.md`. Silent deviation = revert.

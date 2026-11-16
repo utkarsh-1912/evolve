@@ -18,7 +18,7 @@ Written 2026-11-08 after reviewing v1 against the actual environment. Guardrails
 | Phase | Parallel agents | Deliverable | Exit gate |
 |---|---|---|---|
 | **P0** (done by orchestrator) | — | Contracts, gene panel, deps installed, task cards | contracts validate; `guardrail_check` OK |
-| **P1 Engines** | risk-engine · data-synth · privacy-apsi · fhir-interop | Each package importable with a pure-Python API + tests (cards in `handoffs/TASK-P1-*.md`) | G1: all four suites green; V1–V5 fixtures pass through risk-engine with expected numbers; APSI leakage tests green; bundles validate with 0 dangling refs |
+| **P1 Engines** | risk-engine · data-synth · privacy-apsi · fhir-interop | Each package importable with a pure-Python API + tests (internal task cards, not published) | G1: all four suites green; V1–V5 fixtures pass through risk-engine with expected numbers; APSI leakage tests green; bundles validate with 0 dangling refs |
 | **P2 Walking skeleton** | agent-runtime (`services/api` + 7 agents + gate) · ui-frontend (Clinic theme + 4 demo screens against mocks, then live) · qa-redteam (corpus v1 + integration tests) | `uvicorn services.api.main:app` + `apps/citizen` running the V4, V1, and V3 journeys | G2: E2E smoke for V4/V1/V3; red-team v1 at 100%; canary isolation test |
 | **P3 Depth** | agent-runtime (loop bus, CareNavigator, Copilot brief) · ui-frontend (counselor console, residual-risk explainer, care path, AR/RTL) · qa-redteam (E2E V1–V5 EN+AR) | All charter UX requirements | G3: R-UX-1/2/3 done; a11y AA |
 | **P4 Evidence + polish** | qa-redteam (eval harness) · ui-frontend (Ledger dashboard, motion) · docs-demo · fhir-interop (HL7 CLI stretch) | Dashboard, demo script, deck | G4 |
