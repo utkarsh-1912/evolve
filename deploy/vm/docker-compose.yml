@@ -1,0 +1,132 @@
+# évolvé — single-VM deployment (DEPLOY_TARGET=vm, DECISIONS #62). SIMULATED environment, synthetic data only.
+#
+#   cp deploy/vm/.env.example deploy/vm/.env    # fill in; never commit a real key
+#   scripts/deploy/deploy.ps1 -Target vm -EnvFile deploy/vm/.env      (or: docker compose --env-file deploy/vm/.env -f deploy/vm/docker-compose.yml up -d --build)
+#
+# Caddy terminates HTTPS (automatic Let's Encrypt) for four subdomains of APP_DOMAIN:
+#   app.<domain> → citizen · counselor.<domain> → counselor · eval.<domain> → eval dashboard · api.<domain> → backend
+# NEXT_PUBLIC_API is baked into each Next build (build arg), so changing APP_DOMAIN needs a rebuild (--build).
+# Backend keys live in memory: a restart invalidates sessions; the `reset` job reseeds and re-stages V3.
+
+name: evolve-vm
+
+x-web-build: &web-build
+  context: ../..
+  dockerfile: deploy/vm/web.Dockerfile
+
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: deploy/api.Dockerfile
+    image: evolve/api:vm
+    environment:
+      DEPLOY_TARGET: "vm"
+      CORS_ORIGINS: "${CORS_ORIGINS:?set CORS_ORIGINS in the env file}"
+      SARVAM_API_KEY: "${SARVAM_API_KEY:-}"          # empty → offline-stub provider (api.md v1.3.0)
+      SARVAM_MODEL: "${SARVAM_MODEL:-sarvam-105b}"
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+    expose: ["8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/demo/vignettes', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 6
+      start_period: 20s
+    restart: unless-stopped
+
+  # One-shot: reseed V1–V5 and pre-stage V3 once the backend is healthy (runs on every `up`).
+  reset:
+    image: evolve/api:vm
+    depends_on:
+      api:
+        condition: service_healthy
+    volumes:
+      - ./reset_on_start.py:/reset_on_start.py:ro
+    command: ["python", "/reset_on_start.py", "http://api:8000"]
+    restart: "no"
+
+  citizen:
+    build:
+      <<: *web-build
+      args:
+        APP_WORKSPACE: "evolve-citizen"
+        NEXT_PUBLIC_API: "https://api.${APP_DOMAIN:?set APP_DOMAIN}"
+    image: evolve/citizen:vm
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+    expose: ["3000"]
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/en').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 20s
+      timeout: 10s
+      retries: 6
+      start_period: 30s
+    restart: unless-stopped
+
+  counselor:
+    build:
+      <<: *web-build
+      args:
+        APP_WORKSPACE: "evolve-counselor"
+        NEXT_PUBLIC_API: "https://api.${APP_DOMAIN:?set APP_DOMAIN}"
+    image: evolve/counselor:vm
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+    expose: ["3001"]
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/en').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 20s
+      timeout: 10s
+      retries: 6
+      start_period: 30s
+    restart: unless-stopped
+
+  eval:
+    build:
+      <<: *web-build
+      args:
+        APP_WORKSPACE: "evolve-eval-dashboard"
+        NEXT_PUBLIC_API: "https://api.${APP_DOMAIN:?set APP_DOMAIN}"
+    image: evolve/eval:vm
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+    expose: ["3002"]
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3002/en').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 20s
+      timeout: 10s
+      retries: 6
+      start_period: 30s
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    environment:
+      APP_DOMAIN: "${APP_DOMAIN:?set APP_DOMAIN}"
+      ACME_EMAIL: "${ACME_EMAIL:?set ACME_EMAIL}"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [api, citizen, counselor, eval]
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

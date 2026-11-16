@@ -1,0 +1,10 @@
+[project]
+name = "synth"
+version = "1.0.0"
+description = "Synthetic Emirati-calibrated couple cohort + V1-V5 vignettes (R-DATA-1/2/3). SYNTHETIC DATA ONLY."
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

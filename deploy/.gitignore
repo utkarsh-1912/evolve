@@ -1,0 +1,4 @@
+# Real deployment settings and keys never enter the repo (P-11).
+**/.env
+**/.env.*
+!**/.env.example

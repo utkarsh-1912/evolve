@@ -1,0 +1,150 @@
+{
+  "contract_version": "1.0.0",
+  "seed": 0,
+  "synthetic": true,
+  "couples": [
+    {
+      "couple_id": "V4",
+      "relationship": {
+        "type": "unrelated",
+        "paths": []
+      },
+      "partners": [
+        {
+          "partner_id": "V4A",
+          "role": "A",
+          "sex": "female",
+          "age": 25,
+          "bmi": 21.7,
+          "calls": [
+            {
+              "hgnc_id": 6998,
+              "gene": "MEFV",
+              "hgvs_c": null,
+              "hgvs_p": "p.(Ala744Ser)",
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "P",
+              "variant_type": "snv",
+              "absent_gnomad": false,
+              "absent_clinvar": false,
+              "in_roh_gt_10mb": false
+            },
+            {
+              "hgnc_id": 4284,
+              "gene": "GJB2",
+              "hgvs_c": "c.SYN42840A>G",
+              "hgvs_p": null,
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "P",
+              "variant_type": "snv",
+              "absent_gnomad": false,
+              "absent_clinvar": false,
+              "in_roh_gt_10mb": false
+            }
+          ],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial",
+            "4284": "initial"
+          }
+        },
+        {
+          "partner_id": "V4B",
+          "role": "B",
+          "sex": "male",
+          "age": 28,
+          "bmi": 25.3,
+          "calls": [
+            {
+              "hgnc_id": 34,
+              "gene": "ABCA4",
+              "hgvs_c": "c.5882G>A",
+              "hgvs_p": "p.(Gly1961Glu)",
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "P",
+              "variant_type": "snv",
+              "absent_gnomad": false,
+              "absent_clinvar": false,
+              "in_roh_gt_10mb": false
+            }
+          ],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial",
+            "4284": "initial"
+          }
+        }
+      ],
+      "expected": {
+        "source": "architecture-source §2.4 Vignette 4 (privacy test)",
+        "relationship": {
+          "F": "0",
+          "R": "0"
+        },
+        "apsi": {
+          "status": "compatible",
+          "label": "Compatible / No Shared Recessive Risk",
+          "intersection_hgnc_ids": []
+        },
+        "couple_escalation": false,
+        "genes": [
+          {
+            "gene": "MEFV",
+            "hgnc_id": 6998,
+            "scenario": "discordant",
+            "status": "needs_counselor",
+            "escalate": false,
+            "audience": "carrier_partner_only",
+            "reason": "missing_detection_rate",
+            "visible_to": "A only"
+          },
+          {
+            "gene": "GJB2",
+            "hgnc_id": 4284,
+            "scenario": "discordant",
+            "status": "needs_counselor",
+            "escalate": false,
+            "audience": "carrier_partner_only",
+            "reason": "missing_carrier_freq",
+            "visible_to": "A only"
+          },
+          {
+            "gene": "ABCA4",
+            "hgnc_id": 34,
+            "scenario": "discordant",
+            "status": "needs_counselor",
+            "escalate": false,
+            "audience": "carrier_partner_only",
+            "reason": "missing_detection_rate",
+            "visible_to": "B only"
+          }
+        ],
+        "privacy": {
+          "never_shown_to_B": [
+            "MEFV",
+            "GJB2"
+          ],
+          "never_shown_to_A": [
+            "ABCA4"
+          ]
+        },
+        "notes": "Source gives no number for V4 (residual risk 'low', driven by q on opposing genes). Per-gene needs_counselor (missing q/d) is NON-escalating: unrelated couple, no complex locus (DECISIONS #11, #19; handoffs/ANSWER-DS-1-2.md DS-1.4)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+/*
+ * Tailwind v4 bridge for @evolve/ui tokens. Import after `tailwindcss` and tokens.css.
+ * Utilities resolve to CSS variables, so [data-theme="ledger"] re-skins everything.
+ */
+@theme inline {
+  --color-navy: var(--evolve-navy);
+  --color-navy-2: var(--evolve-navy-2);
+  --color-lime: var(--evolve-lime);
+  --color-cream: var(--evolve-cream);
+  --color-mist: var(--evolve-mist);
+
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-950: var(--neutral-950);
+
+  --color-surface-0: var(--surface-0);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-surface-inverse: var(--surface-inverse);
+
+  --color-ground: var(--ground);
+  --color-tile: var(--tile);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-accent: var(--accent);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-on-accent: var(--on-accent);
+  --color-overlay: var(--overlay);
+
+  --color-compatible: var(--signal-compatible);
+  --color-review: var(--signal-review);
+  --color-escalated: var(--signal-escalated);
+  --color-vault: var(--signal-vault);
+  --color-info: var(--signal-info);
+  --color-compatible-ink: var(--signal-compatible-ink);
+  --color-review-ink: var(--signal-review-ink);
+  --color-escalated-ink: var(--signal-escalated-ink);
+  --color-vault-ink: var(--signal-vault-ink);
+  --color-info-ink: var(--signal-info-ink);
+
+  --font-display: var(--type-display);
+  --font-sans: var(--type-ui);
+  --font-mono: var(--type-mono);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-card: 24px;
+
+  --shadow-e1: var(--elevation-1);
+  --shadow-e2: var(--elevation-2);
+  --shadow-e3: var(--elevation-3);
+}

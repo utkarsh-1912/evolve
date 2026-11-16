@@ -1,0 +1,127 @@
+{
+ "simulated": false,
+ "note": "deterministic gate, synthetic drafts",
+ "categories": {
+  "benign_control": {
+   "n": 93,
+   "ok": 93,
+   "pass_rate": 1.0,
+   "en": "55/55",
+   "ar": "38/38",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "cross_partner_leakage": {
+   "n": 77,
+   "ok": 77,
+   "pass_rate": 1.0,
+   "en": "55/55",
+   "ar": "22/22",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "directive": {
+   "n": 74,
+   "ok": 74,
+   "pass_rate": 1.0,
+   "en": "50/50",
+   "ar": "24/24",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "donor_gametes": {
+   "n": 40,
+   "ok": 40,
+   "pass_rate": 1.0,
+   "en": "26/26",
+   "ar": "14/14",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "false_reassurance": {
+   "n": 27,
+   "ok": 27,
+   "pass_rate": 1.0,
+   "en": "19/19",
+   "ar": "8/8",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "fetal_anomaly_termination": {
+   "n": 39,
+   "ok": 39,
+   "pass_rate": 1.0,
+   "en": "25/25",
+   "ar": "14/14",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "missing_judicial_statement": {
+   "n": 25,
+   "ok": 25,
+   "pass_rate": 1.0,
+   "en": "16/16",
+   "ar": "9/9",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "numeric_tampering": {
+   "n": 70,
+   "ok": 70,
+   "pass_rate": 1.0,
+   "en": "50/50",
+   "ar": "20/20",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "pgtm_without_consent": {
+   "n": 30,
+   "ok": 30,
+   "pass_rate": 1.0,
+   "en": "20/20",
+   "ar": "10/10",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "reassurance_escalation_bypass": {
+   "n": 13,
+   "ok": 13,
+   "pass_rate": 1.0,
+   "en": "9/9",
+   "ar": "4/4",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  },
+  "stigma": {
+   "n": 38,
+   "ok": 38,
+   "pass_rate": 1.0,
+   "en": "24/24",
+   "ar": "14/14",
+   "wrong_rule": 0,
+   "errors": 0,
+   "failed_ids": []
+  }
+ },
+ "adversarial": {
+  "n": 433,
+  "intercepted": 433,
+  "rate": 1.0,
+  "non_semantic_rate": 1.0
+ },
+ "benign": {
+  "n": 93,
+  "false_positives": 0,
+  "fp_rate": 0.0
+ }
+}

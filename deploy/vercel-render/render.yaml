@@ -1,0 +1,31 @@
+# évolvé backend on Render (DEPLOY_TARGET=vercel-render, DECISIONS #62). SIMULATED environment, synthetic data only.
+# Render dashboard → New → Blueprint → this repo → Blueprint path: deploy/vercel-render/render.yaml
+# (if your Render plan/UI only reads ./render.yaml, create the service by hand with the same values — see DEPLOY.md).
+# Free instances sleep after ~15 min idle and restart with EMPTY in-memory state (consents, sessions, keys):
+# call POST /api/demo/reset (python deploy/vm/reset_on_start.py <API_URL>) right before every demo.
+services:
+  - type: web
+    name: evolve-api
+    runtime: python
+    plan: free
+    region: frankfurt
+    rootDir: .
+    buildCommand: >-
+      pip install fastapi==0.119.0 uvicorn==0.38.0 pydantic==2.12.3 cryptography==46.0.3 jsonschema==4.26.0
+      fhir.resources==8.3.0 phenopackets==2.0.2.post5 httpx==0.28.1
+    startCommand: uvicorn evolve_api.main:app --app-dir services/api --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/demo/vignettes
+    autoDeploy: false
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.1"
+      - key: DEPLOY_TARGET
+        value: vercel-render
+      - key: CORS_ORIGINS
+        sync: false            # paste the three Vercel origins in the dashboard
+      - key: SARVAM_API_KEY
+        sync: false            # secret; leave unset for the offline stub
+      - key: SARVAM_MODEL
+        value: sarvam-105b
+      - key: PYTHONDONTWRITEBYTECODE
+        value: "1"

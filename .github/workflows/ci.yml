@@ -1,0 +1,83 @@
+# CI pipeline (PROPOSAL-CI accepted, DECISIONS #43). Runs once the repo is on GitHub.
+name: ci
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 22 * * *"   # nightly (02:00 Gulf time): slow full-cohort template closure
+jobs:
+  guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: pip install pytest jsonschema hypothesis cryptography "fhir.resources>=8" phenopackets fastapi uvicorn httpx pydantic
+      - run: python scripts/guardrail_check.py
+      - if: github.event_name == 'pull_request'
+        env: { PR_BODY: "${{ github.event.pull_request.body }}" }
+        run: printf '%s' "$PR_BODY" > /tmp/pr.md && python scripts/guardrail_check.py --pr-body /tmp/pr.md
+      - run: python -m pytest -q tests/guardrails/test_guardrail_check.py
+
+  unit:
+    needs: guardrails
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: { pkg: [risk_engine, privacy, fhir, synth, agents, loop, api] }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: pip install pytest jsonschema hypothesis cryptography "fhir.resources>=8" phenopackets fastapi uvicorn httpx pydantic
+      - run: cd services/${{ matrix.pkg }} && python -m pytest -q -m "not slow"   # full-cohort closure runs nightly (DECISIONS #45)
+      - if: matrix.pkg == 'risk_engine'
+        name: golden vectors unchanged
+        run: git diff --exit-code origin/${{ github.base_ref || 'main' }} -- tests/golden/risk_vectors.json || (echo "golden vectors changed - needs orchestrator label" && exit 1)
+
+  integration-and-redteam:
+    needs: unit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: pip install pytest jsonschema hypothesis cryptography "fhir.resources>=8" phenopackets fastapi uvicorn httpx pydantic
+      - run: python -m pytest -q tests/integration
+      - run: python -m pytest -q tests/guardrails/test_corpus.py   # regression: 100% / FP <= 5%
+      - run: python -m pytest -q tests/eval
+
+  redteam-holdout:   # DECISIONS #37(c): reported, not blocking, but it must run and publish
+    needs: unit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: pip install pytest jsonschema hypothesis cryptography "fhir.resources>=8" phenopackets fastapi uvicorn httpx pydantic
+      - run: python -m pytest -q --tb=no tests/guardrails/test_holdout.py || true   # --tb=no keeps held-out text out of logs
+      - run: test -f tests/guardrails/reports/holdout_last_run.json
+      - uses: actions/upload-artifact@v4
+        with: { name: holdout-report, path: tests/guardrails/reports/holdout_last_run.json }
+
+  evidence:
+    needs: [integration-and-redteam, redteam-holdout]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: pip install pytest jsonschema hypothesis cryptography "fhir.resources>=8" phenopackets fastapi uvicorn httpx pydantic
+      - run: python -m services.eval
+      - uses: actions/upload-artifact@v4
+        with: { name: evidence-pack, path: services/eval/out/ }
+  nightly-template-closure:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: pip install pytest jsonschema hypothesis cryptography "fhir.resources>=8" phenopackets fastapi uvicorn httpx pydantic
+      - run: cd services/agents && python -m pytest -q -m slow
+  # e2e (Playwright EN+AR) and a11y (axe/Lighthouse) jobs are added after UI wave 2 lands.

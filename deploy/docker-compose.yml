@@ -1,0 +1,92 @@
+# évolvé demo stack (R-DEMO-1, docs/08 §2 P5). SIMULATED environment, synthetic data only.
+#
+#   docker compose -f deploy/docker-compose.yml up --build                     # backend + citizen
+#   docker compose -f deploy/docker-compose.yml --profile counselor up --build # + counselor workbench
+#
+# No secrets live here or in the images. The authority, consent and token keys are generated in memory
+# when the backend process starts (services/privacy, DONE-P1-PA), so a restart invalidates every session.
+# NEXT_PUBLIC_API is read by the browser, so it must be the address the presenter's browser can reach
+# (localhost on the demo laptop), not the compose service name.
+# Fallback without Docker: scripts/demo/run_local.ps1 or scripts/demo/run_local.sh.
+
+name: evolve-demo
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/api.Dockerfile
+    image: evolve-demo/api:local
+    command: ["python", "-m", "uvicorn", "evolve_api.main:app", "--app-dir", "services/api",
+              "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    environment:
+      EVOLVE_ENV: "SIMULATED"
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/demo/vignettes', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 20s
+    restart: unless-stopped
+
+  citizen:
+    build:
+      context: ..
+      dockerfile: deploy/web.Dockerfile
+      args:
+        APP_WORKSPACE: "evolve-citizen"
+        NEXT_PUBLIC_API: "http://localhost:8000"
+    image: evolve-demo/citizen:local
+    command: ["npm", "run", "dev", "-w", "evolve-citizen", "--", "--hostname", "0.0.0.0"]
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API: "http://localhost:8000"
+      NEXT_TELEMETRY_DISABLED: "1"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e",
+             "fetch('http://127.0.0.1:3000/en').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 10s
+      retries: 8
+      start_period: 60s
+    restart: unless-stopped
+
+  # PENDING: apps/counselor (docs/09 §4.2) is not built yet. The workspace name "evolve-counselor" and
+  # port 3001 are assumptions; confirm with ui-frontend before G5. The backend CORS allow-list currently
+  # only has :3000 (see handoffs/QUESTION-DD-1.md). Kept behind a profile so the default `up` works today.
+  counselor:
+    profiles: ["counselor"]
+    build:
+      context: ..
+      dockerfile: deploy/web.Dockerfile
+      args:
+        APP_WORKSPACE: "evolve-counselor"
+        NEXT_PUBLIC_API: "http://localhost:8000"
+    image: evolve-demo/counselor:local
+    # Assumes the counselor workspace's own `dev` script pins --port 3001 (as citizen pins 3000).
+    command: ["npm", "run", "dev", "-w", "evolve-counselor", "--", "--hostname", "0.0.0.0"]
+    ports:
+      - "3001:3001"
+    environment:
+      NEXT_PUBLIC_API: "http://localhost:8000"
+      NEXT_TELEMETRY_DISABLED: "1"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e",
+             "fetch('http://127.0.0.1:3001/en').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 10s
+      retries: 8
+      start_period: 60s
+    restart: unless-stopped

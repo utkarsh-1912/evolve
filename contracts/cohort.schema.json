@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cohort.schema.json",
+  "title": "Synthetic couple cohort (data-synth output; input to fhir-interop and risk-engine)",
+  "type": "object",
+  "required": ["contract_version", "seed", "synthetic", "couples"],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {"const": "1.0.0"},
+    "seed": {"type": "integer"},
+    "synthetic": {"const": true},
+    "couples": {"type": "array", "items": {"$ref": "#/$defs/couple"}}
+  },
+  "$defs": {
+    "couple": {
+      "type": "object",
+      "required": ["couple_id", "relationship", "partners"],
+      "additionalProperties": false,
+      "properties": {
+        "couple_id": {"type": "string", "pattern": "^SYN-C[0-9]{4,}$|^V[1-5]$"},
+        "relationship": {
+          "type": "object",
+          "required": ["type", "paths"],
+          "additionalProperties": false,
+          "properties": {
+            "type": {"enum": ["unrelated", "second_cousins", "first_cousins", "double_first_cousins"]},
+            "paths": {"type": "array", "description": "Wright paths [n1, n2, ancestor_F as string fraction]", "items": {"type": "array", "prefixItems": [{"type": "integer", "minimum": 1}, {"type": "integer", "minimum": 1}, {"type": "string"}], "minItems": 3, "maxItems": 3}}
+          }
+        },
+        "partners": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/$defs/partner"}},
+        "family_history": {"type": "array", "items": {"$ref": "#/$defs/history"}},
+        "expected": {"type": "object", "description": "Vignettes only: expected scenario/flags per gene for golden tests"}
+      }
+    },
+    "partner": {
+      "type": "object",
+      "required": ["partner_id", "role", "sex", "age", "calls", "assays"],
+      "additionalProperties": false,
+      "properties": {
+        "partner_id": {"type": "string", "pattern": "^SYN-P[0-9]{4,}[AB]$|^V[1-5][AB]$"},
+        "role": {"enum": ["A", "B"]},
+        "sex": {"enum": ["female", "male"]},
+        "age": {"type": "integer", "minimum": 18, "maximum": 60},
+        "bmi": {"type": ["number", "null"]},
+        "calls": {"type": "array", "items": {"$ref": "#/$defs/call"}},
+        "assays": {"type": "object", "description": "hgnc_id (string) -> assay stage used, e.g. {'11117':'initial'}", "additionalProperties": {"enum": ["initial", "confirmatory"]}}
+      }
+    },
+    "call": {
+      "type": "object",
+      "required": ["hgnc_id", "gene", "zygosity", "classification", "variant_type", "absent_gnomad", "absent_clinvar", "in_roh_gt_10mb"],
+      "additionalProperties": false,
+      "properties": {
+        "hgnc_id": {"type": "integer"},
+        "gene": {"type": "string"},
+        "hgvs_c": {"type": ["string", "null"]},
+        "hgvs_p": {"type": ["string", "null"]},
+        "refseq": {"type": ["string", "null"]},
+        "zygosity": {"enum": ["het", "hom"]},
+        "classification": {"enum": ["P", "LP", "VUS"]},
+        "variant_type": {"enum": ["snv", "indel", "cnv_deletion"]},
+        "absent_gnomad": {"type": "boolean"},
+        "absent_clinvar": {"type": "boolean"},
+        "in_roh_gt_10mb": {"type": "boolean"}
+      }
+    },
+    "history": {
+      "type": "object",
+      "required": ["relative", "finding"],
+      "additionalProperties": false,
+      "properties": {
+        "relative": {"type": "string"},
+        "finding": {"type": "string"},
+        "hpo": {"type": ["string", "null"], "pattern": "^HP:[0-9]{7}$"}
+      }
+    }
+  }
+}

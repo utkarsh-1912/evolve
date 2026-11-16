@@ -1,0 +1,16 @@
+{
+  "contract_version": "1.0.0",
+  "runtime_agents": [
+    "ConsentGuardian",
+    "VariantInterpreter",
+    "PedigreeRiskEngine",
+    "CulturalCommunicator",
+    "CareNavigator",
+    "BioethicsSupervisor",
+    "CounselorCopilot"
+  ],
+  "build_agents": [
+    "orchestrator", "data-synth", "risk-engine", "privacy-apsi", "fhir-interop",
+    "agent-runtime", "ui-frontend", "qa-redteam", "docs-demo"
+  ]
+}

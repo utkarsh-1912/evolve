@@ -1,0 +1,769 @@
+{
+  "meta": {
+    "title": "évolvé · Inherited risk, explained",
+    "description": "Decision support for premarital and preconception carrier results. Simulated environment with synthetic data only."
+  },
+  "chrome": {
+    "envLabel": "Simulated environment",
+    "envDetail": "Synthetic data only. No real person or clinical result is shown.",
+    "brandDescriptor": "Inherited risk, explained",
+    "compliance": "Decision support, not a diagnosis. The marriage certificate is issued regardless of results.",
+    "footerEnv": "Synthetic data · simulated integrations",
+    "simulated": "Simulated",
+    "arPending": "Arabic text is pending native clinical review. English placeholders are shown. TODO(ar)",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "switchPerson": "Switch synthetic person",
+    "designSystem": "Design system",
+    "lang": {
+      "switchTo": "العربية",
+      "switchToLang": "ar"
+    },
+    "nav": {
+      "home": "Home",
+      "results": "My results",
+      "compatibility": "Compatibility",
+      "care": "Care plan",
+      "careShort": "Care",
+      "family": "Family",
+      "privacy": "Privacy & sharing",
+      "help": "Help",
+      "notifications": "Notifications",
+      "explainer": "Explainer",
+      "teachback": "Check your understanding",
+      "cta": "Check compatibility"
+    },
+    "context": {
+      "label": "Your context",
+      "person": "Signed in",
+      "notSignedIn": "Not signed in",
+      "couple": "Couple",
+      "consent": "Consent",
+      "consentActive": "Active until {time}",
+      "consentNone": "Not given",
+      "status": {
+        "not_linked": "Not linked",
+        "invited": "Invitation sent",
+        "both_consented": "Both consented",
+        "result_ready": "Result ready"
+      },
+      "syntheticPerson": "{id} (synthetic)",
+      "consentShort": "Consent active"
+    },
+    "viewAll": "View all notifications"
+  },
+  "ui": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "loading": "Loading",
+    "retry": "Try again",
+    "errorTitle": "Something went wrong",
+    "errorBody": "Nothing was shared. You can try again.",
+    "errorReference": "Reference",
+    "emptyTitle": "Nothing here yet",
+    "offline": "You are offline. Changes will not be saved until you reconnect.",
+    "stale": "This information may be out of date.",
+    "refresh": "Refresh",
+    "permissionTitle": "Consent needed",
+    "heldForReview": "Held for counselor review",
+    "heldForReviewBody": "A genetic counselor will go through this with you before it is shown.",
+    "howCounted": "How it was counted",
+    "hideCounted": "Hide how it was counted",
+    "notComputed": "Not calculated",
+    "notComputedHelp": "A genetic counselor will explain this.",
+    "formula": "Formula",
+    "inputs": "Inputs",
+    "contract": "Contract version",
+    "digest": "Digest",
+    "scenario": "Scenario",
+    "provenanceSource": "Source: docs/07-RISK-MATH-SPEC.md §2",
+    "inputNames": {
+      "F": "F (genome-wide context only)",
+      "prior_carrier_b": "Prior",
+      "detection_rate": "Detection rate d",
+      "posterior_carrier_b": "Posterior",
+      "offspring_risk": "Offspring risk"
+    },
+    "notifications": "Notifications",
+    "notificationsUnread": "{count} unread",
+    "noNotifications": "You have no notifications.",
+    "markAllRead": "Mark all as read",
+    "profile": "Profile",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as {name}",
+    "language": "Language",
+    "breadcrumb": "Breadcrumb",
+    "mainNav": "Main",
+    "more": "More",
+    "menu": "Menu",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "{page} of {pages}",
+    "rowsEmpty": "No records yet.",
+    "sortAscending": "sorted ascending",
+    "sortDescending": "sorted descending",
+    "technicalDetails": "Technical details",
+    "gene": "Gene",
+    "classification": "Classification",
+    "zygosity": "Copies",
+    "visibility": {
+      "only_you": "Only you",
+      "you_and_counselor": "You and your counselor",
+      "couple": "You and your partner"
+    },
+    "loopStates": {
+      "ResultIssued": "Result issued",
+      "PatientNotified": "You were notified",
+      "ComprehensionConfirmed": "Understanding checked",
+      "ConfirmatoryDone": "Confirmatory test done",
+      "CounselingDone": "Counseling done",
+      "ReproReferralDone": "Referral done",
+      "HumanClosure": "Closed by your counselor"
+    },
+    "stepOf": "Step {n} of {total}",
+    "youAreHere": "You are here",
+    "owner": "Owner",
+    "due": "Due",
+    "nextAction": "Next",
+    "completed": "Completed",
+    "upcoming": "Upcoming",
+    "messagesEmpty": "No messages yet. Messages from your care team will appear here.",
+    "gatePassed": "Checked by the safety gate",
+    "skipToContent": "Skip to content",
+    "confirm": "Confirm",
+    "consequences": "What happens",
+    "skipped": "Skipped",
+    "expandMenu": "Expand menu",
+    "collapseMenu": "Collapse menu",
+    "simulated": "Simulated",
+    "simulatedDetail": "Simulated environment: synthetic people, no real results."
+  },
+  "landing": {
+    "eyebrow": "Premarital and preconception results",
+    "headline": "Understand your results. Share only what you choose.",
+    "lede": "Your carrier results stay in your private vault. If you both agree, a private check compares your results and shows only what you share. Nothing else about either of you crosses over.",
+    "secondary": "See who does what",
+    "twoCirclesA": "Two",
+    "twoCirclesB": "circles",
+    "twoCirclesBody": "Each of you is a private circle. Only the overlap you both consent to is ever drawn, and only if there is one.",
+    "protectLabel": "How we protect you",
+    "protect": {
+      "privateTitle": "Private by design",
+      "privateBody": "Your partner never sees your results, only the shared finding you both agreed to check.",
+      "numbersTitle": "Numbers you can check",
+      "numbersBody": "Every number comes from a locked calculation. Tap it to see how it was counted.",
+      "peopleTitle": "People, not just software",
+      "peopleBody": "Any result that needs a conversation goes to a human genetic counselor.",
+      "decideTitle": "You decide",
+      "decideBody": "We explain. We never tell you what to do. You can withdraw consent at any time."
+    },
+    "venn": "Two partner circles with a consented overlap"
+  },
+  "signIn": {
+    "title": "Choose a synthetic person",
+    "body": "This stands in for national digital sign-in. Each card is a synthetic person from the five demo couples. Signing in shows only that person's own data.",
+    "partner": "Partner {role}",
+    "signInAs": "Sign in as {id}",
+    "working": "Signing in…"
+  },
+  "compat": {
+    "title": "Compatibility check",
+    "lede": "Compares only genes you both carry, and only with both consents.",
+    "stepper": "Compatibility steps",
+    "step1": "Invite",
+    "step2": "Both consent",
+    "step3": "Private check",
+    "myConsent": "I agree to a private compatibility check with my partner",
+    "myConsentHelp": "Valid for 24 hours. You can withdraw it at any time.",
+    "partnerStatus": "Your partner",
+    "partnerWaiting": "Waiting for your partner",
+    "partnerAgreed": "Your partner has agreed",
+    "simulatePartner": "Simulate partner agreeing",
+    "sharingTitle": "Sharing & consent",
+    "sharingYou": "You",
+    "sharingPartner": "Your partner",
+    "given": "Given",
+    "notGiven": "Not given",
+    "expires": "Expires {time}",
+    "revoke": "Withdraw my consent",
+    "revokeTitle": "Withdraw your consent?",
+    "revokeDescription": "The private check stops and you can start again later.",
+    "revokeConsequences": [
+      "The shared result is deleted for both of you.",
+      "Your partner is told that the check was stopped, not why.",
+      "Your own results stay in your private vault."
+    ],
+    "revokeConfirm": "Withdraw consent",
+    "revokeNone": "You have not given consent, so there is nothing to withdraw.",
+    "revoked": "Consent withdrawn. The shared result has been deleted.",
+    "consentGiven": "Consent given",
+    "run": "Run the private check",
+    "running": "Comparing privately…",
+    "needBoth": "Both of you must agree before the check can run.",
+    "compatible": "Compatible",
+    "compatibleBody": "No shared carrier finding was found between you on this test panel.",
+    "notZero": "This is not the same as zero risk. No test finds every carrier.",
+    "review": "Counselor review",
+    "reviewHeadline": "A counselor reviews this result first",
+    "reviewBody": "A genetic counselor will review your results with you before anything is treated as final.",
+    "shared": "Shared carrier finding",
+    "sharedBody": "You both carry a change in the same gene.",
+    "sharedGene": "Shared gene",
+    "chanceLabel": "Chance for each pregnancy that a child inherits the condition",
+    "iconCaption": "Each figure is one pregnancy. The highlighted figure shows the chance from your locked result.",
+    "carrierNotDx": "Being a carrier is not a diagnosis. Carriers are usually healthy.",
+    "judicial": "The premarital health certificate is issued regardless of this genetic result.",
+    "relativeMissing": "A comparison with unrelated couples is not part of this result. Your counselor can explain it.",
+    "messagesTitle": "Your result, explained",
+    "assistant": "Your result, explained",
+    "source": "Locked result from the risk calculator · contract {version}",
+    "error": "Something went wrong. Nothing was shared. Please try again.",
+    "consentError": "Your consent could not be saved. Nothing was shared.",
+    "signInTitle": "Sign in to check compatibility",
+    "signInBody": "The check needs both of you to agree. Choose a synthetic person to continue.",
+    "inviteTitle": "Invite your partner",
+    "inviteBody": "Your partner is invited in their own app. Nothing about you is shared.",
+    "consentTitle": "Both of you agree",
+    "checkTitle": "Run the private check",
+    "checkBody": "Takes a few seconds. Only the overlap, if any, is shown.",
+    "counselorTitle": "Your counselor",
+    "counselorBody": "A genetic counselor reviews every result and can talk it through with you.",
+    "counselorNext": "Next step",
+    "viewCare": "Open your care plan",
+    "checkUnderstanding": "Check your understanding",
+    "rerun": "Show my result"
+  },
+  "handoff": {
+    "label": "Counselor handoff",
+    "title": "A genetic counselor will contact you",
+    "body": "A human genetic counselor will offer you an appointment.",
+    "booking": "Booking request sent · target within 48 hours",
+    "simulated": "simulated"
+  },
+  "options": {
+    "title": "Things you might want to do",
+    "note": "These options are listed in no particular order. None is recommended over another.",
+    "counselTitle": "Talk it through",
+    "counselBody": "Meet a genetic counselor to go over what this result means for you.",
+    "learnTitle": "Learn about carriers",
+    "learnBody": "Read how being a carrier differs from having a condition.",
+    "questionsTitle": "Note your questions",
+    "questionsBody": "Write down anything you want to ask, at your own pace."
+  },
+  "results": {
+    "title": "My results",
+    "description": "Private to you.",
+    "conversation": "Needs a conversation",
+    "conversationHelp": "A genetic counselor will go through these with you.",
+    "info": "For your information",
+    "fallbackTitle": "A carrier finding",
+    "confirmatory": "This gene is hard to test, so a confirmatory test comes before any reassurance.",
+    "details": "Details",
+    "explainerLink": "See what this means",
+    "noneTitle": "No carrier findings on this panel",
+    "noneBody": "Nothing was found on this test panel. That is not the same as zero risk.",
+    "drawerMeaning": "What this means",
+    "drawerWho": "Who can see this",
+    "drawerWhoBody": "Only you. Your partner sees a gene only if you both carry it and you both agreed to the private check.",
+    "drawerConfirm": "Confirmatory test",
+    "drawerNext": "Next step",
+    "drawerNextBody": "You can talk this through with a genetic counselor at any time.",
+    "signInTitle": "Sign in to see your results",
+    "signInBody": "Your results are private. Choose a synthetic person to continue.",
+    "explainerAvailable": "A detailed explanation appears after your compatibility check."
+  },
+  "ds": {
+    "title": "Design system",
+    "description": "Every @evolve/ui component in every state. This page is also the visual-regression target.",
+    "theme": "Ledger theme",
+    "themeHelp": "Switch between the Clinic (citizen) and Ledger (counselor) themes.",
+    "sections": {
+      "tokens": "Tokens",
+      "buttons": "Buttons",
+      "forms": "Form controls",
+      "display": "Cards, chips and avatars",
+      "feedback": "Feedback and states",
+      "overlays": "Overlays",
+      "navigation": "Navigation",
+      "data": "Data",
+      "risk": "Locked numbers",
+      "patterns": "Patterns",
+      "shell": "Shell parts"
+    },
+    "sample": {
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "ghost": "Ghost",
+      "danger": "Danger",
+      "loading": "Saving",
+      "disabled": "Disabled",
+      "inputLabel": "Your question",
+      "inputHelp": "Your counselor sees this before your appointment.",
+      "inputError": "Please write at least one word.",
+      "placeholder": "Type here",
+      "selectLabel": "Preferred language",
+      "selectPlaceholder": "Choose a language",
+      "checkbox": "Remind me before my appointment",
+      "radioLegend": "How would you like to be contacted?",
+      "radioPhone": "Phone call",
+      "radioMessage": "Secure message",
+      "switch": "Share with my counselor",
+      "cardTitle": "Card title",
+      "cardBody": "Cards group related content. Flat cards sit on the page; raised cards float above it.",
+      "stat": "Results on file",
+      "alertInfo": "Your appointment request was received.",
+      "alertSuccess": "Consent saved.",
+      "alertWarning": "Your consent expires soon.",
+      "alertDanger": "We could not save your consent.",
+      "emptyTitle": "No appointments yet",
+      "emptyBody": "When a counselor offers a time, it appears here.",
+      "emptyAction": "Contact a counselor",
+      "toastTitle": "Consent saved",
+      "dialogOpen": "Open dialog",
+      "dialogTitle": "About this check",
+      "dialogBody": "The private check compares only the genes you both carry.",
+      "confirmOpen": "Open confirm dialog",
+      "drawerOpen": "Open drawer",
+      "drawerBody": "Detail content appears here.",
+      "tooltip": "Hover or focus me",
+      "tooltipText": "A short supplementary hint.",
+      "menu": "Open menu",
+      "tabA": "Overview",
+      "tabB": "Details",
+      "accordionQ": "What is a carrier?",
+      "accordionA": "A carrier has one copy of a gene change and is usually healthy.",
+      "tableCaption": "Sample consents",
+      "personName": "Synthetic person",
+      "threadTitle": "Messages",
+      "messageAuthor": "Your care team",
+      "messageText": "A genetic counselor reviews every result and can talk it through with you.",
+      "explainerMissing": "Not calculated example (a counselor explains)",
+      "findingSummary": "You carry one copy of a gene change. Carriers are usually healthy."
+    }
+  },
+  "home": {
+    "title": "Home",
+    "greeting": "Hello, {id}",
+    "description": "Your next step and recent activity.",
+    "nextStep": "Your next step",
+    "go": "Continue",
+    "results": "My results",
+    "resultsCount": "{count, plural, =0 {No findings} one {# finding} other {# findings}}",
+    "compatibility": "Compatibility",
+    "care": "Care plan",
+    "careNone": "Starts after your result",
+    "open": "Open",
+    "activity": "Recent activity",
+    "activityEmpty": "Nothing yet. Your own actions appear here.",
+    "activityAll": "See full history"
+  },
+  "activity": {
+    "line": "{who} {action} {object}",
+    "who": {
+      "you": "You",
+      "system": "System",
+      "counselor": "Counselor"
+    },
+    "action": {
+      "viewed": "viewed",
+      "submitted": "submitted",
+      "revoked": "withdrew",
+      "signed_in": "signed in to",
+      "other": "used"
+    },
+    "object": {
+      "results": "your results",
+      "messages": "your messages",
+      "home": "home",
+      "consent": "a consent",
+      "compatibility": "the compatibility check",
+      "care_plan": "your care plan",
+      "teachback": "the understanding check",
+      "sure": "the decision check",
+      "family_token": "a family token",
+      "session": "the app",
+      "notifications": "notifications",
+      "other": "an item"
+    }
+  },
+  "explainer": {
+    "title": "A negative result is not zero",
+    "lede": "No test finds every carrier, so a small chance remains.",
+    "for": "Your finding: {condition}",
+    "chanceLabel": "Chance for each pregnancy",
+    "relativeLabel": "Compared with an unrelated couple",
+    "referenceLabel": "Chance for an unrelated couple",
+    "partnerResidualLabel": "Chance a negative check misses a carrier",
+    "detectionTitle": "What the test can and cannot see",
+    "detectionDetected": "Found by the test",
+    "detectionMissed": "Not ruled out by a negative result",
+    "detectionCaption": "Detection rate for this gene, from the locked calculation.",
+    "detectionRateLabel": "Detection rate",
+    "noneTitle": "Nothing to explain yet",
+    "none": "Run your compatibility check first. Some results do not need this explanation.",
+    "fNote": "Your family relationship is included as context, not as a separate risk.",
+    "talk": "Talk it through",
+    "questionsTitle": "Your questions",
+    "questionsHelp": "Kept on this device for your appointment. Not sent anywhere.",
+    "questionsPlaceholder": "What would you like to ask?",
+    "questionsSave": "Save note",
+    "questionsSaved": "Saved on this device"
+  },
+  "teachback": {
+    "title": "Check your understanding",
+    "description": "Four quick statements to check our explanation.",
+    "progress": "Statement {n} of {total}",
+    "question": "Is this true or false?",
+    "agree": "True",
+    "disagree": "False",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Finish",
+    "doneTitle": "Thank you",
+    "passedBody": "You have the key points. Your care plan is updated.",
+    "notYetBody": "Some points are easy to mix up. A genetic counselor will go through them with you.",
+    "review": "The key points",
+    "again": "Go through it again",
+    "toCare": "Open your care plan",
+    "explain": {
+      "tb1": "Being a carrier is not the same as having the disease. Carriers are usually healthy.",
+      "tb2": "The chance applies to each pregnancy separately.",
+      "tb3": "No test finds every carrier, so a negative result leaves a small chance.",
+      "tb4": "Decisions about marriage and family are yours. The certificate is issued regardless of results."
+    },
+    "signInTitle": "Sign in to continue",
+    "signInBody": "Choose a synthetic person first.",
+    "notReadyTitle": "Available after your result",
+    "notReadyBody": "Run your compatibility check first."
+  },
+  "care": {
+    "title": "Care plan",
+    "description": "Where you are and what comes next.",
+    "timeline": "Your care path",
+    "timelineEmpty": "Your care path starts when your result is issued.",
+    "owner": {
+      "you": "You",
+      "system": "Automatic",
+      "counselor": "Genetic counselor",
+      "lab": "Laboratory (simulated)",
+      "clinic": "Clinic"
+    },
+    "next": {
+      "ResultIssued": "Read your result",
+      "PatientNotified": "Check your understanding",
+      "ComprehensionConfirmed": "Meet your counselor",
+      "ConfirmatoryDone": "Meet your counselor",
+      "CounselingDone": "Discuss referral options",
+      "ReproReferralDone": "Your counselor closes the episode",
+      "HumanClosure": "Nothing more is needed"
+    },
+    "tasks": "Tasks",
+    "tasksEmpty": "No tasks right now.",
+    "task": {
+      "confirmatory_test": "Confirmatory test",
+      "other": "Task"
+    },
+    "taskStatus": {
+      "requested": "Requested",
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "other": "Open"
+    },
+    "due": "Due {date}",
+    "appointments": "Appointments",
+    "appointmentsEmpty": "No appointment yet. A counselor will offer a time.",
+    "appointmentWith": "With {role}",
+    "options": "Options you can discuss",
+    "optionsNote": "Listed in no particular order. None is recommended over another.",
+    "eligibility": "Treatment coverage checks",
+    "eligibilityNote": "Simulated Thiqa checks; a specialist confirms.",
+    "eligibilityStatus": {
+      "met": "Met",
+      "not_met": "Not met",
+      "needs_review": "Needs review"
+    },
+    "eligibilityKey": {
+      "immediate_eligibility": "No waiting period",
+      "age": "Age",
+      "bmi": "BMI",
+      "cryopreservation": "Cryopreservation",
+      "post_pgtm_prenatal_confirmation": "After PGT-M",
+      "other": "Check"
+    },
+    "signInTitle": "Sign in to see your care plan",
+    "signInBody": "Choose a synthetic person first."
+  },
+  "sure": {
+    "title": "How sure do you feel?",
+    "description": "Four yes/no questions (SURE test). Answer for yourself.",
+    "items": [
+      "Do you know the benefits and risks of each option?",
+      "Are you clear about which benefits and risks matter most to you?",
+      "Do you have enough support and advice to make a choice?",
+      "Do you feel sure about the best choice for you?"
+    ],
+    "yes": "Yes",
+    "no": "No",
+    "submit": "Send answers",
+    "allYes": "Thank you for sharing.",
+    "followUp": "Thank you. A counselor will follow up on anything that feels unclear.",
+    "source": "SURE test, O'Connor and Légaré (2008). Wording and Arabic version: TODO(verify)."
+  },
+  "family": {
+    "title": "Family",
+    "description": "Offer screening to relatives without revealing who you are.",
+    "pick": "Finding",
+    "create": "Create family token",
+    "tokenTitle": "Family screening token",
+    "tokenHelp": "Relatives can show this code at a screening clinic.",
+    "expires": "Valid until {date}",
+    "copy": "Copy code",
+    "copied": "Code copied",
+    "share": "Share",
+    "shareSim": "Simulated: a share sheet would open here.",
+    "shared": "What is shared",
+    "sharedItems": [
+      "Which gene to test",
+      "Proof that the code is genuine (signed)"
+    ],
+    "notShared": "What is not shared",
+    "notSharedItems": [
+      "Your name or identity",
+      "Your partner or your results",
+      "Any other gene"
+    ],
+    "noneTitle": "No finding to share",
+    "noneBody": "Family tokens are only for your own carrier findings.",
+    "qrLabel": "QR code for the family screening token",
+    "signInTitle": "Sign in to create a family token",
+    "signInBody": "Choose a synthetic person first."
+  },
+  "privacy": {
+    "title": "Privacy & sharing",
+    "description": "Your consents and who used your data.",
+    "consents": "Consents",
+    "consentsEmpty": "No consents given or received.",
+    "scope": "Private compatibility check",
+    "headers": {
+      "scope": "What",
+      "direction": "Direction",
+      "status": "Status",
+      "expires": "Expires",
+      "actions": "Actions",
+      "when": "When",
+      "who": "Who",
+      "what": "What"
+    },
+    "direction": {
+      "given": "Given by you",
+      "received": "From your partner"
+    },
+    "status": {
+      "active": "Active",
+      "proposed": "Pending",
+      "inactive": "Withdrawn",
+      "rejected": "Declined"
+    },
+    "audit": "Access history",
+    "auditHelp": "Your own events only.",
+    "download": "Download my data",
+    "downloadHelp": "A file with your results, consents and history (simulated export).",
+    "downloaded": "Your data file was downloaded",
+    "signInTitle": "Sign in to see your privacy settings",
+    "signInBody": "Choose a synthetic person first."
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Updates about your results and care.",
+    "empty": "You have no notifications.",
+    "markAll": "Mark all as read",
+    "unread": "Unread",
+    "open": "Open",
+    "signInTitle": "Sign in to see notifications",
+    "signInBody": "Choose a synthetic person first."
+  },
+  "help": {
+    "title": "Help",
+    "description": "Answers, who does what, and how to reach a person.",
+    "glossary": "Glossary",
+    "terms": {
+      "carrier": [
+        "Carrier",
+        "Someone with one changed copy of a gene. Carriers are usually healthy."
+      ],
+      "recessive": [
+        "Recessive condition",
+        "Appears only when a child inherits a changed copy from both parents."
+      ],
+      "residual": [
+        "Residual risk",
+        "The small chance left after a negative test, because no test finds every carrier."
+      ],
+      "detection": [
+        "Detection rate",
+        "How often the test finds a carrier who is there."
+      ],
+      "privateCheck": [
+        "Private check",
+        "A comparison that reveals only genes you both carry, and only if you both agree."
+      ],
+      "related": [
+        "Related couples",
+        "Partners who are relatives. Sharing a gene change is more likely, so it is counted."
+      ]
+    },
+    "contact": "Talk to a person",
+    "contactBody": "A genetic counselor can explain your results in Arabic or English.",
+    "contactAction": "Request a call",
+    "contactSim": "Simulated: a counselor would call you.",
+    "promises": "Seven promises",
+    "promisesStatus": "On",
+    "promiseItems": [
+      [
+        "We never tell you what to decide",
+        "Options are listed without ranking. Decisions are yours."
+      ],
+      [
+        "Your partner sees only what you both share",
+        "Only genes you both carry, after you both agree."
+      ],
+      [
+        "Every number is locked",
+        "Numbers come from a checked calculation. Tap any number to see how."
+      ],
+      [
+        "The certificate is issued regardless",
+        "Your genetic result never blocks the marriage certificate."
+      ],
+      [
+        "A person reviews flagged results",
+        "Results that need a conversation always go to a genetic counselor."
+      ],
+      [
+        "Synthetic data only",
+        "This demo uses invented people. No real person is shown."
+      ],
+      [
+        "You can withdraw at any time",
+        "Withdrawing deletes the shared result for both of you."
+      ]
+    ],
+    "who": "Who does what"
+  },
+  "how": {
+    "people": {
+      "title": "People",
+      "sub": "Genetic counselors",
+      "t1": "Review every flagged result",
+      "t2": "Meet you and answer questions",
+      "t3": "Close your care path",
+      "pill": "on"
+    },
+    "calculator": {
+      "title": "Calculator",
+      "sub": "Deterministic risk engine",
+      "t1": "Relationship coefficients",
+      "t2": "Residual risk after a negative test",
+      "t3": "Locks every number",
+      "pill": "locked"
+    },
+    "assistant": {
+      "title": "Templates",
+      "sub": "Pre-approved wording",
+      "t1": "Plain Arabic or English",
+      "t2": "No arithmetic, no free text",
+      "t3": "Every message passes the safety gate",
+      "pill": "checked"
+    },
+    "caption": "A simulated system. No real person or clinical result is shown."
+  },
+  "api": {
+    "care": {
+      "option": {
+        "counseling": {
+          "title": "Talk it through with a genetic counselor",
+          "body": "A counselor can explain your results and answer your questions, at your pace."
+        },
+        "ivf_pgtm": {
+          "title": "IVF with PGT-M",
+          "body": "Available under Thiqa. PGT-M needs the written consent of both spouses. After PGT-M, confirmatory prenatal testing is still recommended."
+        },
+        "prenatal_diagnosis": {
+          "title": "Prenatal diagnosis",
+          "body": "A specialist and a genetic counselor can explain what this involves."
+        },
+        "own_choice": {
+          "title": "Your own choices about marriage and family",
+          "body": "Every option here is yours to consider or not. There is no right or wrong choice."
+        },
+        "family_screening": {
+          "title": "Offer screening to relatives",
+          "body": "You can create a private family screening token that does not identify you."
+        }
+      }
+    },
+    "eligibility": {
+      "immediate": {
+        "met": "No waiting period applies because of your screening result.",
+        "not_met": "A counselor can explain the usual waiting period."
+      },
+      "age": {
+        "met": "Your age is within the usual range.",
+        "needs_afc": "An ovarian reserve test is needed before this can be confirmed.",
+        "discouraged": "Treatment at this age is usually discouraged; a specialist can explain why.",
+        "under_minimum": "Treatment is available from adulthood.",
+        "female_partner_only": "This check applies to the female partner."
+      },
+      "bmi": {
+        "met": "Your BMI is within the usual range.",
+        "dietitian_referral": "Covered under Thiqa, together with a referral to a dietitian.",
+        "needs_review": "A specialist will review this with you.",
+        "female_partner_only": "This check applies to the female partner."
+      },
+      "cryo": {
+        "first_year": "Cryopreservation in the first year is noted for your care team."
+      },
+      "pgtm": {
+        "prenatal_confirmation": "PGT-M needs the written consent of both spouses. After PGT-M, confirmatory prenatal testing is recommended."
+      }
+    },
+    "home": {
+      "next": {
+        "invite": "Invite your partner to a private compatibility check",
+        "consent": "Your partner invited you. Review and give consent",
+        "wait_partner": "Waiting for your partner's consent",
+        "run_check": "Run your private compatibility check",
+        "teachback": "Check your understanding",
+        "counseling": "Book a conversation with a genetic counselor",
+        "care_plan": "View your care plan"
+      }
+    },
+    "notif": {
+      "result_ready": "Your result is ready",
+      "counselor_contact": "A genetic counselor will contact you",
+      "consent_received": "Your partner invited you to a compatibility check",
+      "consent_revoked": "A consent was withdrawn and shared results were removed",
+      "task_created": "A new step was added to your care plan",
+      "appointment": "An appointment was proposed (SIMULATED)",
+      "shared_gene": "Your partner shared one result with you",
+      "loop": {
+        "ResultIssued": "Your result was issued",
+        "PatientNotified": "You were notified of your result",
+        "ComprehensionConfirmed": "You confirmed your understanding",
+        "ConfirmatoryDone": "Your confirmatory testing is complete",
+        "CounselingDone": "Your counseling session is complete",
+        "ReproReferralDone": "Your referral is complete",
+        "HumanClosure": "Your counselor closed this care episode"
+      }
+    },
+    "teachback": {
+      "q": {
+        "carrier_not_diagnosis": "Being a carrier means I have the disease.",
+        "each_pregnancy": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+        "negative_not_zero": "A negative screening result can still leave a small chance of being a carrier.",
+        "you_decide": "Decisions about marriage and family are mine to make."
+      }
+    }
+  }
+}

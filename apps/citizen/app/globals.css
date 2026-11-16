@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "@evolve/ui/tokens.css";
+@import "@evolve/ui/theme.css";
+@import "@evolve/ui/base.css";
+
+/* Generate utilities used inside the design-system package (transpiled via transpilePackages). */
+@source "../../../packages/ui/src";
+

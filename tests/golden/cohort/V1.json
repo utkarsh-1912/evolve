@@ -1,0 +1,123 @@
+{
+  "contract_version": "1.0.0",
+  "seed": 0,
+  "synthetic": true,
+  "couples": [
+    {
+      "couple_id": "V1",
+      "relationship": {
+        "type": "first_cousins",
+        "paths": [
+          [
+            2,
+            2,
+            "0"
+          ],
+          [
+            2,
+            2,
+            "0"
+          ]
+        ]
+      },
+      "partners": [
+        {
+          "partner_id": "V1A",
+          "role": "A",
+          "sex": "female",
+          "age": 24,
+          "bmi": 23.4,
+          "calls": [
+            {
+              "hgnc_id": 4827,
+              "gene": "HBB",
+              "hgvs_c": "c.92+5G>C",
+              "hgvs_p": null,
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "P",
+              "variant_type": "snv",
+              "absent_gnomad": false,
+              "absent_clinvar": false,
+              "in_roh_gt_10mb": false
+            }
+          ],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial"
+          }
+        },
+        {
+          "partner_id": "V1B",
+          "role": "B",
+          "sex": "male",
+          "age": 27,
+          "bmi": 26.1,
+          "calls": [
+            {
+              "hgnc_id": 4827,
+              "gene": "HBB",
+              "hgvs_c": "c.92+5G>C",
+              "hgvs_p": null,
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "P",
+              "variant_type": "snv",
+              "absent_gnomad": false,
+              "absent_clinvar": false,
+              "in_roh_gt_10mb": false
+            }
+          ],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial"
+          }
+        }
+      ],
+      "expected": {
+        "source": "architecture-source §2.4 Vignette 1; docs/07 §3 (V1 HBB concordant)",
+        "relationship": {
+          "F": "1/16",
+          "R": "1/8"
+        },
+        "apsi": {
+          "status": "incompatible",
+          "intersection_hgnc_ids": [
+            4827
+          ]
+        },
+        "couple_escalation": true,
+        "genes": [
+          {
+            "gene": "HBB",
+            "hgnc_id": 4827,
+            "scenario": "concordant_positive",
+            "status": "ok",
+            "offspring_risk": "1/4",
+            "offspring_one_in": 4.0,
+            "escalate": true,
+            "audience": "couple"
+          }
+        ],
+        "required_actions": [
+          "mutual consent disclosure via APSI",
+          "escalate to genetic counselor",
+          "non-directive options",
+          "certificate issued regardless of result (P-14)"
+        ]
+      }
+    }
+  ]
+}

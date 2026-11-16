@@ -1,0 +1,14 @@
+{
+  "_note": "Verified against source doc §2.4 numbers. d values inferred (TODO(verify)). Changing this file requires orchestrator sign-off (G-04).",
+  "discordant": [
+    {"id": "V2-initial", "q": "0.106", "d": "0.92", "r": "0", "prior": 0.106, "posterior": 0.0094, "posterior_one_in": 106.4, "offspring_one_in": 425.7},
+    {"id": "V2-confirmatory", "q": "0.106", "d": "0.99", "r": "0", "prior": 0.106, "posterior": 0.00118, "posterior_one_in": 844.4, "offspring_one_in": 3377.6},
+    {"id": "V3-cousins", "q": "0.013", "d": "0.92", "r": "1/8", "prior": 0.13637, "posterior": 0.01248, "posterior_one_in": 80.2, "offspring_one_in": 320.6},
+    {"id": "V3-unrelated", "q": "0.013", "d": "0.92", "r": "0", "prior": 0.013, "posterior": 0.00105, "posterior_one_in": 950.0, "offspring_one_in": 3800.2}
+  ],
+  "wright": [
+    {"id": "first-cousins", "paths": [[2,2,0],[2,2,0]], "F": "1/16", "R": "1/8"},
+    {"id": "double-first-cousins", "paths": [[2,2,0],[2,2,0],[2,2,0],[2,2,0]], "F": "1/8", "R": "1/4"},
+    {"id": "first-cousins-inbred-grandparents", "paths": [[2,2,"1/16"],[2,2,"1/16"]], "F": "17/256", "R": "17/128"}
+  ]
+}

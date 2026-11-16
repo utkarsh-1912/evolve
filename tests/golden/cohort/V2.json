@@ -1,0 +1,109 @@
+{
+  "contract_version": "1.0.0",
+  "seed": 0,
+  "synthetic": true,
+  "couples": [
+    {
+      "couple_id": "V2",
+      "relationship": {
+        "type": "unrelated",
+        "paths": []
+      },
+      "partners": [
+        {
+          "partner_id": "V2A",
+          "role": "A",
+          "sex": "female",
+          "age": 29,
+          "bmi": 24.8,
+          "calls": [
+            {
+              "hgnc_id": 2600,
+              "gene": "CYP21A2",
+              "hgvs_c": "c.955C>T",
+              "hgvs_p": "p.(Gln319Ter)",
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "P",
+              "variant_type": "snv",
+              "absent_gnomad": false,
+              "absent_clinvar": false,
+              "in_roh_gt_10mb": false
+            }
+          ],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial"
+          }
+        },
+        {
+          "partner_id": "V2B",
+          "role": "B",
+          "sex": "male",
+          "age": 31,
+          "bmi": 27.9,
+          "calls": [],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial"
+          }
+        }
+      ],
+      "expected": {
+        "source": "architecture-source §2.4 Vignette 2; docs/07 §3; tests/golden/risk_vectors.json V2-*",
+        "relationship": {
+          "F": "0",
+          "R": "0"
+        },
+        "apsi": {
+          "status": "compatible",
+          "intersection_hgnc_ids": []
+        },
+        "couple_escalation": true,
+        "genes": [
+          {
+            "gene": "CYP21A2",
+            "hgnc_id": 2600,
+            "scenario": "discordant",
+            "status": "ok",
+            "screen_negative_partner": "B",
+            "assay_stage_b": "initial",
+            "q": "0.106",
+            "d": "0.92",
+            "prior": 0.106,
+            "posterior": 0.0094,
+            "posterior_one_in": 106.4,
+            "offspring_one_in": 425.7,
+            "offspring_one_in_display": "426",
+            "confirmatory_task_required": true,
+            "escalate": true,
+            "audience": "carrier_partner_only",
+            "visible_to": "A only (not in APSI intersection, P-06)",
+            "reference_if_confirmatory": {
+              "d": "0.99",
+              "posterior": 0.00118,
+              "posterior_one_in": 844.4,
+              "offspring_one_in": 3377.6
+            }
+          }
+        ],
+        "required_actions": [
+          "flag CYP21A2 technical complexity",
+          "FHIR Task for confirmatory testing of B before any reassurance (P-04)"
+        ]
+      }
+    }
+  ]
+}

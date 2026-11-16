@@ -1,0 +1,493 @@
+{
+  "meta": {
+    "title": "évolvé counselor workbench (SIMULATED)",
+    "description": "Counselor workbench for consented couple cases. Synthetic data only. Decision support, not a diagnosis."
+  },
+  "chrome": {
+    "envLabel": "Simulated environment",
+    "envDetail": "Synthetic data only · no real patients · integrations are simulated",
+    "arPending": "Arabic text is being prepared. Some text is shown in English for now.",
+    "brandDescriptor": "Counselor workbench",
+    "compliance": "Decision support for the counselor, not a diagnosis. The premarital health certificate is issued regardless of any genetic result.",
+    "footerEnv": "SIMULATED environment · synthetic data",
+    "simulated": "Simulated",
+    "nav": {
+      "queue": "Queue",
+      "cases": "Cases",
+      "calendar": "Calendar",
+      "reports": "Reports",
+      "designSystem": "Design system"
+    },
+    "lang": {
+      "switchTo": "العربية",
+      "switchToLang": "ar"
+    },
+    "search": {
+      "label": "Find a case by case ID",
+      "placeholder": "Case ID",
+      "submit": "Find case",
+      "help": "Case ID only. Searching by gene or by person is not available.",
+      "notFound": "No case matches that ID.",
+      "offShift": "Go on shift to open cases."
+    },
+    "shift": {
+      "label": "On shift",
+      "on": "On shift",
+      "off": "Off shift",
+      "turnedOn": "You are on shift. Case data is available.",
+      "turnedOff": "You are off shift. Case data is hidden."
+    },
+    "density": {
+      "label": "Compact rows",
+      "comfortable": "Comfortable",
+      "compact": "Compact"
+    },
+    "context": {
+      "label": "Session context",
+      "counselor": "Counselor",
+      "shift": "Shift",
+      "access": "Access",
+      "accessScopes": "Counselor scopes (SIMULATED sign-in)",
+      "notSignedIn": "Not signed in",
+      "scopesShort": "Scopes"
+    },
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "designSystem": "Design system"
+  },
+  "signIn": {
+    "title": "Counselor sign-in",
+    "description": "Simulated sign-in. No real accounts exist.",
+    "counselor": "Counselor account",
+    "submit": "Sign in (simulated)",
+    "shiftNote": "You start off shift. Case data appears only after you go on shift.",
+    "error": "Sign-in failed. Nothing was shared. You can try again."
+  },
+  "access": {
+    "viewingUnder": "Viewing under",
+    "coupleConsent": "couple consent",
+    "onShift": "on shift",
+    "granted": "granted",
+    "missing": "missing"
+  },
+  "gate": {
+    "signInBody": "Sign in as a counselor to see the case queue.",
+    "signInAction": "Go to sign-in",
+    "offShiftTitle": "You are off shift",
+    "offShiftBody": "Case data is available only while you are on shift (online access). Your shift status is recorded in the audit log.",
+    "goOnShift": "Go on shift",
+    "expired": "Your session ended. Sign in again to continue."
+  },
+  "triggers": {
+    "a": "Shared carrier gene",
+    "b": "Residual risk",
+    "c": "Expert review",
+    "d": "Understanding check",
+    "gate": "Message held",
+    "any": "Any trigger",
+    "explain": {
+      "a": "Trigger (a): both partners carry a change in the same gene. The couple needs a counseling appointment within the booking window.",
+      "b": "Trigger (b): one partner carries a change and the other screened negative. Residual risk remains, often at a technically complex locus. Confirm before any reassurance.",
+      "c": "Trigger (c): a variant of uncertain significance in a long run of homozygosity, a red-flag family history, or an atypical genotype. Automated clearance is suppressed.",
+      "d": "Trigger (d): a teach-back was not passed or SURE was below 4. A counselor talks it through.",
+      "gate": "A drafted message was held by the safety gate and was not sent. A counselor reviews the case."
+    }
+  },
+  "priority": {
+    "urgent": "Urgent",
+    "high": "High",
+    "normal": "Normal",
+    "any": "Any priority"
+  },
+  "status": {
+    "open": "Open",
+    "closed": "Closed",
+    "any": "Any status"
+  },
+  "coupleStatus": {
+    "no_active_loop": "No active care loop",
+    "consent_revoked_or_pending": "Consent withdrawn or pending"
+  },
+  "sla": {
+    "left": "{h} h {m} min left",
+    "overdue": "Overdue by {h} h {m} min",
+    "target": "48 h target",
+    "closed": "Closed"
+  },
+  "queue": {
+    "title": "Queue",
+    "description": "Open cases, nearest 48 h target first.",
+    "caption": "Counselor case queue",
+    "keyboard": "Keyboard: j / k to move, Enter to open.",
+    "filters": "Filters",
+    "trigger": "Trigger",
+    "priority": "Priority",
+    "status": "Status",
+    "views": "Saved views",
+    "saveView": "Save view",
+    "saveViewTitle": "Save these filters as a view",
+    "viewName": "View name",
+    "viewNameHelp": "Stored in this browser only.",
+    "save": "Save",
+    "deleteView": "Delete view {name}",
+    "builtIn": {
+      "open": "All open",
+      "urgent": "Urgent",
+      "understanding": "Understanding checks",
+      "closed": "Closed",
+      "all": "All cases"
+    },
+    "cols": {
+      "case": "Case",
+      "trigger": "Trigger",
+      "priority": "Priority",
+      "age": "Time to target",
+      "couple": "Care loop",
+      "assigned": "Assigned to",
+      "status": "Status"
+    },
+    "unassigned": "Unassigned",
+    "emptyTitle": "No cases match",
+    "emptyBody": "Change the filters or pick another view.",
+    "clear": "Clear filters"
+  },
+  "cases": {
+    "title": "Cases",
+    "description": "All cases, open and closed."
+  },
+  "case": {
+    "title": "Case {id}",
+    "couple": "Couple {id}",
+    "back": "Back to queue",
+    "listLabel": "Open cases",
+    "resize": "Resize the case list",
+    "notFoundTitle": "Case not found",
+    "notFoundBody": "There is no case with this ID, or it is not available to you.",
+    "closedChip": "Closed",
+    "tabs": {
+      "label": "Case sections",
+      "brief": "Brief",
+      "pedigree": "Pedigree",
+      "variants": "Variants",
+      "tasks": "Tasks",
+      "notes": "Notes",
+      "timeline": "Timeline"
+    },
+    "noConsentBody": "This section needs active consent from both partners. The couple's data was purged when consent was withdrawn, or consent is not yet given."
+  },
+  "brief": {
+    "title": "Consultation brief",
+    "trigger": "Why this case was opened",
+    "pedigree": "Family structure",
+    "relationship": "Relationship",
+    "wrightPaths": "Shared-ancestor paths (Wright)",
+    "familyHistory": "Family history",
+    "noFamilyHistory": "None recorded.",
+    "variants": "Consented variant summary",
+    "pendingTasks": "Pending tasks",
+    "noPendingTasks": "No pending tasks.",
+    "questions": "Couple's questions",
+    "noQuestions": "No questions recorded.",
+    "comprehension": "Understanding and decision comfort",
+    "teachback": "Teach-back",
+    "sure": "SURE",
+    "notTaken": "Not taken yet",
+    "passed": "Passed (score {score})",
+    "notPassed": "Not passed (score {score})",
+    "sureScore": "Score {score}",
+    "purged": "Consent was withdrawn. The couple's data was purged; only the case shell remains.",
+    "openVariants": "See locked figures in Variants"
+  },
+  "relationship": {
+    "unrelated": "Unrelated",
+    "first_cousins": "First cousins",
+    "double_first_cousins": "Double first cousins",
+    "second_cousins": "Second cousins",
+    "first_cousins_once_removed": "First cousins once removed",
+    "uncle_niece": "Uncle and niece",
+    "other": "Other relationship"
+  },
+  "pedigree": {
+    "title": "Family tree, {relationship}",
+    "fLabel": "F (genome-wide context only)",
+    "fNote": "F describes the genome-wide background. It is never used on its own to counsel risk for a tested gene when molecular results exist.",
+    "fMissing": "F is shown when at least one consented record carries it.",
+    "labels": {
+      "partnerA": "Partner A",
+      "partnerB": "Partner B",
+      "relative": "Relative",
+      "male": "Male",
+      "female": "Female",
+      "unknownSex": "Sex not recorded",
+      "affected": "Affected",
+      "unaffected": "Unaffected",
+      "union": "Union",
+      "consanguineousUnion": "Consanguineous union (double line)",
+      "loop": "Consanguinity loop: paths to shared ancestors",
+      "legend": "Legend",
+      "listHeading": "Individuals in this pedigree",
+      "parents": "Parents",
+      "noParents": "Not recorded",
+      "unplaced": "Position in the family not recorded",
+      "people": "{count} people"
+    }
+  },
+  "variants": {
+    "title": "Variants in consented scope",
+    "description": "Consented records only. Every figure is a locked value from the risk engine.",
+    "outside": "Outside consented scope",
+    "empty": "No consented variant records for this case.",
+    "gene": "Gene",
+    "scenario": "Scenario",
+    "statusLabel": "Status",
+    "audienceLabel": "Who sees this record",
+    "carrierRole": "Carrier",
+    "reasonLabel": "Reason",
+    "escalate": "Escalation",
+    "escalateYes": "Escalation required",
+    "escalateNo": "No escalation",
+    "offspring": "Chance for each pregnancy",
+    "posterior": "Remaining carrier chance (screen-negative partner)",
+    "reference": "Reference, unrelated couple",
+    "relative": "Compared with an unrelated couple",
+    "detection": "Assay detection rate",
+    "digest": "Locked record digest",
+    "scenarios": {
+      "concordant_positive": "Both partners carry (same gene)",
+      "discordant": "One partner carries; the other screened negative",
+      "concordant_negative": "Both screened negative",
+      "shared_vus_roh": "Shared uncertain variant in a run of homozygosity",
+      "atypical_genotype": "Atypical genotype"
+    },
+    "statuses": {
+      "ok": "Calculated",
+      "needs_counselor": "Needs counselor, no number"
+    },
+    "audiences": {
+      "couple": "Couple (consented intersection)",
+      "carrier_partner_only": "Carrier partner only",
+      "counselor_only": "Counselor only"
+    },
+    "roles": {
+      "A": "Partner A",
+      "B": "Partner B",
+      "none": "Not applicable"
+    },
+    "reasons": {
+      "missing_carrier_freq": "Carrier frequency not available",
+      "missing_detection_rate": "Detection rate not available",
+      "shared_vus_roh": "Shared uncertain variant in a run of homozygosity",
+      "atypical_genotype": "Atypical genotype",
+      "related_concordant_negative": "Related couple, both negative",
+      "perfect_detection": "Detection rate recorded as complete",
+      "not_in_panel": "Gene not in panel",
+      "none": "None"
+    }
+  },
+  "tasks": {
+    "title": "Tasks",
+    "description": "Tasks go only to the partners this case covers.",
+    "caption": "Tasks for this case",
+    "create": "Create task",
+    "kind": "Task type",
+    "kindPlaceholder": "Choose a task type",
+    "focus": "Gene focus (optional)",
+    "focusNone": "No gene focus",
+    "created": "Task created",
+    "updated": "Task updated",
+    "outsideConsent": "That task would reach someone outside the consented scope, so it was not created.",
+    "error": "The task could not be saved. Nothing was sent.",
+    "emptyTitle": "No tasks yet",
+    "emptyBody": "Create a task for the partners in this case.",
+    "cols": {
+      "kind": "Task",
+      "for": "For",
+      "status": "Status",
+      "due": "Due",
+      "focus": "Focus",
+      "actions": "Actions"
+    },
+    "kinds": {
+      "confirmatory_test": "Confirmatory test",
+      "appointment": "Counseling appointment",
+      "follow_up": "Follow-up",
+      "referral": "Referral",
+      "sure_check": "SURE check"
+    },
+    "statuses": {
+      "requested": "Requested",
+      "accepted": "Accepted",
+      "in-progress": "In progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "start": "Start",
+    "complete": "Complete",
+    "cancel": "Cancel task",
+    "cancelTitle": "Cancel this task?",
+    "cancelConsequence1": "The task is marked cancelled for the partner it was addressed to.",
+    "cancelConsequence2": "The change is recorded in the audit log.",
+    "keep": "Keep task"
+  },
+  "notes": {
+    "title": "Notes",
+    "internal": "Notes are internal to the care team. They are never sent to patients.",
+    "label": "New note",
+    "help": "Up to 5,000 characters. The audit log stores the note ID, not the text.",
+    "add": "Add note",
+    "added": "Note added",
+    "error": "The note could not be saved.",
+    "required": "Write a note first.",
+    "emptyTitle": "No notes yet",
+    "closureKind": "Closure summary",
+    "noteKind": "Note"
+  },
+  "timeline": {
+    "loop": "Care loop",
+    "activity": "Activity",
+    "activityEmpty": "No activity recorded yet.",
+    "owner": {
+      "ResultIssued": "System",
+      "PatientNotified": "System",
+      "ComprehensionConfirmed": "Patient",
+      "ConfirmatoryDone": "Laboratory (simulated)",
+      "CounselingDone": "Genetic counselor",
+      "ReproReferralDone": "Genetic counselor",
+      "HumanClosure": "Genetic counselor only"
+    },
+    "actors": {
+      "system": "System",
+      "partner": "Patient",
+      "counselor": "Counselor"
+    },
+    "actions": {
+      "counselor_case_open": "Case opened",
+      "note_create": "Note added",
+      "task_update": "Task updated",
+      "case_closure": "Human closure documented",
+      "task_create": "Task created"
+    },
+    "loopEntry": "Care loop: {state}"
+  },
+  "actions": {
+    "label": "Case actions",
+    "advance": "Advance care loop",
+    "advanceTitle": "Advance the care loop",
+    "advanceTo": "Move to",
+    "advanceHelp": "The loop only moves forward. Human closure has its own action.",
+    "advancePlaceholder": "Choose the next state",
+    "advanceSkips": "These steps will be recorded as skipped: {states}",
+    "advanceConfirm": "Advance",
+    "advanced": "Care loop advanced",
+    "advanceError": "The care loop could not be advanced.",
+    "noForward": "No further state is available before human closure.",
+    "sure": "SURE outcome",
+    "sureTitle": "SURE outcome",
+    "sureBody": "Each partner answers SURE in their own app. A score below 4 opens an understanding-check case.",
+    "sureRecorded": "Recorded results",
+    "sureSend": "Send a SURE check task (simulated)",
+    "sureSent": "SURE check task sent",
+    "schedule": "Schedule session",
+    "scheduleTitle": "Schedule a counseling session?",
+    "scheduleConsequence1": "Creates an appointment task for the partners this case covers.",
+    "scheduleConsequence2": "Records the booking against the 48 h target.",
+    "scheduleConsequence3": "The calendar is simulated. No real booking is made.",
+    "scheduleConfirm": "Schedule (simulated)",
+    "scheduled": "Session scheduled (simulated)",
+    "closure": "Document human closure",
+    "closureTitle": "Document human closure",
+    "closureLabel": "Closure summary",
+    "closureHelp": "Internal summary for the record. It is never sent to patients.",
+    "closureRequired": "Write a closure summary first.",
+    "closureNext": "Review and confirm",
+    "closureConfirmTitle": "Close this case as a human counselor?",
+    "closureConsequence1": "The couple's care loop moves to Human closure. Only a counselor can do this.",
+    "closureConsequence2": "Every open case for this couple is closed.",
+    "closureConsequence3": "Your summary is stored as an internal note and the action is audited.",
+    "closureConsequence4": "This cannot be undone from the workbench.",
+    "closureConfirm": "Close case",
+    "closed": "Case closed by counselor",
+    "closureError": "The case could not be closed.",
+    "closedNotice": "This case is closed. Actions are no longer available.",
+    "simulatedNote": "Scheduling is simulated."
+  },
+  "calendar": {
+    "title": "Calendar",
+    "description": "Counseling appointments created from cases.",
+    "caption": "Scheduled counseling appointments",
+    "emptyTitle": "No appointments",
+    "emptyBody": "Schedule a session from a case.",
+    "cols": {
+      "case": "Case",
+      "for": "For",
+      "status": "Status",
+      "created": "Created"
+    }
+  },
+  "reports": {
+    "title": "Reports",
+    "description": "Workload counts for the queue, not clinical findings.",
+    "open": "Open cases",
+    "closed": "Closed cases",
+    "overdue": "Past the 48 h target",
+    "byTrigger": "Open cases by trigger",
+    "caption": "Open cases by trigger"
+  },
+  "ds": {
+    "title": "Counselor design system",
+    "description": "Workbench components in their states (Ledger theme, sample data).",
+    "pedigree": "PedigreeGraph",
+    "chips": "Trigger and priority chips",
+    "sla": "SLA timer",
+    "access": "Access basis",
+    "outside": "Outside-consent placeholder"
+  },
+  "common": {
+    "loading": "Loading",
+    "retry": "Try again",
+    "close": "Close",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "ui": {
+    "loopStates": {
+      "ResultIssued": "Result issued",
+      "PatientNotified": "Patient notified",
+      "ComprehensionConfirmed": "Understanding confirmed",
+      "ConfirmatoryDone": "Confirmatory test done",
+      "CounselingDone": "Counseling done",
+      "ReproReferralDone": "Referral done",
+      "HumanClosure": "Human closure"
+    },
+    "permissionTitle": "Access needed",
+    "errorBody": "Nothing was changed. You can try again.",
+    "rowsEmpty": "No records yet.",
+    "visibility": {
+      "only_you": "Only the partner",
+      "you_and_counselor": "Partner and counselor",
+      "couple": "Both partners"
+    },
+    "expandMenu": "Expand menu",
+    "collapseMenu": "Collapse menu",
+    "simulated": "Simulated",
+    "simulatedDetail": "Synthetic data only. Integrations are simulated.",
+    "skipped": "Skipped"
+  },
+  "aiDraft": {
+    "title": "AI draft summary",
+    "intro": "An optional English draft for you, built from the consented brief. Check it before using any of it.",
+    "generate": "Generate AI draft",
+    "regenerate": "Generate again",
+    "label": "AI draft ({provider}): review before use · not shown to the patient",
+    "providerSarvam": "Sarvam",
+    "providerStub": "offline stub",
+    "meta": "Provider: {provider} · model {model}",
+    "inputs": "Built from: {fields}. Not stored on the case.",
+    "copyToNotes": "Copy to a new note (you review and save)",
+    "blocked": "The safety gate held this draft. No text is shown.",
+    "unavailable": "AI draft unavailable",
+    "unavailableBody": "The AI service did not respond. The rest of the case works as usual.",
+    "error": "The AI draft could not be generated."
+  }
+}

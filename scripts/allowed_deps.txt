@@ -1,0 +1,3 @@
+# Allow-list (G-06). New dependency = PR line "name — justification".
+python: fastapi pydantic cryptography fhir.resources phenopackets pytest hypothesis jsonschema httpx uvicorn
+node: next react react-dom typescript tailwindcss next-intl playwright @playwright/test @axe-core/playwright @tailwindcss/postcss postcss eslint eslint-config-next @types/* @radix-ui/* lucide-react class-variance-authority clsx tailwind-merge @tanstack/react-table @tanstack/react-query (docs/09; no Storybook, no other UI kits)

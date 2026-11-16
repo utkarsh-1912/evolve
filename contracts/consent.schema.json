@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "consent.schema.json",
+  "title": "Consent (FHIR R4 Consent subset) for the APSI compatibility check",
+  "type": "object",
+  "required": [
+    "resourceType",
+    "id",
+    "status",
+    "patient",
+    "purpose",
+    "counterpart",
+    "period",
+    "signature"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "resourceType": {
+      "const": "Consent"
+    },
+    "id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "active",
+        "inactive",
+        "rejected"
+      ]
+    },
+    "patient": {
+      "type": "string",
+      "description": "partner_id"
+    },
+    "purpose": {
+      "enum": [
+        "apsi-couple-compatibility",
+        "disclose-gene-to-partner"
+      ]
+    },
+    "counterpart": {
+      "type": "string",
+      "description": "partner_id of the other partner"
+    },
+    "period": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "signature": {
+      "type": "string",
+      "description": "HMAC/Ed25519 signature by the consent service over the canonical consent"
+    },
+    "scope": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Only for disclose-gene-to-partner: {hgnc_id:int} \u2014 exactly one gene, the grantor's own complex-locus call",
+      "properties": {
+        "hgnc_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "hgnc_id"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "apsi_result.schema.json",
+  "title": "APSI couple compatibility result - the ONLY cross-partner data that may reach the couple workspace (P-06)",
+  "type": "object",
+  "required": ["contract_version", "status", "compatible", "shared_hgnc_ids", "consent_ids", "audit_event_id"],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {"const": "1.0.0"},
+    "status": {"enum": ["ok", "refused_no_consent", "refused_invalid_signature"]},
+    "compatible": {"type": ["boolean", "null"], "description": "true iff intersection empty; null when refused"},
+    "shared_hgnc_ids": {"type": "array", "items": {"type": "integer"}, "uniqueItems": true},
+    "consent_ids": {"type": "array", "items": {"type": "string"}, "maxItems": 2},
+    "audit_event_id": {"type": "string"}
+  }
+}

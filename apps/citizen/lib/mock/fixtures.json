@@ -1,0 +1,3214 @@
+{
+ "_label": "SIMULATED. Synthetic data only. Recorded by apps/citizen/scripts/gen_mock_fixtures.py from the real backend (services/api, in-process) over V1..V5. Numbers come from services/risk_engine. Do not edit by hand.",
+ "vignettes": [
+  {
+   "couple_id": "V1",
+   "label": "Vignette 1 - first cousins",
+   "partner_ids": [
+    "V1A",
+    "V1B"
+   ]
+  },
+  {
+   "couple_id": "V2",
+   "label": "Vignette 2 - unrelated",
+   "partner_ids": [
+    "V2A",
+    "V2B"
+   ]
+  },
+  {
+   "couple_id": "V3",
+   "label": "Vignette 3 - first cousins",
+   "partner_ids": [
+    "V3A",
+    "V3B"
+   ]
+  },
+  {
+   "couple_id": "V4",
+   "label": "Vignette 4 - unrelated",
+   "partner_ids": [
+    "V4A",
+    "V4B"
+   ]
+  },
+  {
+   "couple_id": "V5",
+   "label": "Vignette 5 - double first cousins",
+   "partner_ids": [
+    "V5A",
+    "V5B"
+   ]
+  }
+ ],
+ "partners": {
+  "V1A": {
+   "couple_id": "V1",
+   "counterpart": "V1B",
+   "vault": {
+    "partner_id": "V1A",
+    "calls": [
+     {
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "classification": "P",
+      "zygosity": "het",
+      "plain_en": "You carry one pathogenic (disease-causing) change in HBB. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one pathogenic (disease-causing) change in HBB. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": false,
+      "condition": "Beta-thalassemia / sickle cell disease",
+      "novelty": {
+       "absent_gnomad": false,
+       "absent_clinvar": false
+      }
+     }
+    ],
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "scenario": "concordant_positive",
+      "status": "ok",
+      "fusage": "genome_wide_context_only",
+      "audience": "couple",
+      "carrier_role": null,
+      "reason": null,
+      "F": 0.0625,
+      "offspring_risk": 0.25,
+      "offspring_risk_one_in": "1 in 4",
+      "offspring_risk_one_in_ar": "1 من كل 4",
+      "escalate": true,
+      "digest": "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     }
+    ],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": false,
+     "shared_hgnc_ids": [
+      4827
+     ],
+     "consent_ids": [
+      "consent-fc7ac33352bd85e84e682db1",
+      "consent-282bbd929e78664a17157fe5"
+     ],
+     "audit_event_id": "audit-3c99b7203fada15c"
+    },
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "scenario": "concordant_positive",
+      "status": "ok",
+      "fusage": "genome_wide_context_only",
+      "audience": "couple",
+      "carrier_role": null,
+      "reason": null,
+      "F": 0.0625,
+      "offspring_risk": 0.25,
+      "offspring_risk_one_in": "1 in 4",
+      "offspring_risk_one_in_ar": "1 من كل 4",
+      "escalate": true,
+      "digest": "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     }
+    ],
+    "messages": [
+     {
+      "id": "msg-d35adf2348c7",
+      "to": "V1A",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: you both carry a change in the same gene: HBB. For each pregnancy, the chance that a child inherits a changed copy of HBB from both of you is 1 in 4. Options that couples in this situation can discuss with a counselor, in no particular order: IVF with PGT-M under Thiqa (this needs the written consent of both spouses), prenatal diagnosis, and your own choices about marriage and family. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [
+       "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+      ],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:51.913050Z"
+     },
+     {
+      "id": "msg-9993c021cf83",
+      "to": "V1A",
+      "lang": "en",
+      "kind": "escalation",
+      "text": "Because you both carry a change in the same gene, a genetic counselor will contact you. The aim is to book this within 48 hours.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:51.915948Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages": [
+    {
+     "id": "msg-d35adf2348c7",
+     "to": "V1A",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: you both carry a change in the same gene: HBB. For each pregnancy, the chance that a child inherits a changed copy of HBB from both of you is 1 in 4. Options that couples in this situation can discuss with a counselor, in no particular order: IVF with PGT-M under Thiqa (this needs the written consent of both spouses), prenatal diagnosis, and your own choices about marriage and family. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [
+      "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:51.913050Z"
+    },
+    {
+     "id": "msg-9993c021cf83",
+     "to": "V1A",
+     "lang": "en",
+     "kind": "escalation",
+     "text": "Because you both carry a change in the same gene, a genetic counselor will contact you. The aim is to book this within 48 hours.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:51.915948Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:51.892203Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:51.933660Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     },
+     {
+      "id": "ivf_pgtm",
+      "title_key": "care.option.ivf_pgtm.title",
+      "body_key": "care.option.ivf_pgtm.body"
+     },
+     {
+      "id": "own_choice",
+      "title_key": "care.option.own_choice.title",
+      "body_key": "care.option.own_choice.body"
+     },
+     {
+      "id": "prenatal_diagnosis",
+      "title_key": "care.option.prenatal_diagnosis.title",
+      "body_key": "care.option.prenatal_diagnosis.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      },
+      {
+       "key": "post_pgtm_prenatal_confirmation",
+       "status": "needs_review",
+       "note_key": "eligibility.pgtm.prenatal_confirmation"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-a3f2f5d90632",
+     "ts": "2026-11-15T16:13:51.933686Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-0b1e8e12f421",
+     "ts": "2026-11-15T16:13:51.915990Z",
+     "kind": "escalation",
+     "title_key": "notif.counselor_contact",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-d6e3e59bc9e4",
+     "ts": "2026-11-15T16:13:51.913103Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-80711441c323",
+     "ts": "2026-11-15T16:13:51.892231Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-9d14097343f1",
+     "ts": "2026-11-15T16:13:51.735959Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {
+    "4827": {
+     "token": {
+      "hgnc_id": 4827,
+      "variant_digest": "38a0fbe651f0f31a06ed7c8c9ddc0eee8cd21c3d245b525782c310a76ecf48aa",
+      "issued_at": "2026-11-15T16:13:51.956866Z",
+      "expiry": "2027-05-14T16:13:51.956866Z",
+      "signature": "ZxGrj_Wlgo8SvY9DA4-JqtAlvcwY7sJIVvfik3MhvyzJsN8z9D7-fqTWQ-_Q2bDQvNqVsfGl1JCjIUWSOOrVBg"
+     },
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjUxLjk1Njg2NloiLCJoZ25jX2lkIjo0ODI3LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjUxLjk1Njg2NloiLCJzaWduYXR1cmUiOiJaeEdyal9XbGdvOFN2WTlEQTQtSnF0QWx2Y3dZN3NKSVZ2ZmlrM01odnl6SnNOOHo5RDctZnFUV1EtX1EyYkRRdk5xVnNmR2wxSkNqSVVXU09PclZCZyIsInZhcmlhbnRfZGlnZXN0IjoiMzhhMGZiZTY1MWYwZjMxYTA2ZWQ3YzhjOWRkYzBlZWU4Y2QyMWMzZDI0NWI1MjU3ODJjMzEwYTc2ZWNmNDhhYSJ9",
+     "expires_at": "2027-05-14T16:13:51.956866Z"
+    }
+   }
+  },
+  "V1B": {
+   "couple_id": "V1",
+   "counterpart": "V1A",
+   "vault": {
+    "partner_id": "V1B",
+    "calls": [
+     {
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "classification": "P",
+      "zygosity": "het",
+      "plain_en": "You carry one pathogenic (disease-causing) change in HBB. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one pathogenic (disease-causing) change in HBB. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": false,
+      "condition": "Beta-thalassemia / sickle cell disease",
+      "novelty": {
+       "absent_gnomad": false,
+       "absent_clinvar": false
+      }
+     }
+    ],
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "scenario": "concordant_positive",
+      "status": "ok",
+      "fusage": "genome_wide_context_only",
+      "audience": "couple",
+      "carrier_role": null,
+      "reason": null,
+      "F": 0.0625,
+      "offspring_risk": 0.25,
+      "offspring_risk_one_in": "1 in 4",
+      "offspring_risk_one_in_ar": "1 من كل 4",
+      "escalate": true,
+      "digest": "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     }
+    ],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": false,
+     "shared_hgnc_ids": [
+      4827
+     ],
+     "consent_ids": [
+      "consent-fc7ac33352bd85e84e682db1",
+      "consent-282bbd929e78664a17157fe5"
+     ],
+     "audit_event_id": "audit-b784c7cdbf8ded3f"
+    },
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "scenario": "concordant_positive",
+      "status": "ok",
+      "fusage": "genome_wide_context_only",
+      "audience": "couple",
+      "carrier_role": null,
+      "reason": null,
+      "F": 0.0625,
+      "offspring_risk": 0.25,
+      "offspring_risk_one_in": "1 in 4",
+      "offspring_risk_one_in_ar": "1 من كل 4",
+      "escalate": true,
+      "digest": "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     }
+    ],
+    "messages": [
+     {
+      "id": "msg-48b5e032093e",
+      "to": "V1B",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: you both carry a change in the same gene: HBB. For each pregnancy, the chance that a child inherits a changed copy of HBB from both of you is 1 in 4. Options that couples in this situation can discuss with a counselor, in no particular order: IVF with PGT-M under Thiqa (this needs the written consent of both spouses), prenatal diagnosis, and your own choices about marriage and family. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [
+       "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+      ],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:52.217184Z"
+     },
+     {
+      "id": "msg-861577b2629c",
+      "to": "V1B",
+      "lang": "en",
+      "kind": "escalation",
+      "text": "Because you both carry a change in the same gene, a genetic counselor will contact you. The aim is to book this within 48 hours.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:52.220494Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages": [
+    {
+     "id": "msg-48b5e032093e",
+     "to": "V1B",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: you both carry a change in the same gene: HBB. For each pregnancy, the chance that a child inherits a changed copy of HBB from both of you is 1 in 4. Options that couples in this situation can discuss with a counselor, in no particular order: IVF with PGT-M under Thiqa (this needs the written consent of both spouses), prenatal diagnosis, and your own choices about marriage and family. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [
+      "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:52.217184Z"
+    },
+    {
+     "id": "msg-861577b2629c",
+     "to": "V1B",
+     "lang": "en",
+     "kind": "escalation",
+     "text": "Because you both carry a change in the same gene, a genetic counselor will contact you. The aim is to book this within 48 hours.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:52.220494Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:52.179009Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:52.220617Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     },
+     {
+      "id": "ivf_pgtm",
+      "title_key": "care.option.ivf_pgtm.title",
+      "body_key": "care.option.ivf_pgtm.body"
+     },
+     {
+      "id": "own_choice",
+      "title_key": "care.option.own_choice.title",
+      "body_key": "care.option.own_choice.body"
+     },
+     {
+      "id": "prenatal_diagnosis",
+      "title_key": "care.option.prenatal_diagnosis.title",
+      "body_key": "care.option.prenatal_diagnosis.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      },
+      {
+       "key": "post_pgtm_prenatal_confirmation",
+       "status": "needs_review",
+       "note_key": "eligibility.pgtm.prenatal_confirmation"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-bdff4ac69d8a",
+     "ts": "2026-11-15T16:13:52.220676Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-b219dc2f4bcb",
+     "ts": "2026-11-15T16:13:52.220568Z",
+     "kind": "escalation",
+     "title_key": "notif.counselor_contact",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-cde06a817b14",
+     "ts": "2026-11-15T16:13:52.217221Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-bd2bd4f1b958",
+     "ts": "2026-11-15T16:13:52.179070Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-9af29753769c",
+     "ts": "2026-11-15T16:13:51.720209Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {
+    "4827": {
+     "token": {
+      "hgnc_id": 4827,
+      "variant_digest": "38a0fbe651f0f31a06ed7c8c9ddc0eee8cd21c3d245b525782c310a76ecf48aa",
+      "issued_at": "2026-11-15T16:13:52.244538Z",
+      "expiry": "2027-05-14T16:13:52.244538Z",
+      "signature": "mLSf2pzOVeCVsLOIuuTseu1qfvchK2SR40fBxm91T7ZSnmaoiHju2K-z-il0GcqQ4OPmm_AXxquihXs6jB90Ag"
+     },
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjUyLjI0NDUzOFoiLCJoZ25jX2lkIjo0ODI3LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjUyLjI0NDUzOFoiLCJzaWduYXR1cmUiOiJtTFNmMnB6T1ZlQ1ZzTE9JdXVUc2V1MXFmdmNoSzJTUjQwZkJ4bTkxVDdaU25tYW9pSGp1Mkstei1pbDBHY3FRNE9QbW1fQVh4cXVpaFhzNmpCOTBBZyIsInZhcmlhbnRfZGlnZXN0IjoiMzhhMGZiZTY1MWYwZjMxYTA2ZWQ3YzhjOWRkYzBlZWU4Y2QyMWMzZDI0NWI1MjU3ODJjMzEwYTc2ZWNmNDhhYSJ9",
+     "expires_at": "2027-05-14T16:13:52.244538Z"
+    }
+   }
+  },
+  "V2A": {
+   "couple_id": "V2",
+   "counterpart": "V2B",
+   "vault": {
+    "partner_id": "V2A",
+    "calls": [
+     {
+      "gene": "CYP21A2",
+      "hgnc_id": 2600,
+      "classification": "P",
+      "zygosity": "het",
+      "plain_en": "You carry one pathogenic (disease-causing) change in CYP21A2. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one pathogenic (disease-causing) change in CYP21A2. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": true,
+      "condition": "Congenital adrenal hyperplasia (21-hydroxylase deficiency)",
+      "novelty": {
+       "absent_gnomad": false,
+       "absent_clinvar": false
+      }
+     }
+    ],
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "CYP21A2",
+      "hgnc_id": 2600,
+      "scenario": "discordant",
+      "status": "ok",
+      "fusage": "genome_wide_context_only",
+      "audience": "carrier_partner_only",
+      "carrier_role": "A",
+      "reason": null,
+      "F": 0.0,
+      "offspring_risk": 0.002349082528144668,
+      "offspring_risk_one_in": "1 in 426",
+      "offspring_risk_one_in_ar": "1 من كل 426",
+      "prior_carrier_b": 0.106,
+      "posterior_carrier_b": 0.009396330112578672,
+      "posterior_carrier_b_one_in": "1 in 106",
+      "posterior_carrier_b_one_in_ar": "1 من كل 106",
+      "detection_rate": 0.92,
+      "relative_to_unrelated": null,
+      "relative_to_unrelated_display": null,
+      "relative_to_unrelated_display_ar": null,
+      "reference_unrelated_one_in": "1 in 426",
+      "reference_unrelated_one_in_ar": "1 من كل 426",
+      "escalate": true,
+      "digest": "b3fa6fa6900f8f1af04d795e9a3a906bde54f8c27aafa46892c61910973eda0e"
+     }
+    ],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-4d7dec5307d3e852bd558371",
+      "consent-cad43fca1497b3fc305570fe"
+     ],
+     "audit_event_id": "audit-f6202cee2eea4be0"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-bc1ea6f1aaff",
+      "to": "V2A",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:52.623310Z"
+     },
+     {
+      "id": "msg-1f62e9e68dca",
+      "to": "V2A",
+      "lang": "en",
+      "kind": "escalation",
+      "text": "A genetic counselor will contact you to go through your private result with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:52.644577Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages": [
+    {
+     "id": "msg-bc1ea6f1aaff",
+     "to": "V2A",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:52.623310Z"
+    },
+    {
+     "id": "msg-0868eba6b68b",
+     "to": "V2A",
+     "lang": "en",
+     "kind": "explainer",
+     "text": "Your own carrier results. They are private and shown only to you. This is decision support, not a diagnosis or medical advice. You carry one changed copy of CYP21A2. Screening cannot detect every carrier of this gene, so a negative screen does not fully rule it out: the chance that a person with a negative screen is still a carrier is about 1 in 106. For your couple, the chance that a pregnancy is affected is about 1 in 426. Because CYP21A2 is technically hard to test, confirmatory testing is recommended before any reassurance. Being a carrier is not a diagnosis of disease. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [
+      "b3fa6fa6900f8f1af04d795e9a3a906bde54f8c27aafa46892c61910973eda0e"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:52.642554Z"
+    },
+    {
+     "id": "msg-1f62e9e68dca",
+     "to": "V2A",
+     "lang": "en",
+     "kind": "escalation",
+     "text": "A genetic counselor will contact you to go through your private result with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:52.644577Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:52.609081Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:52.660457Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [
+     {
+      "id": "task-aeca318cc622",
+      "kind": "confirmatory_test",
+      "status": "requested",
+      "due": "2026-11-29T16:13:52.608999Z"
+     }
+    ],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-46c6114c8af3",
+     "ts": "2026-11-15T16:13:52.660481Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-9ac6047b6a94",
+     "ts": "2026-11-15T16:13:52.644617Z",
+     "kind": "escalation",
+     "title_key": "notif.counselor_contact",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-f27f9cbea3d9",
+     "ts": "2026-11-15T16:13:52.623371Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-cef14cc28eac",
+     "ts": "2026-11-15T16:13:52.609094Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-08f0cfb5c5e8",
+     "ts": "2026-11-15T16:13:52.609070Z",
+     "kind": "task",
+     "title_key": "notif.task_created",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-dad144f390fe",
+     "ts": "2026-11-15T16:13:52.475184Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {
+    "2600": {
+     "token": {
+      "hgnc_id": 2600,
+      "variant_digest": "aeb0b11b729ee482d1bf6ea469618c766897e5b5ae64bbff45d4eabb53db741f",
+      "issued_at": "2026-11-15T16:13:52.684517Z",
+      "expiry": "2027-05-14T16:13:52.684517Z",
+      "signature": "Sbs6Yhxz2YMaIl6SJ1Zs-WeP2GTBYwzcfiCBSlUMn6x1RYUNQejYEBsyyE4r6ZUVAwn-EI2EKB5a8yPNpkz0Dg"
+     },
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjUyLjY4NDUxN1oiLCJoZ25jX2lkIjoyNjAwLCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjUyLjY4NDUxN1oiLCJzaWduYXR1cmUiOiJTYnM2WWh4ejJZTWFJbDZTSjFacy1XZVAyR1RCWXd6Y2ZpQ0JTbFVNbjZ4MVJZVU5RZWpZRUJzeXlFNHI2WlVWQXduLUVJMkVLQjVhOHlQTnBrejBEZyIsInZhcmlhbnRfZGlnZXN0IjoiYWViMGIxMWI3MjllZTQ4MmQxYmY2ZWE0Njk2MThjNzY2ODk3ZTViNWFlNjRiYmZmNDVkNGVhYmI1M2RiNzQxZiJ9",
+     "expires_at": "2027-05-14T16:13:52.684517Z"
+    }
+   }
+  },
+  "V2B": {
+   "couple_id": "V2",
+   "counterpart": "V2A",
+   "vault": {
+    "partner_id": "V2B",
+    "calls": [],
+    "records": [],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-4d7dec5307d3e852bd558371",
+      "consent-cad43fca1497b3fc305570fe"
+     ],
+     "audit_event_id": "audit-1a7c09ab8c4c6d61"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-dc6a8b63e624",
+      "to": "V2B",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:52.950194Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages": [
+    {
+     "id": "msg-dc6a8b63e624",
+     "to": "V2B",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:52.950194Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": false,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "needs_review",
+       "note_key": "eligibility.immediate.not_met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:52.896768Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:52.950281Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": false,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "needs_review",
+       "note_key": "eligibility.immediate.not_met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-28981d561703",
+     "ts": "2026-11-15T16:13:52.950314Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-c79f5da5c95b",
+     "ts": "2026-11-15T16:13:52.950246Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-78121d0c763e",
+     "ts": "2026-11-15T16:13:52.896792Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-91e3cf3c4b15",
+     "ts": "2026-11-15T16:13:52.455081Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {}
+  },
+  "V3A": {
+   "couple_id": "V3",
+   "counterpart": "V3B",
+   "vault": {
+    "partner_id": "V3A",
+    "calls": [
+     {
+      "gene": "SMN1",
+      "hgnc_id": 11117,
+      "classification": "P",
+      "zygosity": "het",
+      "plain_en": "You carry one pathogenic (disease-causing) change in SMN1. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one pathogenic (disease-causing) change in SMN1. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": true,
+      "condition": "Spinal muscular atrophy",
+      "novelty": {
+       "absent_gnomad": false,
+       "absent_clinvar": false
+      }
+     }
+    ],
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "SMN1",
+      "hgnc_id": 11117,
+      "scenario": "discordant",
+      "status": "ok",
+      "fusage": "genome_wide_context_only",
+      "audience": "carrier_partner_only",
+      "carrier_role": "A",
+      "reason": null,
+      "F": 0.0625,
+      "offspring_risk": 0.0031188002767184846,
+      "offspring_risk_one_in": "1 in 321",
+      "offspring_risk_one_in_ar": "1 من كل 321",
+      "prior_carrier_b": 0.136375,
+      "posterior_carrier_b": 0.012475201106873939,
+      "posterior_carrier_b_one_in": "1 in 80.2",
+      "posterior_carrier_b_one_in_ar": "1 من كل 80.2",
+      "detection_rate": 0.92,
+      "relative_to_unrelated": 11.85192086695743,
+      "relative_to_unrelated_display": "about 12x",
+      "relative_to_unrelated_display_ar": "حوالي 12 ضعفاً",
+      "reference_unrelated_one_in": "1 in 3,800",
+      "reference_unrelated_one_in_ar": "1 من كل 3,800",
+      "escalate": true,
+      "digest": "cca2150dc3c619b309faaa4d10631ec65e215c124f7a5fe2dc28cdc38675a6a6"
+     }
+    ],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-f3a3e54ffa3401bfdd12c9ab",
+      "consent-a2570c976eb3e1fbfefba37a"
+     ],
+     "audit_event_id": "audit-48f33ce3d13bc049"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-a1f704d42bbc",
+      "to": "V3A",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:53.379861Z"
+     },
+     {
+      "id": "msg-7e84c552c48b",
+      "to": "V3A",
+      "lang": "en",
+      "kind": "escalation",
+      "text": "A genetic counselor will contact you to go through your private result with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:53.403869Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages": [
+    {
+     "id": "msg-a1f704d42bbc",
+     "to": "V3A",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:53.379861Z"
+    },
+    {
+     "id": "msg-d24bf87b58c1",
+     "to": "V3A",
+     "lang": "en",
+     "kind": "explainer",
+     "text": "Your own carrier results. They are private and shown only to you. This is decision support, not a diagnosis or medical advice. You carry one changed copy of SMN1. Screening cannot detect every carrier of this gene, so a negative screen does not fully rule it out: the chance that a person with a negative screen is still a carrier is about 1 in 80.2. For your couple, the chance that a pregnancy is affected is about 1 in 321. That is about 12x the figure for an unrelated couple with the same screening results, which is 1 in 3,800. Because SMN1 is technically hard to test, confirmatory testing is recommended before any reassurance. Being a carrier is not a diagnosis of disease. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [
+      "cca2150dc3c619b309faaa4d10631ec65e215c124f7a5fe2dc28cdc38675a6a6"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:53.401465Z"
+    },
+    {
+     "id": "msg-7e84c552c48b",
+     "to": "V3A",
+     "lang": "en",
+     "kind": "escalation",
+     "text": "A genetic counselor will contact you to go through your private result with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:53.403869Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:53.365348Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:53.418623Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [
+     {
+      "id": "task-917691a27e79",
+      "kind": "confirmatory_test",
+      "status": "requested",
+      "due": "2026-11-29T16:13:53.365264Z"
+     }
+    ],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-07988664fd14",
+     "ts": "2026-11-15T16:13:53.418648Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-9f88ed1626f7",
+     "ts": "2026-11-15T16:13:53.403922Z",
+     "kind": "escalation",
+     "title_key": "notif.counselor_contact",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-08632e4b0d2d",
+     "ts": "2026-11-15T16:13:53.379910Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-87ee69232a2e",
+     "ts": "2026-11-15T16:13:53.365361Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-55358b91e761",
+     "ts": "2026-11-15T16:13:53.365337Z",
+     "kind": "task",
+     "title_key": "notif.task_created",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-5e13c96b5446",
+     "ts": "2026-11-15T16:13:53.212172Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {
+    "11117": {
+     "token": {
+      "hgnc_id": 11117,
+      "variant_digest": "d10456593fc914ee1c9cb9c197230f907013eeacff6105976bbad4824084baf2",
+      "issued_at": "2026-11-15T16:13:53.444333Z",
+      "expiry": "2027-05-14T16:13:53.444333Z",
+      "signature": "mLzQysnMYtJ_TLnhJ7f306sBq5cyKnbyqOCitomg1jXRePQIE8xgKbyZXy8RgJd_2SoJFPgC966sMbkh33RGBw"
+     },
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjUzLjQ0NDMzM1oiLCJoZ25jX2lkIjoxMTExNywiaXNzdWVkX2F0IjoiMjAyNi0xMS0xNVQxNjoxMzo1My40NDQzMzNaIiwic2lnbmF0dXJlIjoibUx6UXlzbk1ZdEpfVExuaEo3ZjMwNnNCcTVjeUtuYnlxT0NpdG9tZzFqWFJlUFFJRTh4Z0tieVpYeThSZ0pkXzJTb0pGUGdDOTY2c01ia2gzM1JHQnciLCJ2YXJpYW50X2RpZ2VzdCI6ImQxMDQ1NjU5M2ZjOTE0ZWUxYzljYjljMTk3MjMwZjkwNzAxM2VlYWNmZjYxMDU5NzZiYmFkNDgyNDA4NGJhZjIifQ",
+     "expires_at": "2027-05-14T16:13:53.444333Z"
+    }
+   }
+  },
+  "V3B": {
+   "couple_id": "V3",
+   "counterpart": "V3A",
+   "vault": {
+    "partner_id": "V3B",
+    "calls": [],
+    "records": [],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-f3a3e54ffa3401bfdd12c9ab",
+      "consent-a2570c976eb3e1fbfefba37a"
+     ],
+     "audit_event_id": "audit-5c46786b672dacb2"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-ff0363fa026e",
+      "to": "V3B",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:53.726091Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages": [
+    {
+     "id": "msg-ff0363fa026e",
+     "to": "V3B",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:53.726091Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": false,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "needs_review",
+       "note_key": "eligibility.immediate.not_met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:53.668487Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:53.726175Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": false,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "needs_review",
+       "note_key": "eligibility.immediate.not_met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-1b869f1d9d85",
+     "ts": "2026-11-15T16:13:53.726208Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-10a7c078e3c1",
+     "ts": "2026-11-15T16:13:53.726141Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-9ff513a63ce6",
+     "ts": "2026-11-15T16:13:53.668511Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-b40dcbd48b88",
+     "ts": "2026-11-15T16:13:53.186512Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {}
+  },
+  "V4A": {
+   "couple_id": "V4",
+   "counterpart": "V4B",
+   "vault": {
+    "partner_id": "V4A",
+    "calls": [
+     {
+      "gene": "MEFV",
+      "hgnc_id": 6998,
+      "classification": "P",
+      "zygosity": "het",
+      "plain_en": "You carry one pathogenic (disease-causing) change in MEFV. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one pathogenic (disease-causing) change in MEFV. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": false,
+      "condition": "Familial Mediterranean fever",
+      "novelty": {
+       "absent_gnomad": false,
+       "absent_clinvar": false
+      }
+     },
+     {
+      "gene": "GJB2",
+      "hgnc_id": 4284,
+      "classification": "P",
+      "zygosity": "het",
+      "plain_en": "You carry one pathogenic (disease-causing) change in GJB2. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one pathogenic (disease-causing) change in GJB2. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": false,
+      "condition": "Nonsyndromic hearing loss",
+      "novelty": {
+       "absent_gnomad": false,
+       "absent_clinvar": false
+      }
+     }
+    ],
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "GJB2",
+      "hgnc_id": 4284,
+      "scenario": "discordant",
+      "status": "needs_counselor",
+      "fusage": "genome_wide_context_only",
+      "audience": "carrier_partner_only",
+      "carrier_role": "A",
+      "reason": "missing_carrier_freq",
+      "F": 0.0,
+      "offspring_risk": null,
+      "offspring_risk_one_in": null,
+      "offspring_risk_one_in_ar": null,
+      "escalate": false,
+      "digest": "ba31b9edecf93af1bda9f9845b36e5f988c1eabfa99608276d0354564134628a"
+     },
+     {
+      "contract_version": "1.1.0",
+      "gene": "MEFV",
+      "hgnc_id": 6998,
+      "scenario": "discordant",
+      "status": "needs_counselor",
+      "fusage": "genome_wide_context_only",
+      "audience": "carrier_partner_only",
+      "carrier_role": "A",
+      "reason": "missing_detection_rate",
+      "F": 0.0,
+      "offspring_risk": null,
+      "offspring_risk_one_in": null,
+      "offspring_risk_one_in_ar": null,
+      "escalate": false,
+      "digest": "94731b5013c892e7b16f7bb801e380fa62f35d5d24f5249739ff44c01791c1ea"
+     }
+    ],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-5ccb873c51a6af08ab35a68d",
+      "consent-692b7d5905ad3d985d9803f5"
+     ],
+     "audit_event_id": "audit-7cc4956a882d44d6"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-b80a6e86be1f",
+      "to": "V4A",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:54.315244Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages": [
+    {
+     "id": "msg-b80a6e86be1f",
+     "to": "V4A",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:54.315244Z"
+    },
+    {
+     "id": "msg-f119f0134f2d",
+     "to": "V4A",
+     "lang": "en",
+     "kind": "explainer",
+     "text": "Your own carrier results. They are private and shown only to you. This is decision support, not a diagnosis or medical advice. You carry one changed copy of GJB2. A figure for this gene cannot be calculated from the available data, so no number is shown. You can talk about it privately with a genetic counselor if you wish. You carry one changed copy of MEFV. A figure for this gene cannot be calculated from the available data, so no number is shown. You can talk about it privately with a genetic counselor if you wish. Being a carrier is not a diagnosis of disease. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [
+      "ba31b9edecf93af1bda9f9845b36e5f988c1eabfa99608276d0354564134628a",
+      "94731b5013c892e7b16f7bb801e380fa62f35d5d24f5249739ff44c01791c1ea"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:54.338110Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:54.293845Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:54.377209Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-88cb2c7ce66f",
+     "ts": "2026-11-15T16:13:54.377264Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-eee55c97edf4",
+     "ts": "2026-11-15T16:13:54.315338Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-df29dfb06cf9",
+     "ts": "2026-11-15T16:13:54.293927Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-7f77f7c4f986",
+     "ts": "2026-11-15T16:13:54.025070Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {
+    "6998": {
+     "token": {
+      "hgnc_id": 6998,
+      "variant_digest": "5cc1d813e4101f4aee70eef3cb6a6e9b6927f26adc51c8ab0b67beacedb3ebfd",
+      "issued_at": "2026-11-15T16:13:54.403587Z",
+      "expiry": "2027-05-14T16:13:54.403587Z",
+      "signature": "dlrVdAUvLjS_ueTjQJPsot7HP4Xz_9mGKfLUNodW_6oRiF5Hw7eViFSkaB7tzEZvL6eEKcevqwuInHtZjoSeBA"
+     },
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjU0LjQwMzU4N1oiLCJoZ25jX2lkIjo2OTk4LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjU0LjQwMzU4N1oiLCJzaWduYXR1cmUiOiJkbHJWZEFVdkxqU191ZVRqUUpQc290N0hQNFh6XzltR0tmTFVOb2RXXzZvUmlGNUh3N2VWaUZTa2FCN3R6RVp2TDZlRUtjZXZxd3VJbkh0WmpvU2VCQSIsInZhcmlhbnRfZGlnZXN0IjoiNWNjMWQ4MTNlNDEwMWY0YWVlNzBlZWYzY2I2YTZlOWI2OTI3ZjI2YWRjNTFjOGFiMGI2N2JlYWNlZGIzZWJmZCJ9",
+     "expires_at": "2027-05-14T16:13:54.403587Z"
+    },
+    "4284": {
+     "token": {
+      "hgnc_id": 4284,
+      "variant_digest": "127b977b0fb54b45a5b0d706924423beef09e31a747cd7dfbb2522d09dfeeff7",
+      "issued_at": "2026-11-15T16:13:54.420117Z",
+      "expiry": "2027-05-14T16:13:54.420117Z",
+      "signature": "2UevwqnxJbLDthsRcTDtJWW7ANKQW-WEPoCSF3EQdOCtnFM9xzMRXwcBZQv6-UuzggWWm8LpfOC0vKhSpZ-uDw"
+     },
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjU0LjQyMDExN1oiLCJoZ25jX2lkIjo0Mjg0LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjU0LjQyMDExN1oiLCJzaWduYXR1cmUiOiIyVWV2d3FueEpiTER0aHNSY1REdEpXVzdBTktRVy1XRVBvQ1NGM0VRZE9DdG5GTTl4ek1SWHdjQlpRdjYtVXV6Z2dXV204THBmT0MwdktoU3BaLXVEdyIsInZhcmlhbnRfZGlnZXN0IjoiMTI3Yjk3N2IwZmI1NGI0NWE1YjBkNzA2OTI0NDIzYmVlZjA5ZTMxYTc0N2NkN2RmYmIyNTIyZDA5ZGZlZWZmNyJ9",
+     "expires_at": "2027-05-14T16:13:54.420117Z"
+    }
+   }
+  },
+  "V4B": {
+   "couple_id": "V4",
+   "counterpart": "V4A",
+   "vault": {
+    "partner_id": "V4B",
+    "calls": [
+     {
+      "gene": "ABCA4",
+      "hgnc_id": 34,
+      "classification": "P",
+      "zygosity": "het",
+      "plain_en": "You carry one pathogenic (disease-causing) change in ABCA4. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one pathogenic (disease-causing) change in ABCA4. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": false,
+      "condition": "Stargardt disease / inherited retinal dystrophy",
+      "novelty": {
+       "absent_gnomad": false,
+       "absent_clinvar": false
+      }
+     }
+    ],
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "ABCA4",
+      "hgnc_id": 34,
+      "scenario": "discordant",
+      "status": "needs_counselor",
+      "fusage": "genome_wide_context_only",
+      "audience": "carrier_partner_only",
+      "carrier_role": "B",
+      "reason": "missing_detection_rate",
+      "F": 0.0,
+      "offspring_risk": null,
+      "offspring_risk_one_in": null,
+      "offspring_risk_one_in_ar": null,
+      "escalate": false,
+      "digest": "3b932544dfc74a92a087c87f4b330a4e96de7b83391ec3468d5ca20ae2c99cac"
+     }
+    ],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-5ccb873c51a6af08ab35a68d",
+      "consent-692b7d5905ad3d985d9803f5"
+     ],
+     "audit_event_id": "audit-db6a172cbb677573"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-1bbf792e5599",
+      "to": "V4B",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:54.839638Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages": [
+    {
+     "id": "msg-1bbf792e5599",
+     "to": "V4B",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: no gene was found in which you both carry a change, on the screened panel (Compatible). Screening cannot find every carrier, so this is not a guarantee. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:54.839638Z"
+    },
+    {
+     "id": "msg-9ec9255a1abc",
+     "to": "V4B",
+     "lang": "en",
+     "kind": "explainer",
+     "text": "Your own carrier results. They are private and shown only to you. This is decision support, not a diagnosis or medical advice. You carry one changed copy of ABCA4. A figure for this gene cannot be calculated from the available data, so no number is shown. You can talk about it privately with a genetic counselor if you wish. Being a carrier is not a diagnosis of disease. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [
+      "3b932544dfc74a92a087c87f4b330a4e96de7b83391ec3468d5ca20ae2c99cac"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:54.859734Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:54.783418Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:54.859805Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     },
+     {
+      "id": "family_screening",
+      "title_key": "care.option.family_screening.title",
+      "body_key": "care.option.family_screening.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-48c8349e9754",
+     "ts": "2026-11-15T16:13:54.859856Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-e13a15e33fe3",
+     "ts": "2026-11-15T16:13:54.839700Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-038e75b944f4",
+     "ts": "2026-11-15T16:13:54.783486Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-a45beebe88e4",
+     "ts": "2026-11-15T16:13:53.997259Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {
+    "34": {
+     "token": {
+      "hgnc_id": 34,
+      "variant_digest": "b385ab4fcd0e67e9e07116c5710f4b4556a27867854d2c03fe715d347abccf25",
+      "issued_at": "2026-11-15T16:13:54.888174Z",
+      "expiry": "2027-05-14T16:13:54.888174Z",
+      "signature": "dQoBClsKnsE2_hLrRVCTDUOYVSNJNvqK4S-hzHU8LvrciI4eup83QHfeKxSf5QzPFRIcgGhEjCQ32wJ1l3_2Bg"
+     },
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjU0Ljg4ODE3NFoiLCJoZ25jX2lkIjozNCwiaXNzdWVkX2F0IjoiMjAyNi0xMS0xNVQxNjoxMzo1NC44ODgxNzRaIiwic2lnbmF0dXJlIjoiZFFvQkNsc0tuc0UyX2hMclJWQ1REVU9ZVlNOSk52cUs0Uy1oekhVOEx2cmNpSTRldXA4M1FIZmVLeFNmNVF6UEZSSWNnR2hFakNRMzJ3SjFsM18yQmciLCJ2YXJpYW50X2RpZ2VzdCI6ImIzODVhYjRmY2QwZTY3ZTllMDcxMTZjNTcxMGY0YjQ1NTZhMjc4Njc4NTRkMmMwM2ZlNzE1ZDM0N2FiY2NmMjUifQ",
+     "expires_at": "2027-05-14T16:13:54.888174Z"
+    }
+   }
+  },
+  "V5A": {
+   "couple_id": "V5",
+   "counterpart": "V5B",
+   "vault": {
+    "partner_id": "V5A",
+    "calls": [
+     {
+      "gene": "DONSON",
+      "hgnc_id": 2993,
+      "classification": "VUS",
+      "zygosity": "het",
+      "plain_en": "You carry one change of uncertain significance in DONSON. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one change of uncertain significance in DONSON. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": false,
+      "condition": "DONSON-related autosomal recessive disorder",
+      "novelty": {
+       "absent_gnomad": true,
+       "absent_clinvar": true
+      }
+     }
+    ],
+    "records": [],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-7982f9f8cabb1c0f1b3fbf24",
+      "consent-f0314d8964a8f320e53ec144"
+     ],
+     "audit_event_id": "audit-7aa08628d88142ac"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-64ab24c88a90",
+      "to": "V5A",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: some findings need review by a genetic counselor before a couple result can be given, so no result is shown yet. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:55.244234Z"
+     },
+     {
+      "id": "msg-54ffbe02931b",
+      "to": "V5A",
+      "lang": "en",
+      "kind": "escalation",
+      "text": "Some of your findings need a genetic counselor's review. A counselor will contact you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:55.246604Z"
+     }
+    ],
+    "review_required": true
+   },
+   "messages": [
+    {
+     "id": "msg-64ab24c88a90",
+     "to": "V5A",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: some findings need review by a genetic counselor before a couple result can be given, so no result is shown yet. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:55.244234Z"
+    },
+    {
+     "id": "msg-54ffbe02931b",
+     "to": "V5A",
+     "lang": "en",
+     "kind": "escalation",
+     "text": "Some of your findings need a genetic counselor's review. A counselor will contact you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:55.246604Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:55.230019Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:55.262265Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.met"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.met"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-3efcf260d447",
+     "ts": "2026-11-15T16:13:55.262286Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-6b9637138f95",
+     "ts": "2026-11-15T16:13:55.246629Z",
+     "kind": "escalation",
+     "title_key": "notif.counselor_contact",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-cdfa428c0509",
+     "ts": "2026-11-15T16:13:55.244286Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-580ca88a1b34",
+     "ts": "2026-11-15T16:13:55.230035Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-84978eb7fe07",
+     "ts": "2026-11-15T16:13:55.139614Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {}
+  },
+  "V5B": {
+   "couple_id": "V5",
+   "counterpart": "V5A",
+   "vault": {
+    "partner_id": "V5B",
+    "calls": [
+     {
+      "gene": "DONSON",
+      "hgnc_id": 2993,
+      "classification": "VUS",
+      "zygosity": "het",
+      "plain_en": "You carry one change of uncertain significance in DONSON. Being a carrier is not a diagnosis of disease.",
+      "plain_ar": "You carry one change of uncertain significance in DONSON. Being a carrier is not a diagnosis of disease.",
+      "confirmatory_recommended": false,
+      "condition": "DONSON-related autosomal recessive disorder",
+      "novelty": {
+       "absent_gnomad": true,
+       "absent_clinvar": true
+      }
+     }
+    ],
+    "records": [],
+    "notice": "Decision support - not a diagnosis or medical advice. Synthetic data (SIMULATED).",
+    "simulated": true
+   },
+   "compatibility": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-7982f9f8cabb1c0f1b3fbf24",
+      "consent-f0314d8964a8f320e53ec144"
+     ],
+     "audit_event_id": "audit-3da570cef72697ec"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-98103e1ca496",
+      "to": "V5B",
+      "lang": "en",
+      "kind": "result",
+      "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: some findings need review by a genetic counselor before a couple result can be given, so no result is shown yet. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:55.494995Z"
+     },
+     {
+      "id": "msg-f9730eb5d39c",
+      "to": "V5B",
+      "lang": "en",
+      "kind": "escalation",
+      "text": "Some of your findings need a genetic counselor's review. A counselor will contact you.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-15T16:13:55.499186Z"
+     }
+    ],
+    "review_required": true
+   },
+   "messages": [
+    {
+     "id": "msg-98103e1ca496",
+     "to": "V5B",
+     "lang": "en",
+     "kind": "result",
+     "text": "Your couple screening result. This is decision support, not a diagnosis or medical advice. Couple check: some findings need review by a genetic counselor before a couple result can be given, so no result is shown yet. Being a carrier is not a diagnosis of disease. A genetic counselor reviews every result and can talk it through with you. The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results. There is no right or wrong choice here. Decisions about marriage and family are yours to make, and a genetic counselor can talk through your options with you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:55.494995Z"
+    },
+    {
+     "id": "msg-f9730eb5d39c",
+     "to": "V5B",
+     "lang": "en",
+     "kind": "escalation",
+     "text": "Some of your findings need a genetic counselor's review. A counselor will contact you.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-15T16:13:55.499186Z"
+    }
+   ],
+   "care_plan_pre": {
+    "loop": {
+     "state": null,
+     "history": []
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "care_plan_post": {
+    "loop": {
+     "state": "PatientNotified",
+     "history": [
+      {
+       "state": "ResultIssued",
+       "ts": "2026-11-15T16:13:55.459361Z",
+       "actor_role": "system"
+      },
+      {
+       "state": "PatientNotified",
+       "ts": "2026-11-15T16:13:55.499314Z",
+       "actor_role": "system"
+      }
+     ]
+    },
+    "tasks": [],
+    "appointments": [],
+    "options": [
+     {
+      "id": "counseling",
+      "title_key": "care.option.counseling.title",
+      "body_key": "care.option.counseling.body"
+     }
+    ],
+    "eligibility": {
+     "immediate": true,
+     "checks": [
+      {
+       "key": "immediate_eligibility",
+       "status": "met",
+       "note_key": "eligibility.immediate.met"
+      },
+      {
+       "key": "age",
+       "status": "met",
+       "note_key": "eligibility.age.female_partner_only"
+      },
+      {
+       "key": "bmi",
+       "status": "met",
+       "note_key": "eligibility.bmi.female_partner_only"
+      },
+      {
+       "key": "cryopreservation",
+       "status": "met",
+       "note_key": "eligibility.cryo.first_year"
+      }
+     ]
+    },
+    "simulated": true
+   },
+   "notifications_pre": [],
+   "notifications_post": [
+    {
+     "id": "ntf-eae1f14753d7",
+     "ts": "2026-11-15T16:13:55.499364Z",
+     "kind": "care",
+     "title_key": "notif.loop.PatientNotified",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-f14172f2f822",
+     "ts": "2026-11-15T16:13:55.499266Z",
+     "kind": "escalation",
+     "title_key": "notif.counselor_contact",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-301b19f51784",
+     "ts": "2026-11-15T16:13:55.495074Z",
+     "kind": "result",
+     "title_key": "notif.result_ready",
+     "href": "/results",
+     "read": false
+    },
+    {
+     "id": "ntf-743191355045",
+     "ts": "2026-11-15T16:13:55.459426Z",
+     "kind": "care",
+     "title_key": "notif.loop.ResultIssued",
+     "href": "/care-plan",
+     "read": false
+    },
+    {
+     "id": "ntf-c8b2694334c2",
+     "ts": "2026-11-15T16:13:55.116263Z",
+     "kind": "consent",
+     "title_key": "notif.consent_received",
+     "href": "/compatibility",
+     "read": false
+    }
+   ],
+   "teachback": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "Being a carrier means I have the disease.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "A negative screening result can still leave a small chance of being a carrier.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "Decisions about marriage and family are mine to make.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   },
+   "family_tokens": {}
+  }
+ },
+ "teachback_key": {
+  "tb1": false,
+  "tb2": true,
+  "tb3": true,
+  "tb4": true
+ }
+}

@@ -1,0 +1,84 @@
+/* @evolve/ui base layer: focus, textures, motion keyframes. Import after tailwindcss + tokens + theme. */
+html {
+  background: var(--surface-0);
+  color: var(--ink);
+  font-family: var(--type-ui);
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  min-inline-size: 360px;
+  font-size: var(--text-16);
+  line-height: 1.5;
+}
+[dir="rtl"] body {
+  letter-spacing: 0;
+}
+/* Focus: navy ring on light, lime on dark (docs/09 §7). */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.bg-navy :focus-visible,
+[data-theme="ledger"] :focus-visible,
+.bg-surface-inverse :focus-visible {
+  outline-color: var(--evolve-lime);
+}
+.hatch {
+  background-image: repeating-linear-gradient(135deg, var(--signal-review) 0 3px, transparent 3px 8px);
+}
+.chamfer {
+  clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 14px 100%, 0 50%);
+}
+.halftone {
+  background-image: radial-gradient(circle at center, rgb(255 254 240 / 0.16) 1.2px, transparent 1.6px);
+  background-size: 10px 10px;
+  mask-image: linear-gradient(to bottom, transparent, #000 35%, #000 70%, transparent);
+}
+.skeleton {
+  background-image: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.55), transparent);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 1.4s linear infinite;
+}
+[data-theme="ledger"] .skeleton {
+  background-image: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.06), transparent);
+}
+@keyframes shimmer {
+  from { background-position: 150% 0; }
+  to { background-position: -50% 0; }
+}
+.venn-a,
+.venn-b {
+  transition: transform var(--motion-venn) var(--ease-out);
+}
+.venn-idle .venn-a { transform: translateX(-18px); }
+.venn-idle .venn-b { transform: translateX(18px); }
+.venn-running .venn-a { animation: venn-a 1.2s var(--ease-out) infinite alternate; }
+.venn-running .venn-b { animation: venn-b 1.2s var(--ease-out) infinite alternate; }
+@keyframes venn-a { from { transform: translateX(-22px); } to { transform: translateX(0); } }
+@keyframes venn-b { from { transform: translateX(22px); } to { transform: translateX(0); } }
+.reveal { animation: reveal var(--motion-slow) var(--ease-out) both; }
+@keyframes reveal { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes drawer-in { from { transform: translateX(100%); } to { transform: none; } }
+[dir="rtl"] [data-state="open"][class*="drawer-in"] { animation-name: drawer-in-rtl; }
+@keyframes drawer-in-rtl { from { transform: translateX(-100%); } to { transform: none; } }
+@keyframes sheet-in { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ledger theme: brand navy as *ink* is unreadable on #141412, so navy text/borders map to the lime accent
+   (navy surfaces keep cream text). Keeps every component AA in both themes without per-component forks. */
+[data-theme="ledger"] .text-navy { color: var(--evolve-lime); }
+[data-theme="ledger"] .border-navy,
+[data-theme="ledger"] .border-navy\/50 { border-color: rgb(193 255 114 / 0.6); }
+[data-theme="ledger"] .data-\[state\=checked\]\:border-navy[data-state="checked"] { border-color: var(--evolve-lime); }

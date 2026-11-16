@@ -1,0 +1,39 @@
+{
+  "name": "evolve-citizen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "évolvé citizen app (walking skeleton, SIMULATED environment, synthetic data only)",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start --port 3000",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "gen:mock": "python scripts/gen_mock_fixtures.py",
+    "test:e2e": "playwright test",
+    "build:live": "node scripts/build-live.mjs",
+    "test:e2e:live": "playwright test -c playwright.live.config.ts",
+    "sync:i18n": "python scripts/sync_i18n.py"
+  },
+  "dependencies": {
+    "@evolve/ui": "*",
+    "@tanstack/react-query": "^5.107.1",
+    "next": "^16.4.5",
+    "next-intl": "^4.14.9",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.5",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
+  }
+}

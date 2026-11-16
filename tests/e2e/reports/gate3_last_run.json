@@ -1,0 +1,8 @@
+{"source": "handoffs/DONE-G3-QA.md", "date": "2026-11-16", "passed": true, "p0": 0,
+ "suites": [
+  {"app": "citizen", "config": "playwright.live.config.ts", "passed": 21, "failed": 0},
+  {"app": "counselor", "config": "playwright.config.ts (incl. axe EN+AR)", "passed": 27, "failed": 0},
+  {"app": "counselor", "config": "playwright.live.config.ts", "passed": 2, "failed": 0},
+  {"app": "eval-dashboard", "config": "playwright.config.ts (incl. live gate-probe, axe EN+AR)", "passed": 17, "failed": 0},
+  {"app": "cross-app", "config": "tests/e2e/playwright.config.ts (V1 shared -> counselor (a) -> probe holds leak)", "passed": 1, "failed": 0}],
+ "not_covered": ["citizen a11y.spec (mock config only)", "citizen visual/budget specs"]}

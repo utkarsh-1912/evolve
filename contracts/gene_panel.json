@@ -1,0 +1,219 @@
+{
+  "contract_version": "1.0.0",
+  "_note": "Carrier frequencies are from source doc §2.1 (Rabea et al.). Detection rates are inferred from the doc's vignette outputs (DECISIONS #1) - TODO(verify). Founder variants are from the doc table. Genes marked verify=true have HGNC IDs/frequencies not stated in the source. Synthetic-use only. refseq_transcript: MANE Select transcripts added 2026-11-09 for HGVS conformance (DECISIONS #39); only ABCA4 (NM_000350.3) is cited in the source - all others TODO(verify) against NCBI/MANE before any external use.",
+  "genes": [
+    {
+      "symbol": "CYP21A2",
+      "hgnc_id": 2600,
+      "condition": "Congenital adrenal hyperplasia (21-hydroxylase deficiency)",
+      "carrier_freq": 0.106,
+      "complex_locus": true,
+      "detection": {
+        "initial": 0.92,
+        "confirmatory": 0.99
+      },
+      "founder_variants": [
+        {
+          "hgvs_c": "c.955C>T",
+          "hgvs_p": "p.(Gln319Ter)",
+          "af": 0.043,
+          "variant_type": "snv"
+        },
+        {
+          "hgvs_c": "c.844G>T",
+          "hgvs_p": "p.(Val282Leu)",
+          "af": null,
+          "variant_type": "snv"
+        }
+      ],
+      "refseq_transcript": "NM_000500.9",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "HBB",
+      "hgnc_id": 4827,
+      "condition": "Beta-thalassemia / sickle cell disease",
+      "carrier_freq": 0.096,
+      "complex_locus": false,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [
+        {
+          "hgvs_c": "c.92+5G>C",
+          "hgvs_p": null,
+          "af": 0.016,
+          "variant_type": "snv"
+        }
+      ],
+      "refseq_transcript": "NM_000518.5",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "MEFV",
+      "hgnc_id": 6998,
+      "condition": "Familial Mediterranean fever",
+      "carrier_freq": 0.059,
+      "complex_locus": false,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [
+        {
+          "hgvs_c": null,
+          "hgvs_p": "p.(Ala744Ser)",
+          "af": 0.028,
+          "variant_type": "snv"
+        }
+      ],
+      "refseq_transcript": "NM_000243.3",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "ABCA4",
+      "hgnc_id": 34,
+      "condition": "Stargardt disease / inherited retinal dystrophy",
+      "carrier_freq": 0.043,
+      "complex_locus": false,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [
+        {
+          "hgvs_c": "c.5882G>A",
+          "hgvs_p": "p.(Gly1961Glu)",
+          "af": 0.017,
+          "variant_type": "snv"
+        },
+        {
+          "hgvs_c": "c.2570T>C",
+          "hgvs_p": "p.(Leu857Pro)",
+          "af": 0.003,
+          "variant_type": "snv"
+        }
+      ],
+      "refseq_transcript": "NM_000350.3",
+      "refseq_verified_from_source": true
+    },
+    {
+      "symbol": "HBA2",
+      "hgnc_id": 4824,
+      "condition": "Alpha-thalassemia",
+      "carrier_freq": 0.018,
+      "complex_locus": true,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [],
+      "refseq_transcript": "NM_000517.6",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "SMN1",
+      "hgnc_id": 11117,
+      "condition": "Spinal muscular atrophy",
+      "carrier_freq": 0.013,
+      "complex_locus": true,
+      "detection": {
+        "initial": 0.92
+      },
+      "founder_variants": [
+        {
+          "hgvs_c": null,
+          "hgvs_p": null,
+          "af": null,
+          "variant_type": "cnv_deletion",
+          "note": "exon 7 deletion"
+        }
+      ],
+      "verify": true,
+      "refseq_transcript": "NM_000344.4",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "DONSON",
+      "hgnc_id": 2993,
+      "condition": "DONSON-related autosomal recessive disorder",
+      "carrier_freq": 0.01,
+      "complex_locus": false,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [],
+      "refseq_transcript": "NM_017613.4",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "ALDH3A2",
+      "hgnc_id": 403,
+      "condition": "ALDH3A2-related autosomal recessive disorder",
+      "carrier_freq": 0.006,
+      "complex_locus": false,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [],
+      "refseq_transcript": "NM_000382.3",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "TPO",
+      "hgnc_id": 12015,
+      "condition": "TPO-related recessive disorder",
+      "carrier_freq": null,
+      "complex_locus": false,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [
+        {
+          "hgvs_c": "c.2422del",
+          "hgvs_p": "p.(Cys808Alafs)",
+          "af": null,
+          "variant_type": "indel"
+        }
+      ],
+      "refseq_transcript": "NM_000547.6",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "CYP1B1",
+      "hgnc_id": 2597,
+      "condition": "Primary congenital glaucoma",
+      "carrier_freq": null,
+      "complex_locus": false,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [
+        {
+          "hgvs_c": "c.182G>A",
+          "hgvs_p": null,
+          "af": null,
+          "variant_type": "snv"
+        }
+      ],
+      "verify": true,
+      "refseq_transcript": "NM_000104.4",
+      "refseq_verified_from_source": false
+    },
+    {
+      "symbol": "GJB2",
+      "hgnc_id": 4284,
+      "condition": "Nonsyndromic hearing loss",
+      "carrier_freq": null,
+      "complex_locus": false,
+      "detection": {
+        "initial": null
+      },
+      "founder_variants": [],
+      "verify": true,
+      "refseq_transcript": "NM_004004.6",
+      "refseq_verified_from_source": false
+    }
+  ],
+  "rules": {
+    "null_carrier_freq": "gene may appear in vignettes only; do not sample it in the random cohort and do not compute residual risk (needs_counselor)",
+    "null_detection": "residual risk for a screen-negative partner cannot be computed -> status needs_counselor, never 'no risk'"
+  }
+}

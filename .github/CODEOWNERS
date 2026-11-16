@@ -1,0 +1,18 @@
+# Replace @orchestrator / @qa-redteam with real GitHub handles or teams. Branch protection: require code-owner review.
+/contracts/                    @orchestrator @qa-redteam
+/AGENTS.md                     @orchestrator
+/docs/01-GUARDRAILS.md         @orchestrator @qa-redteam
+/docs/00-CHARTER.md            @orchestrator
+/scripts/guardrail_check.py    @orchestrator @qa-redteam
+/.claude/                      @orchestrator
+/services/risk_engine/         @risk-engine @qa-redteam
+/tests/golden/                 @orchestrator @qa-redteam
+/services/privacy/             @privacy-apsi @qa-redteam
+/services/agents/              @agent-runtime
+/services/agents/bioethics*    @agent-runtime @qa-redteam @orchestrator
+/services/loop/                @agent-runtime
+/services/fhir/                @fhir-interop
+/services/synth/               @data-synth
+/apps/                         @ui-frontend
+/tests/ /services/eval/        @qa-redteam
+/docs/demo/ /README.md         @docs-demo

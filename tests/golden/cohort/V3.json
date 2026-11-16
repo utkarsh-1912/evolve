@@ -1,0 +1,117 @@
+{
+  "contract_version": "1.0.0",
+  "seed": 0,
+  "synthetic": true,
+  "couples": [
+    {
+      "couple_id": "V3",
+      "relationship": {
+        "type": "first_cousins",
+        "paths": [
+          [
+            2,
+            2,
+            "0"
+          ],
+          [
+            2,
+            2,
+            "0"
+          ]
+        ]
+      },
+      "partners": [
+        {
+          "partner_id": "V3A",
+          "role": "A",
+          "sex": "female",
+          "age": 26,
+          "bmi": 22.1,
+          "calls": [
+            {
+              "hgnc_id": 11117,
+              "gene": "SMN1",
+              "hgvs_c": null,
+              "hgvs_p": null,
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "P",
+              "variant_type": "cnv_deletion",
+              "absent_gnomad": false,
+              "absent_clinvar": false,
+              "in_roh_gt_10mb": false
+            }
+          ],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial"
+          }
+        },
+        {
+          "partner_id": "V3B",
+          "role": "B",
+          "sex": "male",
+          "age": 30,
+          "bmi": 28.5,
+          "calls": [],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial"
+          }
+        }
+      ],
+      "expected": {
+        "source": "architecture-source §2.4 Vignette 3; docs/07 §3; tests/golden/risk_vectors.json V3-*",
+        "relationship": {
+          "F": "1/16",
+          "R": "1/8"
+        },
+        "apsi": {
+          "status": "compatible",
+          "intersection_hgnc_ids": []
+        },
+        "couple_escalation": true,
+        "genes": [
+          {
+            "gene": "SMN1",
+            "hgnc_id": 11117,
+            "scenario": "discordant",
+            "status": "ok",
+            "screen_negative_partner": "B",
+            "assay_stage_b": "initial",
+            "q": "0.013",
+            "d": "0.92",
+            "R": "1/8",
+            "prior": 0.13637,
+            "posterior": 0.01248,
+            "posterior_one_in": 80.2,
+            "offspring_one_in": 320.6,
+            "offspring_one_in_display": "321",
+            "reference_unrelated_offspring_one_in": 3800.2,
+            "escalate": true,
+            "confirmatory_task_required": true,
+            "audience": "carrier_partner_only",
+            "visible_to": "A only (not in APSI intersection, P-06)"
+          }
+        ],
+        "required_actions": [
+          "prevent false-negative clearance",
+          "explain residual risk",
+          "specialist genetic counseling + extended family phasing"
+        ]
+      }
+    }
+  ]
+}

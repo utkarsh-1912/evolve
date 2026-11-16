@@ -1,0 +1,88 @@
+{
+  "care": {
+    "option": {
+      "counseling": {
+        "title": "Talk it through with a genetic counselor",
+        "body": "A counselor can explain your results and answer your questions, at your pace."
+      },
+      "ivf_pgtm": {
+        "title": "IVF with PGT-M",
+        "body": "Available under Thiqa. PGT-M needs the written consent of both spouses. After PGT-M, confirmatory prenatal testing is still recommended."
+      },
+      "prenatal_diagnosis": {
+        "title": "Prenatal diagnosis",
+        "body": "A specialist and a genetic counselor can explain what this involves."
+      },
+      "own_choice": {
+        "title": "Your own choices about marriage and family",
+        "body": "Every option here is yours to consider or not. There is no right or wrong choice."
+      },
+      "family_screening": {
+        "title": "Offer screening to relatives",
+        "body": "You can create a private family screening token that does not identify you."
+      }
+    }
+  },
+  "eligibility": {
+    "immediate": {
+      "met": "No waiting period applies because of your screening result.",
+      "not_met": "A counselor can explain the usual waiting period."
+    },
+    "age": {
+      "met": "Your age is within the usual range.",
+      "needs_afc": "An ovarian reserve test is needed before this can be confirmed.",
+      "discouraged": "Treatment at this age is usually discouraged; a specialist can explain why.",
+      "under_minimum": "Treatment is available from adulthood.",
+      "female_partner_only": "This check applies to the female partner."
+    },
+    "bmi": {
+      "met": "Your BMI is within the usual range.",
+      "dietitian_referral": "Covered under Thiqa, together with a referral to a dietitian.",
+      "needs_review": "A specialist will review this with you.",
+      "female_partner_only": "This check applies to the female partner."
+    },
+    "cryo": {
+      "first_year": "Cryopreservation in the first year is noted for your care team."
+    },
+    "pgtm": {
+      "prenatal_confirmation": "PGT-M needs the written consent of both spouses. After PGT-M, confirmatory prenatal testing is recommended."
+    }
+  },
+  "home": {
+    "next": {
+      "invite": "Invite your partner to a private compatibility check",
+      "consent": "Your partner invited you. Review and give consent",
+      "wait_partner": "Waiting for your partner's consent",
+      "run_check": "Run your private compatibility check",
+      "teachback": "Check your understanding",
+      "counseling": "Book a conversation with a genetic counselor",
+      "care_plan": "View your care plan"
+    }
+  },
+  "notif": {
+    "result_ready": "Your result is ready",
+    "counselor_contact": "A genetic counselor will contact you",
+    "consent_received": "Your partner invited you to a compatibility check",
+    "consent_revoked": "A consent was withdrawn and shared results were removed",
+    "task_created": "A new step was added to your care plan",
+    "appointment": "An appointment was proposed (SIMULATED)",
+    "shared_gene": "Your partner shared one result with you",
+    "loop": {
+      "ResultIssued": "Your result was issued",
+      "PatientNotified": "You were notified of your result",
+      "ComprehensionConfirmed": "You confirmed your understanding",
+      "ConfirmatoryDone": "Your confirmatory testing is complete",
+      "CounselingDone": "Your counseling session is complete",
+      "ReproReferralDone": "Your referral is complete",
+      "HumanClosure": "Your counselor closed this care episode"
+    }
+  },
+  "teachback": {
+    "q": {
+      "carrier_not_diagnosis": "Being a carrier means I have the disease.",
+      "each_pregnancy": "When both partners carry a change in the same gene, the chance applies to every pregnancy separately.",
+      "negative_not_zero": "A negative screening result can still leave a small chance of being a carrier.",
+      "you_decide": "Decisions about marriage and family are mine to make."
+    }
+  }
+}

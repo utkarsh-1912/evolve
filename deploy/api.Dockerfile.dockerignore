@@ -1,0 +1,13 @@
+**/.env
+**/.env.*
+**/node_modules
+**/.next
+**/__pycache__
+**/.pytest_cache
+**/.hypothesis
+**/test-results
+apps/
+packages/
+docs/
+handoffs/
+services/fhir/.tools/

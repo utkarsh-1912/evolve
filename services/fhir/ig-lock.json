@@ -1,0 +1,32 @@
+{
+  "_note": "IG/package pins for the HL7 validator CLI run. IG pin per DECISIONS #14; validator fetched per DECISIONS #35 (official hapifhir GitHub release only, stored untracked in services/fhir/.tools/).",
+  "fhirVersion": "4.0.1",
+  "packages": {
+    "hl7.fhir.uv.genomics-reporting": "3.0.0",
+    "hl7.terminology.r4": "6.1.0 (IG 3.0.0 dependency; validator also loaded 6.2.0)",
+    "hl7.fhir.uv.extensions.r4": "5.1.0 (IG 3.0.0 dependency; validator also loaded 5.2.0)",
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "python_models": "fhir.resources 8.3.0 (R4B module)",
+  "phenopacket_schema": "2.0 (phenopackets python package, protobuf)",
+  "validator_cli": {
+    "version": "7.0.5",
+    "source": "https://github.com/hapifhir/org.hl7.fhir.core/releases/download/7.0.5/validator_cli.jar",
+    "sha256": "9dfe9f305b0f9389eceade2a4a1c9a2740d7b0e614066fdf07a78b571c76d92f",
+    "sha256_matches_github_asset_digest": true,
+    "published": "2026-11-05",
+    "java": "Temurin 25.0.4.1",
+    "invocation": "java -jar validator_cli.jar out -version 4.0.1 -ig hl7.fhir.uv.genomics-reporting#3.0.0 -output val.json"
+  },
+  "package_cache": "~/.fhir/packages (validator default, outside the repo); terminology server https://tx.fhir.org",
+  "phenopacket_tools": {
+    "version": "1.0.0 (latest stable, published 2026-06-15)",
+    "source": "https://github.com/phenopackets/phenopacket-tools/releases/download/v1.0.0/phenopacket-tools-cli-1.0.0-distribution.zip",
+    "zip_sha256": "6e5f0873127354897ac5cc48a1c6061417a871cc69c8eb39571d52c9a9881074",
+    "zip_sha256_matches_github_asset_digest": true,
+    "jar": "phenopacket-tools-cli-1.0.0/phenopacket-tools-cli-1.0.0.jar (extracted to services/fhir/.tools/)",
+    "jar_sha256": "d717ea62b3eb81a70ce17b6a6b6a9e9efdf66a169a09f595e0ebea09dda80fed (computed locally; no published digest for the inner jar)",
+    "status": "downloaded + verified under DECISIONS #41; running `validate` on our files was blocked by the Claude Code permission system - NOT RUN",
+    "intended_invocation": "java -jar phenopacket-tools-cli-1.0.0.jar validate -H -f json -e phenopacket pp-v/*-phenopacket.json"
+  }
+}

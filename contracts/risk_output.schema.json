@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "risk_output.schema.json",
+  "title": "Locked RiskOutput (the only numeric source for user-facing text)",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "gene",
+    "hgnc_id",
+    "scenario",
+    "status",
+    "fusage",
+    "digest",
+    "audience",
+    "reason"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "1.1.0"
+    },
+    "gene": {
+      "type": "string"
+    },
+    "hgnc_id": {
+      "type": "integer"
+    },
+    "scenario": {
+      "enum": [
+        "concordant_positive",
+        "discordant",
+        "concordant_negative",
+        "shared_vus_roh",
+        "atypical_genotype"
+      ]
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "needs_counselor"
+      ]
+    },
+    "fusage": {
+      "const": "genome_wide_context_only"
+    },
+    "F": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "prior_carrier_b": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "posterior_carrier_b": {
+      "type": "number"
+    },
+    "posterior_carrier_b_one_in": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "detection_rate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "offspring_risk": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "offspring_risk_one_in": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "relative_to_unrelated": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "reference_unrelated_one_in": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "escalate": {
+      "type": "boolean"
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "audience": {
+      "enum": [
+        "couple",
+        "carrier_partner_only",
+        "counselor_only"
+      ],
+      "description": "Who may see this record (P-06). discordant => carrier_partner_only; only APSI-intersection genes may be 'couple'."
+    },
+    "carrier_role": {
+      "enum": [
+        "A",
+        "B",
+        null
+      ],
+      "description": "Cohort role of the carrier partner for discordant records; null otherwise"
+    },
+    "reason": {
+      "enum": [
+        "missing_carrier_freq",
+        "missing_detection_rate",
+        "shared_vus_roh",
+        "atypical_genotype",
+        "related_concordant_negative",
+        "perfect_detection",
+        "not_in_panel",
+        null
+      ],
+      "description": "Why status is needs_counselor; null when status ok"
+    },
+    "relative_to_unrelated_display": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Rounded once in lock(), e.g. 'about 12x'; null when R=0 or not computable"
+    },
+    "offspring_risk_one_in_ar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Arabic display form, rounded once in lock() from the same value as the EN field (e.g. '1 من كل 321', 'حوالي 12 ضعفاً'); Western digits (DECISIONS #48)"
+    },
+    "posterior_carrier_b_one_in_ar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Arabic display form, rounded once in lock() from the same value as the EN field (e.g. '1 من كل 321', 'حوالي 12 ضعفاً'); Western digits (DECISIONS #48)"
+    },
+    "reference_unrelated_one_in_ar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Arabic display form, rounded once in lock() from the same value as the EN field (e.g. '1 من كل 321', 'حوالي 12 ضعفاً'); Western digits (DECISIONS #48)"
+    },
+    "relative_to_unrelated_display_ar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Arabic display form, rounded once in lock() from the same value as the EN field (e.g. '1 من كل 321', 'حوالي 12 ضعفاً'); Western digits (DECISIONS #48)"
+    }
+  }
+}

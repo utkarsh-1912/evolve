@@ -1,0 +1,135 @@
+{
+  "contract_version": "1.0.0",
+  "seed": 0,
+  "synthetic": true,
+  "couples": [
+    {
+      "couple_id": "V5",
+      "relationship": {
+        "type": "double_first_cousins",
+        "paths": [
+          [
+            2,
+            2,
+            "0"
+          ],
+          [
+            2,
+            2,
+            "0"
+          ],
+          [
+            2,
+            2,
+            "0"
+          ],
+          [
+            2,
+            2,
+            "0"
+          ]
+        ]
+      },
+      "partners": [
+        {
+          "partner_id": "V5A",
+          "role": "A",
+          "sex": "female",
+          "age": 27,
+          "bmi": 24.0,
+          "calls": [
+            {
+              "hgnc_id": 2993,
+              "gene": "DONSON",
+              "hgvs_c": "c.SYN29939C>T",
+              "hgvs_p": null,
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "VUS",
+              "variant_type": "snv",
+              "absent_gnomad": true,
+              "absent_clinvar": true,
+              "in_roh_gt_10mb": true
+            }
+          ],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial"
+          }
+        },
+        {
+          "partner_id": "V5B",
+          "role": "B",
+          "sex": "male",
+          "age": 32,
+          "bmi": 29.2,
+          "calls": [
+            {
+              "hgnc_id": 2993,
+              "gene": "DONSON",
+              "hgvs_c": "c.SYN29939C>T",
+              "hgvs_p": null,
+              "refseq": null,
+              "zygosity": "het",
+              "classification": "VUS",
+              "variant_type": "snv",
+              "absent_gnomad": true,
+              "absent_clinvar": true,
+              "in_roh_gt_10mb": true
+            }
+          ],
+          "assays": {
+            "2600": "initial",
+            "4827": "initial",
+            "6998": "initial",
+            "34": "initial",
+            "4824": "initial",
+            "11117": "initial",
+            "2993": "initial",
+            "403": "initial"
+          }
+        }
+      ],
+      "family_history": [
+        {
+          "relative": "infant relative (pedigree position not stated in source §2.4)",
+          "finding": "Unexplained neonatal or infant death (HPO code TODO(verify))",
+          "hpo": "HP:0001522"
+        }
+      ],
+      "expected": {
+        "source": "architecture-source §2.4 Vignette 5",
+        "relationship": {
+          "F": "1/8",
+          "R": "1/4"
+        },
+        "p_lp_screen": "negative",
+        "couple_escalation": true,
+        "suppress_automated_clearance": true,
+        "genes": [
+          {
+            "gene": "DONSON",
+            "hgnc_id": 2993,
+            "scenario": "shared_vus_roh",
+            "status": "needs_counselor",
+            "escalate": true,
+            "audience": "counselor_only",
+            "reason": "shared_vus_roh"
+          }
+        ],
+        "red_flags": [
+          "unexplained infant death",
+          "double first cousins",
+          "shared ROH variant"
+        ],
+        "notes": "Scenario shared_vus_roh per risk_output v1.1.0 (DECISIONS #13, #17); counselor_only per #20 (P-05, trigger c). HPO HP:0001522 (Death in infancy) TODO(verify)."
+      }
+    }
+  ]
+}

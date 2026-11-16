@@ -1,0 +1,45 @@
+# ---- AI agent workflow files (not part of the product) ----
+.claude/
+agents/
+handoffs/
+AGENTS.md
+CLAUDE.md
+
+# ---- Secrets: never commit; copy env.example -> .env locally / paste in dashboards ----
+.env
+.env.*
+!**/env.example
+*.pem
+*.key
+
+# ---- Dependencies & build output ----
+node_modules/
+.next/
+.next-live/
+**/dist/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# ---- Test & tool artifacts ----
+test-results/
+playwright-report/
+blob-report/
+.pytest_cache/
+.hypothesis/
+__pycache__/
+*.pyc
+.coverage
+htmlcov/
+services/fhir/.tools/
+
+# ---- Submission decks (contain personal details; not needed to deploy) ----
+docs/submission/*.pptx
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log

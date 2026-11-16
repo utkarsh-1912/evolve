@@ -1,0 +1,17 @@
+{
+  "name": "evolve-monorepo",
+  "private": true,
+  "description": "évolvé workspace: packages/ui design system + apps (docs/09 §2). SIMULATED environment, synthetic data only.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w evolve-citizen",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test:e2e": "npm run test:e2e -w evolve-citizen",
+    "build:counselor": "npm run build -w evolve-counselor",
+    "build:all": "npm run build --workspaces --if-present"
+  }
+}

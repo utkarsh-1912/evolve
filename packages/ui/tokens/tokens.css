@@ -1,0 +1,167 @@
+/*
+ * évolvé design tokens v4 (docs/09 §5, docs/03 v3 §0/§3). Source of truth for every app.
+ * design/tokens.css re-exports this file for backwards compatibility.
+ * Themes: Clinic (default, citizen) and Ledger ([data-theme="ledger"], counselor/eval). Nestable.
+ * Signal colors carry meaning only and are always paired with an icon + text.
+ */
+
+:root,
+[data-theme="clinic"] {
+  /* ---- Brand layer (docs/03 §0) ---- */
+  --evolve-navy: #00357d;
+  --evolve-navy-2: #114285;
+  --evolve-lime: #c1ff72; /* brand accent only: CTA on navy, focus on dark, "you are here". Never a status. */
+  --evolve-cream: #fffef0;
+  --evolve-mist: #afbfcc;
+
+  /* ---- Neutral ramp 50–950 (cool, Clinic) ---- */
+  --neutral-50: #f6f7fb;
+  --neutral-100: #ecf1f7;
+  --neutral-200: #d5dce7;
+  --neutral-300: #b7c1d1;
+  --neutral-400: #8a96aa;
+  --neutral-500: #66718a;
+  --neutral-600: #4d5669;
+  --neutral-700: #3a4253;
+  --neutral-800: #222a3b;
+  --neutral-900: #0e1a33;
+  --neutral-950: #0a1225;
+
+  /* ---- Signal colors (docs/03 §3) + AA text variants ---- */
+  --signal-compatible: #1f9d6b;
+  --signal-review: #f5a524;
+  --signal-escalated: #f0556b;
+  --signal-vault: #7a5af8;
+  --signal-info: #2e62c8;
+  --signal-compatible-ink: #11704b;
+  --signal-review-ink: #8a5300;
+  --signal-escalated-ink: #b4233a;
+  --signal-vault-ink: #5b3bd6;
+  --signal-info-ink: #1f4fa8;
+
+  /* ---- Surfaces 0–3 ---- */
+  --surface-0: var(--neutral-50); /* page ground */
+  --surface-1: #fcfdff; /* cards */
+  --surface-2: var(--neutral-100); /* tiles, wells */
+  --surface-3: #ffffff; /* popovers, dialogs */
+  --surface-inverse: var(--evolve-navy);
+
+  /* Semantic aliases (kept from v3 so existing code keeps working) */
+  --ground: var(--surface-0);
+  --tile: var(--surface-2);
+  --card: var(--surface-1);
+  --ink: var(--neutral-950);
+  --ink-2: var(--neutral-600);
+  --accent: var(--evolve-navy);
+  --accent-blue: #2e62c8;
+  --accent-soft: #9cc2ff;
+  --line: var(--neutral-200);
+  --line-strong: var(--neutral-300);
+  --on-accent: var(--evolve-cream);
+  --focus-ring: var(--evolve-navy); /* navy on light; lime on dark (below) */
+  --focus-halo: var(--evolve-lime);
+  --overlay: rgb(10 18 37 / 0.48);
+
+  /* ---- Spacing (8-pt, with 4 and 12 half-steps) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---- Elevation 0–3 ---- */
+  --elevation-0: none;
+  --elevation-1: 0 1px 2px rgb(10 18 37 / 0.06), 0 0 0 1px rgb(10 18 37 / 0.04);
+  --elevation-2: 0 4px 12px rgb(10 18 37 / 0.08), 0 1px 3px rgb(10 18 37 / 0.06);
+  --elevation-3: 0 16px 40px rgb(10 18 37 / 0.16), 0 2px 8px rgb(10 18 37 / 0.08);
+
+  /* ---- Type scale ---- */
+  --text-12: 0.75rem;
+  --text-14: 0.875rem;
+  --text-16: 1rem;
+  --text-18: 1.125rem;
+  --text-20: 1.25rem;
+  --text-24: 1.5rem;
+  --text-30: 1.875rem;
+  --text-36: 2.25rem;
+  --text-48: 3rem;
+  --text-60: 3.75rem;
+  --text-72: 4.5rem;
+  --type-display: var(--font-lexend), var(--font-plex-arabic), system-ui, sans-serif; /* >= 30px only */
+  --type-ui: var(--font-instrument), var(--font-plex-arabic), system-ui, sans-serif;
+  --type-mono: var(--font-jetbrains), ui-monospace, monospace; /* IDs, digests, codes only */
+
+  /* ---- Motion ---- */
+  --motion-fast: 120ms;
+  --motion-base: 200ms;
+  --motion-slow: 320ms;
+  --motion-venn: 1200ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---- Layout ---- */
+  --shell-sidebar: 264px;
+  --content-max: 1280px;
+  --tap-min: 44px;
+}
+
+[data-theme="ledger"] {
+  --neutral-50: #141412;
+  --neutral-100: #1a1a1a;
+  --neutral-200: #34342f;
+  --neutral-300: #4a4a44;
+  --neutral-400: #77766f;
+  --neutral-500: #9a9993;
+  --neutral-600: #b9b8b2;
+  --neutral-700: #d0cfc9;
+  --neutral-800: #e0dfda;
+  --neutral-900: #e5e4e0;
+  --neutral-950: #e9e8e4;
+
+  --surface-0: #141412;
+  --surface-1: #1a1a1a;
+  --surface-2: #222220;
+  --surface-3: #262624;
+  --surface-inverse: #e5e4e0;
+  --paper: #e5e4e0;
+
+  --ink: var(--neutral-950);
+  --ink-2: var(--neutral-600);
+  --accent: #ffffff;
+  --line: var(--neutral-200);
+  --line-strong: var(--neutral-300);
+  --on-accent: #141412;
+  --focus-ring: var(--evolve-lime);
+  --focus-halo: #141412;
+  --overlay: rgb(0 0 0 / 0.6);
+
+  --signal-compatible-ink: #3fcf96;
+  --signal-review-ink: #f5a524;
+  --signal-escalated-ink: #ff8696;
+  --signal-vault-ink: #b3a1ff;
+  --signal-info-ink: #8fb4ff;
+
+  --elevation-1: 0 0 0 1px rgb(255 255 255 / 0.06);
+  --elevation-2: 0 0 0 1px rgb(255 255 255 / 0.08), 0 6px 16px rgb(0 0 0 / 0.4);
+  --elevation-3: 0 0 0 1px rgb(255 255 255 / 0.1), 0 18px 48px rgb(0 0 0 / 0.55);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+    --motion-slow: 0ms;
+    --motion-venn: 0ms;
+  }
+}

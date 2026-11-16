@@ -1,0 +1,39 @@
+{
+  "name": "evolve-counselor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "\u00e9volv\u00e9 counselor workbench (R-UX-2, docs/09 \u00a73/\u00a74.2). SIMULATED environment, synthetic data only.",
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start --port 3001",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "gen:mock": "python scripts/gen_mock_fixtures.py",
+    "test:e2e": "playwright test",
+    "build:mock": "node scripts/build-mock.mjs",
+    "build:standalone": "node -e \"process.env.NEXT_OUTPUT='standalone';require('child_process').spawnSync('npx',['next','build'],{stdio:'inherit',shell:true,env:process.env})\""
+  },
+  "dependencies": {
+    "@evolve/ui": "*",
+    "@tanstack/react-query": "^5.107.1",
+    "lucide-react": "^1.70.0",
+    "next": "^16.4.5",
+    "next-intl": "^4.14.9",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.5",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
+  }
+}

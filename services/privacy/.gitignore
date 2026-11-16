@@ -1,0 +1,5 @@
+# Dev keys are generated in memory at runtime; if anyone ever persists one locally it must stay here, untracked.
+.dev_keystore/
+.hypothesis/
+__pycache__/
+*.jsonl

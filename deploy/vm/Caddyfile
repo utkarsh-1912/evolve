@@ -1,0 +1,30 @@
+# évolvé VM reverse proxy. Automatic HTTPS (Let's Encrypt) for the four subdomains of APP_DOMAIN.
+# DNS: point app., counselor., eval. and api.<APP_DOMAIN> (A/AAAA records) at this VM before `up`.
+{
+	email {$ACME_EMAIL}
+}
+
+(common) {
+	encode zstd gzip
+	header -Server
+}
+
+app.{$APP_DOMAIN} {
+	import common
+	reverse_proxy citizen:3000
+}
+
+counselor.{$APP_DOMAIN} {
+	import common
+	reverse_proxy counselor:3001
+}
+
+eval.{$APP_DOMAIN} {
+	import common
+	reverse_proxy eval:3002
+}
+
+api.{$APP_DOMAIN} {
+	import common
+	reverse_proxy api:8000
+}

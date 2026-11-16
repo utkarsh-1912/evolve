@@ -1,0 +1,17 @@
+**/.env
+**/.env.*
+!**/.env.example
+**/node_modules
+**/.next
+**/.next-live
+**/dist
+**/__pycache__
+**/test-results
+**/playwright-report
+apps/*/screenshots
+apps/*/e2e
+services/
+tests/
+docs/
+handoffs/
+deploy/
