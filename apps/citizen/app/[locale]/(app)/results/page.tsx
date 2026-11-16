@@ -66,6 +66,16 @@ function ResultsInner() {
     { key: "info" as const, title: t("info"), help: undefined, items: calls.filter((c) => !needsConversation(c)) },
   ].filter((g) => g.items.length);
   const current = calls.find((c) => c.hgnc_id === open) ?? null;
+  // ar: use the backend's plain_ar; while it is still the English placeholder upstream, use the UI's generic
+  // Arabic sentence for the classification (never gene-specific; see messages/AR-REVIEW.md).
+  const plainText = (c: VaultCall) =>
+    locale !== "ar"
+      ? c.plain_en
+      : c.plain_ar && c.plain_ar !== c.plain_en
+        ? c.plain_ar
+        : t.has(`plainFallback.${c.classification}`)
+          ? t(`plainFallback.${c.classification}`)
+          : t("plainFallback.other");
 
   return (
     <>
@@ -89,7 +99,7 @@ function ResultsInner() {
                     testId={`finding-${c.hgnc_id}`}
                     condition={conditionOf(c, locale)}
                     fallbackTitle={t("fallbackTitle")}
-                    summary={locale === "ar" ? c.plain_ar : c.plain_en}
+                    summary={plainText(c)}
                     gene={c.gene}
                     classification={c.classification}
                     zygosity={c.zygosity}
@@ -111,7 +121,7 @@ function ResultsInner() {
           <div className="space-y-5 text-sm">
             <section>
               <h3 className="font-semibold">{t("drawerMeaning")}</h3>
-              <p className="mt-1 text-base">{locale === "ar" ? current.plain_ar : current.plain_en}</p>
+              <p className="mt-1 text-base">{plainText(current)}</p>
             </section>
             <section>
               <h3 className="font-semibold">{t("drawerWho")}</h3>

@@ -47,7 +47,7 @@ export function LockedNumber({
   const panelId = useId();
   // ar locale: the engine's Arabic display string for this field, if the record has one (else EN).
   const arField = AR_FIELD[field];
-  const arValue = locale === "ar" && arField ? record[arField] : null;
+  const arValue = locale === "ar" && arField ? (record[arField] as string | null | undefined) ?? null : null;
   const value = arValue ?? record[field];
   const isAr = typeof arValue === "string";
 

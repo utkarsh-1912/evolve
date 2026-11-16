@@ -3,6 +3,11 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { expect, test, type Page } from "@playwright/test";
 import { runCompatibility, signIn } from "./helpers";
+import en from "../messages/en.json";
+import ar from "../messages/ar.json";
+
+// Labels come from the locale's own messages, so AR journeys exercise the Arabic UI (not English literals).
+const L = { en, ar } as const;
 
 // TASK-P3-UI-CIT acceptance: V1–V5 journeys, EN + AR, through all citizen surfaces.
 // Runs unchanged against the SIMULATED mock (playwright.config.ts) and the live backend (playwright.live.config.ts).
@@ -30,7 +35,7 @@ const JOURNEYS: Expect[] = [
   { partner: "V5B", other: "V5A", headline: "review", handoff: true, neverSee: [], family: false },
 ];
 const TEACHBACK_CORRECT = [false, true, true, true];
-const BACKEND_JUDICIAL = "sent to the Abu Dhabi Judicial Department";
+const BACKEND_JUDICIAL = { en: "sent to the Abu Dhabi Judicial Department", ar: "دائرة القضاء في أبوظبي" } as const;
 
 async function bodyText(page: Page) {
   return page.locator("main").innerText();
@@ -52,7 +57,7 @@ for (const locale of ["en", "ar"] as const) {
       // My results (open every finding's technical details before reading text)
       await page.goto(`/${locale}/results`);
       await expect(page.getByTestId("vault-calls").or(page.getByTestId("vault-none"))).toBeVisible();
-      for (const btn of await page.getByRole("button", { name: "Technical details" }).all()) await btn.click();
+      for (const btn of await page.getByRole("button", { name: L[locale].ui.technicalDetails }).all()) await btn.click();
       await collect();
 
       // Compatibility
@@ -60,10 +65,10 @@ for (const locale of ["en", "ar"] as const) {
       const result = page.getByTestId("result");
       if (j.headline === "shared") {
         await expect(result).toHaveAttribute("data-result", "shared");
-        await expect(page.getByTestId("locked-offspring_risk_one_in")).toHaveText(/^1 in\s+4$/);
+        await expect(page.getByTestId("locked-offspring_risk_one_in")).toHaveText(locale === "ar" ? /^1 من كل\s+4$/ : /^1 in\s+4$/);
       } else if (j.headline === "review") {
         await expect(result).toHaveAttribute("data-result", "review");
-        await expect(result.getByText("Compatible", { exact: true })).toHaveCount(0); // api.md v1.2.1
+        await expect(result.getByText(L[locale].compat.compatible, { exact: true })).toHaveCount(0); // api.md v1.2.1
       } else {
         await expect(result).toHaveAttribute("data-result", "compatible");
       }
@@ -72,13 +77,15 @@ for (const locale of ["en", "ar"] as const) {
       await expect(page.getByTestId("counselor-rail")).toBeVisible();
       await expect(page.getByTestId("message-thread")).toBeVisible();
       // Certificate sentence once per page: the callout shows it; message bodies do not repeat the backend sentence.
-      expect(await bodyText(page)).not.toContain(BACKEND_JUDICIAL);
+      expect(await bodyText(page)).not.toContain(BACKEND_JUDICIAL[locale]);
       await collect();
 
       // Explainer (carrier only)
       await page.goto(`/${locale}/results/explainer`);
       if (j.explainer) {
-        await expect(page.getByTestId("locked-offspring_risk_one_in")).toHaveText(new RegExp(`^${j.explainer.replace(/ /g, "\\s+")}$`));
+        // ar: the engine's Arabic display string ("1 in N" -> "1 من كل N", same digits).
+        const shown = locale === "ar" ? j.explainer.replace(/^1 in /, "1 من كل ") : j.explainer;
+        await expect(page.getByTestId("locked-offspring_risk_one_in")).toHaveText(new RegExp(`^${shown.replace(/ /g, "\\s+")}$`));
         await expect(page.getByTestId("detection-bar")).toBeVisible();
       } else {
         await expect(page.getByTestId("results-none")).toBeVisible();
@@ -89,7 +96,7 @@ for (const locale of ["en", "ar"] as const) {
       await page.goto(`/${locale}/teachback`);
       for (let i = 0; i < TEACHBACK_CORRECT.length; i++) {
         await expect(page.getByTestId("teachback-statement")).toBeVisible();
-        await page.getByRole("radio", { name: TEACHBACK_CORRECT[i] ? "True" : "False" }).click();
+        await page.getByRole("radio", { name: TEACHBACK_CORRECT[i] ? L[locale].teachback.agree : L[locale].teachback.disagree }).click();
         await page.getByTestId(i === TEACHBACK_CORRECT.length - 1 ? "teachback-submit" : "teachback-next").click();
       }
       await expect(page.getByTestId("teachback-done")).toHaveAttribute("data-passed", "true");
