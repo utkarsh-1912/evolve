@@ -1,7 +1,8 @@
 "use client";
 // Counselor-only AI draft summary (api.md v1.3.0, DECISIONS #62). Clearly labelled, review before use, never shown to
 // the patient, never stored on the case. If the gate blocks it, show the violations and no text. On 503 the panel
-// says "unavailable" and the rest of the case keeps working. Hidden when /api/config says ai_draft_enabled=false.
+// says "unavailable" and the rest of the case keeps working. The draft text is English only (Sarvam has no Arabic):
+// it is marked lang="en" dir="ltr" inside Arabic pages; the label and controls are translated. Hidden when /api/config says ai_draft_enabled=false.
 import { Alert, Button, Card, CardHeader, StatusChip } from "@evolve/ui";
 import { IconAction } from "@evolve/ui/shell/hints";
 import { Bot, NotebookPen, ShieldAlert } from "lucide-react";
@@ -51,7 +52,7 @@ export function AiDraftPanel({ caseId, onCopyToNotes, readOnly }: { caseId: stri
           {d.gate.passed && d.draft ? (
             <>
               <div className="flex items-start gap-2">
-                <p className="max-w-[72ch] flex-1 whitespace-pre-wrap text-ink" data-testid="ai-draft-text">
+                <p lang="en" dir="ltr" className="max-w-[72ch] flex-1 whitespace-pre-wrap text-start text-ink" data-testid="ai-draft-text">
                   {d.draft}
                 </p>
                 {readOnly ? null : (

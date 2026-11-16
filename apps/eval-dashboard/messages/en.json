@@ -9,7 +9,7 @@
     "compliance": "Decision support · not a diagnosis or medical advice · the premarital certificate is issued regardless of result",
     "footerEnv": "Synthetic data · simulated users · SIMULATED integrations",
     "simulated": "Simulated",
-    "arPending": "Arabic text is pending native clinical review. English placeholders are shown. TODO(ar)",
+    "arPending": "The Arabic text is a draft pending native clinical review.",
     "switchTo": "العربية",
     "switchToLang": "ar",
     "brandDescriptor": "Inherited risk, explained",

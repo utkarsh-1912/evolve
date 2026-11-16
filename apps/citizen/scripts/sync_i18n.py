@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""i18n sync for apps/citizen (docs/09 §7: 0 missing keys in EN, AR keys present and flagged).
+"""i18n build for apps/citizen (docs/09 §7).
 
-1. Merges the backend's gate-checked EN reference text for every key it returns (messages/_api.en.json, written by
-   gen_mock_fixtures.py from runtime.templates.I18N_EN; DECISIONS #37) into en.json["api"].
-2. Rebuilds messages/ar.json from en.json. Real translations are kept only for dotted keys listed in TRANSLATED
-   (none yet; all pending native clinical review), so stale copies can never survive an EN edit.
+en.json : UI strings (hand-edited) + `api` = backend EN key table (messages/_api.en.json).
+ar.json : UI strings from scripts/ar_ui.py (Modern Standard Arabic) + `api` = backend AR key table
+          (messages/_api.ar.json, runtime/i18n_ar.py). No English placeholders: a key missing in Arabic FAILS the build.
+Review status lives in messages/AR-REVIEW.md, never inside the strings.
 
 Usage: python apps/citizen/scripts/sync_i18n.py
 """
 import json
 import pathlib
+import sys
 
-HERE = pathlib.Path(__file__).resolve().parents[1] / "messages"
-TRANSLATED: set[str] = set()  # e.g. {"chrome.nav.home"} once reviewed Arabic exists
+APP = pathlib.Path(__file__).resolve().parents[1]
+HERE = APP / "messages"
+sys.path.insert(0, str(APP / "scripts"))
+from ar_ui import AR  # noqa: E402
 
 
 def load(name: str):
@@ -23,20 +26,25 @@ def dump(name: str, data) -> None:
     (HERE / name).write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def merge(e, a, path=""):
-    if isinstance(e, dict):
-        return {k: merge(v, a.get(k) if isinstance(a, dict) else None, f"{path}{k}.") for k, v in e.items()}
-    return a if path.rstrip(".") in TRANSLATED and a is not None else e
+def leaves(d, p=""):
+    for k, v in d.items():
+        if isinstance(v, dict):
+            yield from leaves(v, f"{p}{k}.")
+        else:
+            yield f"{p}{k}", v
 
 
 en = load("en.json")
-if (HERE / "_api.en.json").exists():
-    en["api"] = load("_api.en.json")
-    dump("en.json", en)
+en["api"] = load("_api.en.json")
+dump("en.json", en)
 
-old = load("ar.json") if (HERE / "ar.json").exists() else {}
-ar = merge(en, old)
-ar["chrome"]["lang"] = {"switchTo": "English", "switchToLang": "en"}
-ar["_todo"] = "TODO(ar): English placeholders pending native clinical Arabic review (docs/09 §5, TODO(native-review)). Keys mirror en.json."
+ar = json.loads(json.dumps(AR))
+ar["api"] = load("_api.ar.json")
+en_keys = {k for k, _ in leaves(en)}
+ar_keys = {k for k, _ in leaves(ar)}
+missing = sorted(en_keys - ar_keys)
+extra = sorted(ar_keys - en_keys)
+if missing or extra:
+    sys.exit(f"i18n key mismatch. missing in ar: {missing[:20]} extra in ar: {extra[:20]}")
 dump("ar.json", ar)
-print("i18n synced: en.json api keys merged; ar.json rebuilt")
+print(f"i18n synced: {len(en_keys)} keys, en/ar parity OK")

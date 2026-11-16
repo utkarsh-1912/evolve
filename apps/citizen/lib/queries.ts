@@ -82,7 +82,7 @@ export function useCompatResult() {
 export function useSignIn() {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (partnerId: string) => api.createSession(partnerId),
+    mutationFn: ({ partnerId, lang }: { partnerId: string; lang: "en" | "ar" }) => api.createSession(partnerId, lang),
     onSuccess: (s: Session) => {
       qc.clear();
       setSession(s);

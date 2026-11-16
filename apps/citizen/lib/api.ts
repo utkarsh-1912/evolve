@@ -22,7 +22,7 @@ import { ApiError } from "./types";
 
 export interface Api {
   simulated: boolean;
-  createSession(partner_id: string): Promise<Session>;
+  createSession(partner_id: string, lang?: "en" | "ar"): Promise<Session>;
   vignettes(): Promise<Vignette[]>;
   vault(token: string | null): Promise<Vault>;
   listConsents(token: string | null): Promise<Consent[]>;
@@ -74,7 +74,7 @@ async function call<T>(method: string, path: string, token: string | null, body?
 
 const liveApi: Api = {
   simulated: false,
-  createSession: (partner_id) => call("POST", "/session", null, { partner_id }),
+  createSession: (partner_id, lang = "en") => call("POST", "/session", null, { partner_id, lang }),
   vignettes: () => call("GET", "/demo/vignettes", null),
   vault: (t) => call("GET", "/me/vault", t),
   listConsents: (t) => call("GET", "/consents", t),

@@ -57,8 +57,8 @@ def main() -> None:
         "vignettes": vignettes, "partners": {}, "teachback_key": {t["id"]: t["answer"] for t in templates.TEACHBACK},
     }
 
-    def session(pid: str) -> dict:
-        tok = c.post("/api/session", json={"partner_id": pid}).json()["token"]
+    def session(pid: str, lang: str = "en") -> dict:
+        tok = c.post("/api/session", json={"partner_id": pid, "lang": lang}).json()["token"]
         return {"Authorization": f"Bearer {tok}"}
 
     for v in vignettes:
@@ -94,6 +94,18 @@ def main() -> None:
                 "family_tokens": fam,
             }
         c.post("/api/demo/reset")
+        # Arabic pass: same journey with lang=ar sessions; keeps the closed AR templates (DECISIONS #37/#48).
+        ha, hb = session(a, "ar"), session(b, "ar")
+        c.post("/api/consents", json={"counterpart": b}, headers=ha)
+        c.post("/api/consents", json={"counterpart": a}, headers=hb)
+        ca = c.post(f"/api/couples/{v['couple_id']}/compatibility", headers=ha).json()
+        for pid, h in ((a, ha), (b, hb)):
+            comp = ca if pid == a else c.post(f"/api/couples/{v['couple_id']}/compatibility", headers=h).json()
+            out["partners"][pid]["compatibility_ar"] = {"apsi": comp["apsi"], "records": comp["records"], "messages": comp["messages"],
+                                                       "review_required": comp["review_required"]}
+            out["partners"][pid]["messages_ar"] = c.get("/api/me/messages", headers=h).json()
+            out["partners"][pid]["teachback_ar"] = c.post("/api/me/teachback/start", headers=h).json()
+        c.post("/api/demo/reset")
 
     dest = APP / "lib" / "mock" / "fixtures.json"
     dest.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -107,7 +119,16 @@ def main() -> None:
             node = node.setdefault(p, {})
         node[leaf] = text
     (APP / "messages" / "_api.en.json").write_text(json.dumps(nested, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"wrote {dest.relative_to(ROOT)} and messages/_api.en.json ({len(templates.I18N_EN)} keys)")
+    # Backend's Arabic text for the same keys (runtime/i18n_ar.py, TODO(native-review) upstream).
+    nested_ar: dict = {}
+    for key, text in templates.I18N["ar"].items():
+        node = nested_ar
+        *path, leaf = key.split(".")
+        for p in path:
+            node = node.setdefault(p, {})
+        node[leaf] = text
+    (APP / "messages" / "_api.ar.json").write_text(json.dumps(nested_ar, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"wrote {dest.relative_to(ROOT)} and messages/_api.{{en,ar}}.json ({len(templates.I18N_EN)} keys)")
 
 
 if __name__ == "__main__":

@@ -34,11 +34,6 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <Providers dir={dir}>
             <EnvironmentBanner label={t("envLabel")} detail={t("envDetail")} />
             <OfflineBanner />
-            {locale === "ar" ? (
-              <p className="bg-review/20 px-4 py-2 text-center text-sm text-ink" data-testid="ar-pending">
-                {t("arPending")}
-              </p>
-            ) : null}
             {children}
           </Providers>
         </NextIntlClientProvider>

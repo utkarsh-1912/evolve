@@ -38,6 +38,10 @@ interface PartnerFx {
   notifications_post: Notification[];
   teachback: TeachbackStart;
   family_tokens: Record<string, FamilyToken>;
+  // Recorded with lang=ar sessions (closed Arabic templates; DECISIONS #37/#48).
+  compatibility_ar: CompatibilityResponse;
+  messages_ar: Message[];
+  teachback_ar: TeachbackStart;
 }
 const F = fixtures as unknown as { vignettes: Vignette[]; partners: Record<string, PartnerFx>; teachback_key: Record<string, boolean> };
 
@@ -65,10 +69,11 @@ function write(key: string, value: unknown) {
 type ConsentStore = Record<string, Consent>;
 const delay = (ms = 100) => new Promise((r) => setTimeout(r, ms));
 const now = () => new Date().toISOString();
-const tokenFor = (pid: string) => `sim-token-${pid}`;
+const tokenFor = (pid: string, lang: "en" | "ar" = "en") => `sim-token-${pid}${lang === "ar" ? ".ar" : ""}`;
+const langOf = (token: string | null): "en" | "ar" => (token?.endsWith(".ar") ? "ar" : "en");
 
 function me(token: string | null): string {
-  const pid = token?.startsWith("sim-token-") ? token.slice("sim-token-".length) : null;
+  const pid = token?.startsWith("sim-token-") ? token.slice("sim-token-".length).replace(/\.ar$/, "") : null;
   if (!pid || !F.partners[pid]) throw new ApiError(401, "unauthorized", "Sign in again (SIMULATED).", "SIM-401");
   return pid;
 }
@@ -128,11 +133,11 @@ function carePlanFor(pid: string): CarePlan {
 export const mockApi = {
   simulated: true as const,
 
-  async createSession(partner_id: string): Promise<Session> {
+  async createSession(partner_id: string, lang: "en" | "ar" = "en"): Promise<Session> {
     await delay();
     if (!F.partners[partner_id]) throw new ApiError(404, "not_found", "Unknown synthetic partner.", "SIM-404");
     audit(partner_id, "signed_in", "session");
-    return { token: tokenFor(partner_id), partner_id, scopes: ["patient/Observation.rs", "patient/DiagnosticReport.r", "patient/Consent.cru"], expires_in: 3600 };
+    return { token: tokenFor(partner_id, lang), partner_id, scopes: ["patient/Observation.rs", "patient/DiagnosticReport.r", "patient/Consent.cru"], expires_in: 3600 };
   },
 
   async vignettes(): Promise<Vignette[]> {
@@ -209,14 +214,14 @@ export const mockApi = {
     }
     setReady(couple_id, true);
     audit(pid, "submitted", "compatibility");
-    return f.compatibility;
+    return langOf(token) === "ar" ? f.compatibility_ar : f.compatibility;
   },
 
   async messages(token: string | null): Promise<Message[]> {
     await delay();
     const pid = me(token);
     audit(pid, "viewed", "messages");
-    return isReady(fx(pid).couple_id) ? fx(pid).messages : [];
+    return isReady(fx(pid).couple_id) ? (langOf(token) === "ar" ? fx(pid).messages_ar : fx(pid).messages) : [];
   },
 
   async loop(token: string | null, couple_id: string): Promise<LoopStatus> {
@@ -288,7 +293,7 @@ export const mockApi = {
 
   async teachbackStart(token: string | null): Promise<TeachbackStart> {
     await delay(60);
-    return fx(me(token)).teachback;
+    return langOf(token) === "ar" ? fx(me(token)).teachback_ar : fx(me(token)).teachback;
   },
 
   /** Scored with the backend's answer key (recorded into the SIMULATED fixtures). Failure escalates (trigger d). */

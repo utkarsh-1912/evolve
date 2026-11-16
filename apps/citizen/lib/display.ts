@@ -4,6 +4,8 @@
 const REPEATED_SENTENCES = [
   "The marriage health certificate is issued and sent to the Abu Dhabi Judicial Department regardless of your genetic results.",
   "This is decision support, not a diagnosis or medical advice.",
+  "تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية.",
+  "هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية.",
 ] as const;
 
 export function withoutPageNotices(text: string): string {

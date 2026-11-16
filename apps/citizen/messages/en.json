@@ -270,7 +270,13 @@
     "drawerNextBody": "You can talk this through with a genetic counselor at any time.",
     "signInTitle": "Sign in to see your results",
     "signInBody": "Your results are private. Choose a synthetic person to continue.",
-    "explainerAvailable": "A detailed explanation appears after your compatibility check."
+    "explainerAvailable": "A detailed explanation appears after your compatibility check.",
+    "plainFallback": {
+      "P": "You carry one copy of a gene change known to cause a recessive condition. Carriers are usually healthy. Being a carrier is not a diagnosis.",
+      "LP": "You carry one copy of a gene change that is likely to cause a recessive condition. Carriers are usually healthy. Being a carrier is not a diagnosis.",
+      "VUS": "A gene change of uncertain meaning was found. It is not a diagnosis; a genetic counselor will review it with you.",
+      "other": "A gene change was found. A genetic counselor will explain it."
+    }
   },
   "ds": {
     "title": "Design system",

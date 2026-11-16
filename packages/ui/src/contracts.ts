@@ -41,6 +41,11 @@ export interface RiskOutput {
   carrier_role?: "A" | "B" | null;
   reason: Reason;
   relative_to_unrelated_display?: string | null;
+  /** Arabic display strings produced by the risk engine (Western digits). Shown on the ar locale. */
+  offspring_risk_one_in_ar?: string | null;
+  posterior_carrier_b_one_in_ar?: string | null;
+  reference_unrelated_one_in_ar?: string | null;
+  relative_to_unrelated_display_ar?: string | null;
 }
 
 /** Fields LockedNumber may render. */

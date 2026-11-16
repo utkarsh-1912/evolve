@@ -95,10 +95,10 @@
       4827
      ],
      "consent_ids": [
-      "consent-fc7ac33352bd85e84e682db1",
-      "consent-282bbd929e78664a17157fe5"
+      "consent-ff037cc8063af1efaec4b144",
+      "consent-ba5806e7c62e72d98db3a943"
      ],
-     "audit_event_id": "audit-3c99b7203fada15c"
+     "audit_event_id": "audit-58370a53f52c9b25"
     },
     "records": [
      {
@@ -121,7 +121,7 @@
     ],
     "messages": [
      {
-      "id": "msg-d35adf2348c7",
+      "id": "msg-4c798c6a4a8b",
       "to": "V1A",
       "lang": "en",
       "kind": "result",
@@ -139,10 +139,10 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:51.913050Z"
+      "created_at": "2026-11-16T18:58:03.249197Z"
      },
      {
-      "id": "msg-9993c021cf83",
+      "id": "msg-aed408557303",
       "to": "V1A",
       "lang": "en",
       "kind": "escalation",
@@ -158,14 +158,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:51.915948Z"
+      "created_at": "2026-11-16T18:58:03.251619Z"
      }
     ],
     "review_required": false
    },
    "messages": [
     {
-     "id": "msg-d35adf2348c7",
+     "id": "msg-4c798c6a4a8b",
      "to": "V1A",
      "lang": "en",
      "kind": "result",
@@ -183,10 +183,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:51.913050Z"
+     "created_at": "2026-11-16T18:58:03.249197Z"
     },
     {
-     "id": "msg-9993c021cf83",
+     "id": "msg-aed408557303",
      "to": "V1A",
      "lang": "en",
      "kind": "escalation",
@@ -202,7 +202,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:51.915948Z"
+     "created_at": "2026-11-16T18:58:03.251619Z"
     }
    ],
    "care_plan_pre": {
@@ -257,12 +257,12 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:51.892203Z",
+       "ts": "2026-11-16T18:58:03.237208Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:51.933660Z",
+       "ts": "2026-11-16T18:58:03.264582Z",
        "actor_role": "system"
       }
      ]
@@ -331,40 +331,40 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-a3f2f5d90632",
-     "ts": "2026-11-15T16:13:51.933686Z",
+     "id": "ntf-05c1e1fb377c",
+     "ts": "2026-11-16T18:58:03.264602Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-0b1e8e12f421",
-     "ts": "2026-11-15T16:13:51.915990Z",
+     "id": "ntf-c6a11bcdd145",
+     "ts": "2026-11-16T18:58:03.251646Z",
      "kind": "escalation",
      "title_key": "notif.counselor_contact",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-d6e3e59bc9e4",
-     "ts": "2026-11-15T16:13:51.913103Z",
+     "id": "ntf-d2ba98e1f8e1",
+     "ts": "2026-11-16T18:58:03.249239Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-80711441c323",
-     "ts": "2026-11-15T16:13:51.892231Z",
+     "id": "ntf-6e27c25c05a2",
+     "ts": "2026-11-16T18:58:03.237224Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-9d14097343f1",
-     "ts": "2026-11-15T16:13:51.735959Z",
+     "id": "ntf-ea3e1278fc2e",
+     "ts": "2026-11-16T18:58:03.091409Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -405,13 +405,161 @@
      "token": {
       "hgnc_id": 4827,
       "variant_digest": "38a0fbe651f0f31a06ed7c8c9ddc0eee8cd21c3d245b525782c310a76ecf48aa",
-      "issued_at": "2026-11-15T16:13:51.956866Z",
-      "expiry": "2027-05-14T16:13:51.956866Z",
-      "signature": "ZxGrj_Wlgo8SvY9DA4-JqtAlvcwY7sJIVvfik3MhvyzJsN8z9D7-fqTWQ-_Q2bDQvNqVsfGl1JCjIUWSOOrVBg"
+      "issued_at": "2026-11-16T18:58:03.278476Z",
+      "expiry": "2027-05-15T18:58:03.278476Z",
+      "signature": "etK_yVp1Prt9HDBCAK_hpb8piKqvQ3ouV_X-ykmuLUzaABSwrfTeP8k1GZ9dh8_Xo7jqRxBGER2wke_PD7pFCw"
      },
-     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjUxLjk1Njg2NloiLCJoZ25jX2lkIjo0ODI3LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjUxLjk1Njg2NloiLCJzaWduYXR1cmUiOiJaeEdyal9XbGdvOFN2WTlEQTQtSnF0QWx2Y3dZN3NKSVZ2ZmlrM01odnl6SnNOOHo5RDctZnFUV1EtX1EyYkRRdk5xVnNmR2wxSkNqSVVXU09PclZCZyIsInZhcmlhbnRfZGlnZXN0IjoiMzhhMGZiZTY1MWYwZjMxYTA2ZWQ3YzhjOWRkYzBlZWU4Y2QyMWMzZDI0NWI1MjU3ODJjMzEwYTc2ZWNmNDhhYSJ9",
-     "expires_at": "2027-05-14T16:13:51.956866Z"
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE1VDE4OjU4OjAzLjI3ODQ3NloiLCJoZ25jX2lkIjo0ODI3LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE2VDE4OjU4OjAzLjI3ODQ3NloiLCJzaWduYXR1cmUiOiJldEtfeVZwMVBydDlIREJDQUtfaHBiOHBpS3F2UTNvdVZfWC15a211TFV6YUFCU3dyZlRlUDhrMUdaOWRoOF9YbzdqcVJ4QkdFUjJ3a2VfUEQ3cEZDdyIsInZhcmlhbnRfZGlnZXN0IjoiMzhhMGZiZTY1MWYwZjMxYTA2ZWQ3YzhjOWRkYzBlZWU4Y2QyMWMzZDI0NWI1MjU3ODJjMzEwYTc2ZWNmNDhhYSJ9",
+     "expires_at": "2027-05-15T18:58:03.278476Z"
     }
+   },
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": false,
+     "shared_hgnc_ids": [
+      4827
+     ],
+     "consent_ids": [
+      "consent-663e34b011e62f438f71d699",
+      "consent-7c49cabdd0e8ec62b0eaa694"
+     ],
+     "audit_event_id": "audit-7567cabcfdbcadc4"
+    },
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "scenario": "concordant_positive",
+      "status": "ok",
+      "fusage": "genome_wide_context_only",
+      "audience": "couple",
+      "carrier_role": null,
+      "reason": null,
+      "F": 0.0625,
+      "offspring_risk": 0.25,
+      "offspring_risk_one_in": "1 in 4",
+      "offspring_risk_one_in_ar": "1 من كل 4",
+      "escalate": true,
+      "digest": "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     }
+    ],
+    "messages": [
+     {
+      "id": "msg-bda06c542cef",
+      "to": "V1A",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: كلاكما لديه تغيّر في الجين نفسه: HBB. في كل حمل، احتمال أن يرث الطفل نسخة متغيّرة من جين HBB من كليكما هو 1 من كل 4. من الخيارات التي يمكن للزوجين مناقشتها مع المستشار، دون ترتيب معيّن: أطفال الأنابيب مع الفحص الجيني للأجنة قبل الزرع (PGT-M) ضمن تغطية ثقة (ويتطلب ذلك موافقة خطية من الزوجين)، والتشخيص قبل الولادة، وخياراتكما الخاصة بشأن الزواج والأسرة. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [
+       "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+      ],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:03.797656Z"
+     },
+     {
+      "id": "msg-016aded979ee",
+      "to": "V1A",
+      "lang": "ar",
+      "kind": "escalation",
+      "text": "لأن لدى كليكما تغيّراً في الجين نفسه، سيتواصل معك مستشار وراثي. والهدف هو حجز موعد خلال 48 ساعة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:03.800280Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages_ar": [
+    {
+     "id": "msg-bda06c542cef",
+     "to": "V1A",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: كلاكما لديه تغيّر في الجين نفسه: HBB. في كل حمل، احتمال أن يرث الطفل نسخة متغيّرة من جين HBB من كليكما هو 1 من كل 4. من الخيارات التي يمكن للزوجين مناقشتها مع المستشار، دون ترتيب معيّن: أطفال الأنابيب مع الفحص الجيني للأجنة قبل الزرع (PGT-M) ضمن تغطية ثقة (ويتطلب ذلك موافقة خطية من الزوجين)، والتشخيص قبل الولادة، وخياراتكما الخاصة بشأن الزواج والأسرة. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [
+      "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:03.797656Z"
+    },
+    {
+     "id": "msg-016aded979ee",
+     "to": "V1A",
+     "lang": "ar",
+     "kind": "escalation",
+     "text": "لأن لدى كليكما تغيّراً في الجين نفسه، سيتواصل معك مستشار وراثي. والهدف هو حجز موعد خلال 48 ساعة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:03.800280Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
    }
   },
   "V1B": {
@@ -466,10 +614,10 @@
       4827
      ],
      "consent_ids": [
-      "consent-fc7ac33352bd85e84e682db1",
-      "consent-282bbd929e78664a17157fe5"
+      "consent-ff037cc8063af1efaec4b144",
+      "consent-ba5806e7c62e72d98db3a943"
      ],
-     "audit_event_id": "audit-b784c7cdbf8ded3f"
+     "audit_event_id": "audit-6fac7bf58c986dde"
     },
     "records": [
      {
@@ -492,7 +640,7 @@
     ],
     "messages": [
      {
-      "id": "msg-48b5e032093e",
+      "id": "msg-854dd8dcff0e",
       "to": "V1B",
       "lang": "en",
       "kind": "result",
@@ -510,10 +658,10 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:52.217184Z"
+      "created_at": "2026-11-16T18:58:03.482422Z"
      },
      {
-      "id": "msg-861577b2629c",
+      "id": "msg-0e7270f8cb79",
       "to": "V1B",
       "lang": "en",
       "kind": "escalation",
@@ -529,14 +677,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:52.220494Z"
+      "created_at": "2026-11-16T18:58:03.485601Z"
      }
     ],
     "review_required": false
    },
    "messages": [
     {
-     "id": "msg-48b5e032093e",
+     "id": "msg-854dd8dcff0e",
      "to": "V1B",
      "lang": "en",
      "kind": "result",
@@ -554,10 +702,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:52.217184Z"
+     "created_at": "2026-11-16T18:58:03.482422Z"
     },
     {
-     "id": "msg-861577b2629c",
+     "id": "msg-0e7270f8cb79",
      "to": "V1B",
      "lang": "en",
      "kind": "escalation",
@@ -573,7 +721,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:52.220494Z"
+     "created_at": "2026-11-16T18:58:03.485601Z"
     }
    ],
    "care_plan_pre": {
@@ -628,12 +776,12 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:52.179009Z",
+       "ts": "2026-11-16T18:58:03.419547Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:52.220617Z",
+       "ts": "2026-11-16T18:58:03.485698Z",
        "actor_role": "system"
       }
      ]
@@ -702,40 +850,40 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-bdff4ac69d8a",
-     "ts": "2026-11-15T16:13:52.220676Z",
+     "id": "ntf-5d3084be12ff",
+     "ts": "2026-11-16T18:58:03.485739Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-b219dc2f4bcb",
-     "ts": "2026-11-15T16:13:52.220568Z",
+     "id": "ntf-7d690dd22b9c",
+     "ts": "2026-11-16T18:58:03.485660Z",
      "kind": "escalation",
      "title_key": "notif.counselor_contact",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-cde06a817b14",
-     "ts": "2026-11-15T16:13:52.217221Z",
+     "id": "ntf-365d306ea2d9",
+     "ts": "2026-11-16T18:58:03.482484Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-bd2bd4f1b958",
-     "ts": "2026-11-15T16:13:52.179070Z",
+     "id": "ntf-09547a01e3b7",
+     "ts": "2026-11-16T18:58:03.419610Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-9af29753769c",
-     "ts": "2026-11-15T16:13:51.720209Z",
+     "id": "ntf-7b0bae512858",
+     "ts": "2026-11-16T18:58:03.070736Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -776,13 +924,161 @@
      "token": {
       "hgnc_id": 4827,
       "variant_digest": "38a0fbe651f0f31a06ed7c8c9ddc0eee8cd21c3d245b525782c310a76ecf48aa",
-      "issued_at": "2026-11-15T16:13:52.244538Z",
-      "expiry": "2027-05-14T16:13:52.244538Z",
-      "signature": "mLSf2pzOVeCVsLOIuuTseu1qfvchK2SR40fBxm91T7ZSnmaoiHju2K-z-il0GcqQ4OPmm_AXxquihXs6jB90Ag"
+      "issued_at": "2026-11-16T18:58:03.549673Z",
+      "expiry": "2027-05-15T18:58:03.549673Z",
+      "signature": "k4IVe1F8jgev7kyV8EA9YnWsHqLr-vvyMqjym225RPo5LkeDHTHhmvC55gmoFQwu5bwAcY6WMvOoAgmimFmKCA"
      },
-     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjUyLjI0NDUzOFoiLCJoZ25jX2lkIjo0ODI3LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjUyLjI0NDUzOFoiLCJzaWduYXR1cmUiOiJtTFNmMnB6T1ZlQ1ZzTE9JdXVUc2V1MXFmdmNoSzJTUjQwZkJ4bTkxVDdaU25tYW9pSGp1Mkstei1pbDBHY3FRNE9QbW1fQVh4cXVpaFhzNmpCOTBBZyIsInZhcmlhbnRfZGlnZXN0IjoiMzhhMGZiZTY1MWYwZjMxYTA2ZWQ3YzhjOWRkYzBlZWU4Y2QyMWMzZDI0NWI1MjU3ODJjMzEwYTc2ZWNmNDhhYSJ9",
-     "expires_at": "2027-05-14T16:13:52.244538Z"
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE1VDE4OjU4OjAzLjU0OTY3M1oiLCJoZ25jX2lkIjo0ODI3LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE2VDE4OjU4OjAzLjU0OTY3M1oiLCJzaWduYXR1cmUiOiJrNElWZTFGOGpnZXY3a3lWOEVBOVluV3NIcUxyLXZ2eU1xanltMjI1UlBvNUxrZURIVEhobXZDNTVnbW9GUXd1NWJ3QWNZNldNdk9vQWdtaW1GbUtDQSIsInZhcmlhbnRfZGlnZXN0IjoiMzhhMGZiZTY1MWYwZjMxYTA2ZWQ3YzhjOWRkYzBlZWU4Y2QyMWMzZDI0NWI1MjU3ODJjMzEwYTc2ZWNmNDhhYSJ9",
+     "expires_at": "2027-05-15T18:58:03.549673Z"
     }
+   },
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": false,
+     "shared_hgnc_ids": [
+      4827
+     ],
+     "consent_ids": [
+      "consent-663e34b011e62f438f71d699",
+      "consent-7c49cabdd0e8ec62b0eaa694"
+     ],
+     "audit_event_id": "audit-9cc3bd35db836d72"
+    },
+    "records": [
+     {
+      "contract_version": "1.1.0",
+      "gene": "HBB",
+      "hgnc_id": 4827,
+      "scenario": "concordant_positive",
+      "status": "ok",
+      "fusage": "genome_wide_context_only",
+      "audience": "couple",
+      "carrier_role": null,
+      "reason": null,
+      "F": 0.0625,
+      "offspring_risk": 0.25,
+      "offspring_risk_one_in": "1 in 4",
+      "offspring_risk_one_in_ar": "1 من كل 4",
+      "escalate": true,
+      "digest": "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     }
+    ],
+    "messages": [
+     {
+      "id": "msg-7905131a8c9f",
+      "to": "V1B",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: كلاكما لديه تغيّر في الجين نفسه: HBB. في كل حمل، احتمال أن يرث الطفل نسخة متغيّرة من جين HBB من كليكما هو 1 من كل 4. من الخيارات التي يمكن للزوجين مناقشتها مع المستشار، دون ترتيب معيّن: أطفال الأنابيب مع الفحص الجيني للأجنة قبل الزرع (PGT-M) ضمن تغطية ثقة (ويتطلب ذلك موافقة خطية من الزوجين)، والتشخيص قبل الولادة، وخياراتكما الخاصة بشأن الزواج والأسرة. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [
+       "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+      ],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:04.099334Z"
+     },
+     {
+      "id": "msg-bc31eeb8e5ee",
+      "to": "V1B",
+      "lang": "ar",
+      "kind": "escalation",
+      "text": "لأن لدى كليكما تغيّراً في الجين نفسه، سيتواصل معك مستشار وراثي. والهدف هو حجز موعد خلال 48 ساعة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:04.102359Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages_ar": [
+    {
+     "id": "msg-7905131a8c9f",
+     "to": "V1B",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: كلاكما لديه تغيّر في الجين نفسه: HBB. في كل حمل، احتمال أن يرث الطفل نسخة متغيّرة من جين HBB من كليكما هو 1 من كل 4. من الخيارات التي يمكن للزوجين مناقشتها مع المستشار، دون ترتيب معيّن: أطفال الأنابيب مع الفحص الجيني للأجنة قبل الزرع (PGT-M) ضمن تغطية ثقة (ويتطلب ذلك موافقة خطية من الزوجين)، والتشخيص قبل الولادة، وخياراتكما الخاصة بشأن الزواج والأسرة. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [
+      "2117d97b2bf014afab10f8a513c54e21071a19fa0dc68477e69fcaa07de24dcd"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:04.099334Z"
+    },
+    {
+     "id": "msg-bc31eeb8e5ee",
+     "to": "V1B",
+     "lang": "ar",
+     "kind": "escalation",
+     "text": "لأن لدى كليكما تغيّراً في الجين نفسه، سيتواصل معك مستشار وراثي. والهدف هو حجز موعد خلال 48 ساعة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:04.102359Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
    }
   },
   "V2A": {
@@ -845,15 +1141,15 @@
      "compatible": true,
      "shared_hgnc_ids": [],
      "consent_ids": [
-      "consent-4d7dec5307d3e852bd558371",
-      "consent-cad43fca1497b3fc305570fe"
+      "consent-fcac02ae649757ecec4a7d30",
+      "consent-dd2096c5bba5c06b0f07fcb3"
      ],
-     "audit_event_id": "audit-f6202cee2eea4be0"
+     "audit_event_id": "audit-ada896d5482c195e"
     },
     "records": [],
     "messages": [
      {
-      "id": "msg-bc1ea6f1aaff",
+      "id": "msg-dc375d2ab2ae",
       "to": "V2A",
       "lang": "en",
       "kind": "result",
@@ -869,10 +1165,10 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:52.623310Z"
+      "created_at": "2026-11-16T18:58:04.563900Z"
      },
      {
-      "id": "msg-1f62e9e68dca",
+      "id": "msg-c657049b0d48",
       "to": "V2A",
       "lang": "en",
       "kind": "escalation",
@@ -888,14 +1184,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:52.644577Z"
+      "created_at": "2026-11-16T18:58:04.581127Z"
      }
     ],
     "review_required": false
    },
    "messages": [
     {
-     "id": "msg-bc1ea6f1aaff",
+     "id": "msg-dc375d2ab2ae",
      "to": "V2A",
      "lang": "en",
      "kind": "result",
@@ -911,10 +1207,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:52.623310Z"
+     "created_at": "2026-11-16T18:58:04.563900Z"
     },
     {
-     "id": "msg-0868eba6b68b",
+     "id": "msg-be3834ca7843",
      "to": "V2A",
      "lang": "en",
      "kind": "explainer",
@@ -932,10 +1228,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:52.642554Z"
+     "created_at": "2026-11-16T18:58:04.579555Z"
     },
     {
-     "id": "msg-1f62e9e68dca",
+     "id": "msg-c657049b0d48",
      "to": "V2A",
      "lang": "en",
      "kind": "escalation",
@@ -951,7 +1247,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:52.644577Z"
+     "created_at": "2026-11-16T18:58:04.581127Z"
     }
    ],
    "care_plan_pre": {
@@ -1006,22 +1302,22 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:52.609081Z",
+       "ts": "2026-11-16T18:58:04.550399Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:52.660457Z",
+       "ts": "2026-11-16T18:58:04.593890Z",
        "actor_role": "system"
       }
      ]
     },
     "tasks": [
      {
-      "id": "task-aeca318cc622",
+      "id": "task-bc500a3da5d4",
       "kind": "confirmatory_test",
       "status": "requested",
-      "due": "2026-11-29T16:13:52.608999Z"
+      "due": "2026-11-30T18:58:04.550323Z"
      }
     ],
     "appointments": [],
@@ -1067,48 +1363,48 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-46c6114c8af3",
-     "ts": "2026-11-15T16:13:52.660481Z",
+     "id": "ntf-af5bd719c4bc",
+     "ts": "2026-11-16T18:58:04.593919Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-9ac6047b6a94",
-     "ts": "2026-11-15T16:13:52.644617Z",
+     "id": "ntf-f87f766cd313",
+     "ts": "2026-11-16T18:58:04.581147Z",
      "kind": "escalation",
      "title_key": "notif.counselor_contact",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-f27f9cbea3d9",
-     "ts": "2026-11-15T16:13:52.623371Z",
+     "id": "ntf-f3c34ad9e2e2",
+     "ts": "2026-11-16T18:58:04.563957Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-cef14cc28eac",
-     "ts": "2026-11-15T16:13:52.609094Z",
+     "id": "ntf-c0d45838976e",
+     "ts": "2026-11-16T18:58:04.550411Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-08f0cfb5c5e8",
-     "ts": "2026-11-15T16:13:52.609070Z",
+     "id": "ntf-5567b5e9f689",
+     "ts": "2026-11-16T18:58:04.550389Z",
      "kind": "task",
      "title_key": "notif.task_created",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-dad144f390fe",
-     "ts": "2026-11-15T16:13:52.475184Z",
+     "id": "ntf-587ec2688bb4",
+     "ts": "2026-11-16T18:58:04.431660Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -1149,13 +1445,158 @@
      "token": {
       "hgnc_id": 2600,
       "variant_digest": "aeb0b11b729ee482d1bf6ea469618c766897e5b5ae64bbff45d4eabb53db741f",
-      "issued_at": "2026-11-15T16:13:52.684517Z",
-      "expiry": "2027-05-14T16:13:52.684517Z",
-      "signature": "Sbs6Yhxz2YMaIl6SJ1Zs-WeP2GTBYwzcfiCBSlUMn6x1RYUNQejYEBsyyE4r6ZUVAwn-EI2EKB5a8yPNpkz0Dg"
+      "issued_at": "2026-11-16T18:58:04.611959Z",
+      "expiry": "2027-05-15T18:58:04.611959Z",
+      "signature": "j1ZQSMWW5DpV8ESRw1CacVXEzIQQ3adhvEdPrK42h64uyrRY-I1JnpfUJlessL61z3hwYfdhf9W_T1z7He9EAw"
      },
-     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjUyLjY4NDUxN1oiLCJoZ25jX2lkIjoyNjAwLCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjUyLjY4NDUxN1oiLCJzaWduYXR1cmUiOiJTYnM2WWh4ejJZTWFJbDZTSjFacy1XZVAyR1RCWXd6Y2ZpQ0JTbFVNbjZ4MVJZVU5RZWpZRUJzeXlFNHI2WlVWQXduLUVJMkVLQjVhOHlQTnBrejBEZyIsInZhcmlhbnRfZGlnZXN0IjoiYWViMGIxMWI3MjllZTQ4MmQxYmY2ZWE0Njk2MThjNzY2ODk3ZTViNWFlNjRiYmZmNDVkNGVhYmI1M2RiNzQxZiJ9",
-     "expires_at": "2027-05-14T16:13:52.684517Z"
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE1VDE4OjU4OjA0LjYxMTk1OVoiLCJoZ25jX2lkIjoyNjAwLCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE2VDE4OjU4OjA0LjYxMTk1OVoiLCJzaWduYXR1cmUiOiJqMVpRU01XVzVEcFY4RVNSdzFDYWNWWEV6SVFRM2FkaHZFZFBySzQyaDY0dXlyUlktSTFKbnBmVUpsZXNzTDYxejNod1lmZGhmOVdfVDF6N0hlOUVBdyIsInZhcmlhbnRfZGlnZXN0IjoiYWViMGIxMWI3MjllZTQ4MmQxYmY2ZWE0Njk2MThjNzY2ODk3ZTViNWFlNjRiYmZmNDVkNGVhYmI1M2RiNzQxZiJ9",
+     "expires_at": "2027-05-15T18:58:04.611959Z"
     }
+   },
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-f0fdeefc2946983913f529d8",
+      "consent-4858838efe62b4a9c10882e5"
+     ],
+     "audit_event_id": "audit-dbed929a13b825b5"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-3e400862852f",
+      "to": "V2A",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:04.992310Z"
+     },
+     {
+      "id": "msg-5679fa0e0647",
+      "to": "V2A",
+      "lang": "ar",
+      "kind": "escalation",
+      "text": "سيتواصل معك مستشار وراثي ليراجع معك نتيجتك الخاصة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:05.018883Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages_ar": [
+    {
+     "id": "msg-3e400862852f",
+     "to": "V2A",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:04.992310Z"
+    },
+    {
+     "id": "msg-b08a81c1de4c",
+     "to": "V2A",
+     "lang": "ar",
+     "kind": "explainer",
+     "text": "نتائجك الخاصة بالتغيّرات الجينية. هي خاصة بك ولا تظهر إلا لك. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. لديك نسخة واحدة متغيّرة من جين CYP21A2. لا يكشف الفحص كل حاملي التغيّر في هذا الجين، لذلك فإن النتيجة السلبية لا تنفي الاحتمال تماماً: احتمال أن يكون الشخص ذو النتيجة السلبية حاملاً للتغيّر الجيني هو حوالي 1 من كل 106. وبالنسبة لكما كزوجين، فإن احتمال أن يتأثر الحمل هو حوالي 1 من كل 426. لأن فحص جين CYP21A2 صعب من الناحية التقنية، يُوصى بإجراء فحص تأكيدي قبل الاعتماد على أي نتيجة. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [
+      "b3fa6fa6900f8f1af04d795e9a3a906bde54f8c27aafa46892c61910973eda0e"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:05.017682Z"
+    },
+    {
+     "id": "msg-5679fa0e0647",
+     "to": "V2A",
+     "lang": "ar",
+     "kind": "escalation",
+     "text": "سيتواصل معك مستشار وراثي ليراجع معك نتيجتك الخاصة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:05.018883Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
    }
   },
   "V2B": {
@@ -1175,15 +1616,15 @@
      "compatible": true,
      "shared_hgnc_ids": [],
      "consent_ids": [
-      "consent-4d7dec5307d3e852bd558371",
-      "consent-cad43fca1497b3fc305570fe"
+      "consent-fcac02ae649757ecec4a7d30",
+      "consent-dd2096c5bba5c06b0f07fcb3"
      ],
-     "audit_event_id": "audit-1a7c09ab8c4c6d61"
+     "audit_event_id": "audit-9f5e6a9f8d0025c7"
     },
     "records": [],
     "messages": [
      {
-      "id": "msg-dc6a8b63e624",
+      "id": "msg-2dc6d94b48e2",
       "to": "V2B",
       "lang": "en",
       "kind": "result",
@@ -1199,14 +1640,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:52.950194Z"
+      "created_at": "2026-11-16T18:58:04.787359Z"
      }
     ],
     "review_required": false
    },
    "messages": [
     {
-     "id": "msg-dc6a8b63e624",
+     "id": "msg-2dc6d94b48e2",
      "to": "V2B",
      "lang": "en",
      "kind": "result",
@@ -1222,7 +1663,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:52.950194Z"
+     "created_at": "2026-11-16T18:58:04.787359Z"
     }
    ],
    "care_plan_pre": {
@@ -1272,12 +1713,12 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:52.896768Z",
+       "ts": "2026-11-16T18:58:04.749576Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:52.950281Z",
+       "ts": "2026-11-16T18:58:04.787552Z",
        "actor_role": "system"
       }
      ]
@@ -1321,32 +1762,32 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-28981d561703",
-     "ts": "2026-11-15T16:13:52.950314Z",
+     "id": "ntf-2970da86dfdb",
+     "ts": "2026-11-16T18:58:04.787626Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-c79f5da5c95b",
-     "ts": "2026-11-15T16:13:52.950246Z",
+     "id": "ntf-2b64c7729ab0",
+     "ts": "2026-11-16T18:58:04.787463Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-78121d0c763e",
-     "ts": "2026-11-15T16:13:52.896792Z",
+     "id": "ntf-fd46314700e1",
+     "ts": "2026-11-16T18:58:04.749592Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-91e3cf3c4b15",
-     "ts": "2026-11-15T16:13:52.455081Z",
+     "id": "ntf-ec50e0ffe387",
+     "ts": "2026-11-16T18:58:04.396034Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -1382,7 +1823,93 @@
     ],
     "answer_format": "list of booleans in order, or {id: bool}"
    },
-   "family_tokens": {}
+   "family_tokens": {},
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-f0fdeefc2946983913f529d8",
+      "consent-4858838efe62b4a9c10882e5"
+     ],
+     "audit_event_id": "audit-37c94d055cc03137"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-10c503576ba2",
+      "to": "V2B",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:05.196197Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages_ar": [
+    {
+     "id": "msg-10c503576ba2",
+     "to": "V2B",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:05.196197Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   }
   },
   "V3A": {
    "couple_id": "V3",
@@ -1444,15 +1971,15 @@
      "compatible": true,
      "shared_hgnc_ids": [],
      "consent_ids": [
-      "consent-f3a3e54ffa3401bfdd12c9ab",
-      "consent-a2570c976eb3e1fbfefba37a"
+      "consent-ddfecc9c19aa5d12244eb1c7",
+      "consent-69d5c1dfcb5d43e26bca5fcf"
      ],
-     "audit_event_id": "audit-48f33ce3d13bc049"
+     "audit_event_id": "audit-9dcdb80fadab53fe"
     },
     "records": [],
     "messages": [
      {
-      "id": "msg-a1f704d42bbc",
+      "id": "msg-c2d77c228e67",
       "to": "V3A",
       "lang": "en",
       "kind": "result",
@@ -1468,10 +1995,10 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:53.379861Z"
+      "created_at": "2026-11-16T18:58:05.504705Z"
      },
      {
-      "id": "msg-7e84c552c48b",
+      "id": "msg-cb60237ce405",
       "to": "V3A",
       "lang": "en",
       "kind": "escalation",
@@ -1487,14 +2014,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:53.403869Z"
+      "created_at": "2026-11-16T18:58:05.520414Z"
      }
     ],
     "review_required": false
    },
    "messages": [
     {
-     "id": "msg-a1f704d42bbc",
+     "id": "msg-c2d77c228e67",
      "to": "V3A",
      "lang": "en",
      "kind": "result",
@@ -1510,10 +2037,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:53.379861Z"
+     "created_at": "2026-11-16T18:58:05.504705Z"
     },
     {
-     "id": "msg-d24bf87b58c1",
+     "id": "msg-24157b77b73d",
      "to": "V3A",
      "lang": "en",
      "kind": "explainer",
@@ -1531,10 +2058,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:53.401465Z"
+     "created_at": "2026-11-16T18:58:05.519109Z"
     },
     {
-     "id": "msg-7e84c552c48b",
+     "id": "msg-cb60237ce405",
      "to": "V3A",
      "lang": "en",
      "kind": "escalation",
@@ -1550,7 +2077,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:53.403869Z"
+     "created_at": "2026-11-16T18:58:05.520414Z"
     }
    ],
    "care_plan_pre": {
@@ -1605,22 +2132,22 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:53.365348Z",
+       "ts": "2026-11-16T18:58:05.495019Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:53.418623Z",
+       "ts": "2026-11-16T18:58:05.529809Z",
        "actor_role": "system"
       }
      ]
     },
     "tasks": [
      {
-      "id": "task-917691a27e79",
+      "id": "task-8b7125f07c96",
       "kind": "confirmatory_test",
       "status": "requested",
-      "due": "2026-11-29T16:13:53.365264Z"
+      "due": "2026-11-30T18:58:05.494962Z"
      }
     ],
     "appointments": [],
@@ -1666,48 +2193,48 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-07988664fd14",
-     "ts": "2026-11-15T16:13:53.418648Z",
+     "id": "ntf-4b0ade0fcc04",
+     "ts": "2026-11-16T18:58:05.529826Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-9f88ed1626f7",
-     "ts": "2026-11-15T16:13:53.403922Z",
+     "id": "ntf-f67841bc3a18",
+     "ts": "2026-11-16T18:58:05.520434Z",
      "kind": "escalation",
      "title_key": "notif.counselor_contact",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-08632e4b0d2d",
-     "ts": "2026-11-15T16:13:53.379910Z",
+     "id": "ntf-6052b238ecaa",
+     "ts": "2026-11-16T18:58:05.504782Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-87ee69232a2e",
-     "ts": "2026-11-15T16:13:53.365361Z",
+     "id": "ntf-bb0b065b84c2",
+     "ts": "2026-11-16T18:58:05.495031Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-55358b91e761",
-     "ts": "2026-11-15T16:13:53.365337Z",
+     "id": "ntf-0d6023390087",
+     "ts": "2026-11-16T18:58:05.495012Z",
      "kind": "task",
      "title_key": "notif.task_created",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-5e13c96b5446",
-     "ts": "2026-11-15T16:13:53.212172Z",
+     "id": "ntf-5c0bab44200c",
+     "ts": "2026-11-16T18:58:05.390478Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -1748,13 +2275,158 @@
      "token": {
       "hgnc_id": 11117,
       "variant_digest": "d10456593fc914ee1c9cb9c197230f907013eeacff6105976bbad4824084baf2",
-      "issued_at": "2026-11-15T16:13:53.444333Z",
-      "expiry": "2027-05-14T16:13:53.444333Z",
-      "signature": "mLzQysnMYtJ_TLnhJ7f306sBq5cyKnbyqOCitomg1jXRePQIE8xgKbyZXy8RgJd_2SoJFPgC966sMbkh33RGBw"
+      "issued_at": "2026-11-16T18:58:05.544153Z",
+      "expiry": "2027-05-15T18:58:05.544153Z",
+      "signature": "lqvZq8xMGuTzCh-Lm2vVNZ_BhuXGf0BAv0WRWt9cbh9SnUnTPzkACqZ5Yx22enzj7gqfwMLL3elt6MXqeN4SAg"
      },
-     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjUzLjQ0NDMzM1oiLCJoZ25jX2lkIjoxMTExNywiaXNzdWVkX2F0IjoiMjAyNi0xMS0xNVQxNjoxMzo1My40NDQzMzNaIiwic2lnbmF0dXJlIjoibUx6UXlzbk1ZdEpfVExuaEo3ZjMwNnNCcTVjeUtuYnlxT0NpdG9tZzFqWFJlUFFJRTh4Z0tieVpYeThSZ0pkXzJTb0pGUGdDOTY2c01ia2gzM1JHQnciLCJ2YXJpYW50X2RpZ2VzdCI6ImQxMDQ1NjU5M2ZjOTE0ZWUxYzljYjljMTk3MjMwZjkwNzAxM2VlYWNmZjYxMDU5NzZiYmFkNDgyNDA4NGJhZjIifQ",
-     "expires_at": "2027-05-14T16:13:53.444333Z"
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE1VDE4OjU4OjA1LjU0NDE1M1oiLCJoZ25jX2lkIjoxMTExNywiaXNzdWVkX2F0IjoiMjAyNi0xMS0xNlQxODo1ODowNS41NDQxNTNaIiwic2lnbmF0dXJlIjoibHF2WnE4eE1HdVR6Q2gtTG0ydlZOWl9CaHVYR2YwQkF2MFdSV3Q5Y2JoOVNuVW5UUHprQUNxWjVZeDIyZW56ajdncWZ3TUxMM2VsdDZNWHFlTjRTQWciLCJ2YXJpYW50X2RpZ2VzdCI6ImQxMDQ1NjU5M2ZjOTE0ZWUxYzljYjljMTk3MjMwZjkwNzAxM2VlYWNmZjYxMDU5NzZiYmFkNDgyNDA4NGJhZjIifQ",
+     "expires_at": "2027-05-15T18:58:05.544153Z"
     }
+   },
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-fff7fb7a75c4e417a38f1326",
+      "consent-ee0ec5af7b3fcab68451cfa8"
+     ],
+     "audit_event_id": "audit-9637786ae684fbb4"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-44d0315fd914",
+      "to": "V3A",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:05.909429Z"
+     },
+     {
+      "id": "msg-32843e9b8759",
+      "to": "V3A",
+      "lang": "ar",
+      "kind": "escalation",
+      "text": "سيتواصل معك مستشار وراثي ليراجع معك نتيجتك الخاصة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:05.927088Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages_ar": [
+    {
+     "id": "msg-44d0315fd914",
+     "to": "V3A",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:05.909429Z"
+    },
+    {
+     "id": "msg-f085fa67807f",
+     "to": "V3A",
+     "lang": "ar",
+     "kind": "explainer",
+     "text": "نتائجك الخاصة بالتغيّرات الجينية. هي خاصة بك ولا تظهر إلا لك. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. لديك نسخة واحدة متغيّرة من جين SMN1. لا يكشف الفحص كل حاملي التغيّر في هذا الجين، لذلك فإن النتيجة السلبية لا تنفي الاحتمال تماماً: احتمال أن يكون الشخص ذو النتيجة السلبية حاملاً للتغيّر الجيني هو حوالي 1 من كل 80.2. وبالنسبة لكما كزوجين، فإن احتمال أن يتأثر الحمل هو حوالي 1 من كل 321. ويبلغ هذا الرقم حوالي 12 ضعفاً مقارنة بالرقم لدى زوجين من غير الأقارب لديهما نتائج الفحص نفسها، وهو 1 من كل 3,800. لأن فحص جين SMN1 صعب من الناحية التقنية، يُوصى بإجراء فحص تأكيدي قبل الاعتماد على أي نتيجة. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [
+      "cca2150dc3c619b309faaa4d10631ec65e215c124f7a5fe2dc28cdc38675a6a6"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:05.925971Z"
+    },
+    {
+     "id": "msg-32843e9b8759",
+     "to": "V3A",
+     "lang": "ar",
+     "kind": "escalation",
+     "text": "سيتواصل معك مستشار وراثي ليراجع معك نتيجتك الخاصة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:05.927088Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
    }
   },
   "V3B": {
@@ -1774,15 +2446,15 @@
      "compatible": true,
      "shared_hgnc_ids": [],
      "consent_ids": [
-      "consent-f3a3e54ffa3401bfdd12c9ab",
-      "consent-a2570c976eb3e1fbfefba37a"
+      "consent-ddfecc9c19aa5d12244eb1c7",
+      "consent-69d5c1dfcb5d43e26bca5fcf"
      ],
-     "audit_event_id": "audit-5c46786b672dacb2"
+     "audit_event_id": "audit-08e0288e73197d38"
     },
     "records": [],
     "messages": [
      {
-      "id": "msg-ff0363fa026e",
+      "id": "msg-2107a6bd0544",
       "to": "V3B",
       "lang": "en",
       "kind": "result",
@@ -1798,14 +2470,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:53.726091Z"
+      "created_at": "2026-11-16T18:58:05.698568Z"
      }
     ],
     "review_required": false
    },
    "messages": [
     {
-     "id": "msg-ff0363fa026e",
+     "id": "msg-2107a6bd0544",
      "to": "V3B",
      "lang": "en",
      "kind": "result",
@@ -1821,7 +2493,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:53.726091Z"
+     "created_at": "2026-11-16T18:58:05.698568Z"
     }
    ],
    "care_plan_pre": {
@@ -1871,12 +2543,12 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:53.668487Z",
+       "ts": "2026-11-16T18:58:05.665581Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:53.726175Z",
+       "ts": "2026-11-16T18:58:05.698631Z",
        "actor_role": "system"
       }
      ]
@@ -1920,32 +2592,32 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-1b869f1d9d85",
-     "ts": "2026-11-15T16:13:53.726208Z",
+     "id": "ntf-24b02ace1a7c",
+     "ts": "2026-11-16T18:58:05.698653Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-10a7c078e3c1",
-     "ts": "2026-11-15T16:13:53.726141Z",
+     "id": "ntf-5c962d702507",
+     "ts": "2026-11-16T18:58:05.698609Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-9ff513a63ce6",
-     "ts": "2026-11-15T16:13:53.668511Z",
+     "id": "ntf-b0fc497f169b",
+     "ts": "2026-11-16T18:58:05.665595Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-b40dcbd48b88",
-     "ts": "2026-11-15T16:13:53.186512Z",
+     "id": "ntf-2a7e6f46d899",
+     "ts": "2026-11-16T18:58:05.373209Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -1981,7 +2653,93 @@
     ],
     "answer_format": "list of booleans in order, or {id: bool}"
    },
-   "family_tokens": {}
+   "family_tokens": {},
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-fff7fb7a75c4e417a38f1326",
+      "consent-ee0ec5af7b3fcab68451cfa8"
+     ],
+     "audit_event_id": "audit-b3f2698d6ac8c33d"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-60dfc4309d7a",
+      "to": "V3B",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:06.085195Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages_ar": [
+    {
+     "id": "msg-60dfc4309d7a",
+     "to": "V3B",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:06.085195Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   }
   },
   "V4A": {
    "couple_id": "V4",
@@ -2064,15 +2822,15 @@
      "compatible": true,
      "shared_hgnc_ids": [],
      "consent_ids": [
-      "consent-5ccb873c51a6af08ab35a68d",
-      "consent-692b7d5905ad3d985d9803f5"
+      "consent-a92efc02f6a6ebe75e9ed2bb",
+      "consent-f0e995af7ea03b6f5dc1bcf4"
      ],
-     "audit_event_id": "audit-7cc4956a882d44d6"
+     "audit_event_id": "audit-92aff61cda169c6b"
     },
     "records": [],
     "messages": [
      {
-      "id": "msg-b80a6e86be1f",
+      "id": "msg-384c5b52a2df",
       "to": "V4A",
       "lang": "en",
       "kind": "result",
@@ -2088,14 +2846,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:54.315244Z"
+      "created_at": "2026-11-16T18:58:06.392274Z"
      }
     ],
     "review_required": false
    },
    "messages": [
     {
-     "id": "msg-b80a6e86be1f",
+     "id": "msg-384c5b52a2df",
      "to": "V4A",
      "lang": "en",
      "kind": "result",
@@ -2111,10 +2869,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:54.315244Z"
+     "created_at": "2026-11-16T18:58:06.392274Z"
     },
     {
-     "id": "msg-f119f0134f2d",
+     "id": "msg-0987885fd3ec",
      "to": "V4A",
      "lang": "en",
      "kind": "explainer",
@@ -2133,7 +2891,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:54.338110Z"
+     "created_at": "2026-11-16T18:58:06.402432Z"
     }
    ],
    "care_plan_pre": {
@@ -2188,12 +2946,12 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:54.293845Z",
+       "ts": "2026-11-16T18:58:06.380798Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:54.377209Z",
+       "ts": "2026-11-16T18:58:06.419957Z",
        "actor_role": "system"
       }
      ]
@@ -2242,32 +3000,32 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-88cb2c7ce66f",
-     "ts": "2026-11-15T16:13:54.377264Z",
+     "id": "ntf-e8bd61947c47",
+     "ts": "2026-11-16T18:58:06.419976Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-eee55c97edf4",
-     "ts": "2026-11-15T16:13:54.315338Z",
+     "id": "ntf-45d3b3b0bcba",
+     "ts": "2026-11-16T18:58:06.392314Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-df29dfb06cf9",
-     "ts": "2026-11-15T16:13:54.293927Z",
+     "id": "ntf-977d31300cdb",
+     "ts": "2026-11-16T18:58:06.380846Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-7f77f7c4f986",
-     "ts": "2026-11-15T16:13:54.025070Z",
+     "id": "ntf-d85bcee3290b",
+     "ts": "2026-11-16T18:58:06.218589Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -2308,24 +3066,132 @@
      "token": {
       "hgnc_id": 6998,
       "variant_digest": "5cc1d813e4101f4aee70eef3cb6a6e9b6927f26adc51c8ab0b67beacedb3ebfd",
-      "issued_at": "2026-11-15T16:13:54.403587Z",
-      "expiry": "2027-05-14T16:13:54.403587Z",
-      "signature": "dlrVdAUvLjS_ueTjQJPsot7HP4Xz_9mGKfLUNodW_6oRiF5Hw7eViFSkaB7tzEZvL6eEKcevqwuInHtZjoSeBA"
+      "issued_at": "2026-11-16T18:58:06.433849Z",
+      "expiry": "2027-05-15T18:58:06.433849Z",
+      "signature": "1kRrkNmJx1FXP3EyZzEGY3c9SnB7vHzpfzYDHWBRUSr-DglZsdOIMYUikZx6gKCvGRKNiFROjNCUxXXRBYOwDQ"
      },
-     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjU0LjQwMzU4N1oiLCJoZ25jX2lkIjo2OTk4LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjU0LjQwMzU4N1oiLCJzaWduYXR1cmUiOiJkbHJWZEFVdkxqU191ZVRqUUpQc290N0hQNFh6XzltR0tmTFVOb2RXXzZvUmlGNUh3N2VWaUZTa2FCN3R6RVp2TDZlRUtjZXZxd3VJbkh0WmpvU2VCQSIsInZhcmlhbnRfZGlnZXN0IjoiNWNjMWQ4MTNlNDEwMWY0YWVlNzBlZWYzY2I2YTZlOWI2OTI3ZjI2YWRjNTFjOGFiMGI2N2JlYWNlZGIzZWJmZCJ9",
-     "expires_at": "2027-05-14T16:13:54.403587Z"
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE1VDE4OjU4OjA2LjQzMzg0OVoiLCJoZ25jX2lkIjo2OTk4LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE2VDE4OjU4OjA2LjQzMzg0OVoiLCJzaWduYXR1cmUiOiIxa1Jya05tSngxRlhQM0V5WnpFR1kzYzlTbkI3dkh6cGZ6WURIV0JSVVNyLURnbFpzZE9JTVlVaWtaeDZnS0N2R1JLTmlGUk9qTkNVeFhYUkJZT3dEUSIsInZhcmlhbnRfZGlnZXN0IjoiNWNjMWQ4MTNlNDEwMWY0YWVlNzBlZWYzY2I2YTZlOWI2OTI3ZjI2YWRjNTFjOGFiMGI2N2JlYWNlZGIzZWJmZCJ9",
+     "expires_at": "2027-05-15T18:58:06.433849Z"
     },
     "4284": {
      "token": {
       "hgnc_id": 4284,
       "variant_digest": "127b977b0fb54b45a5b0d706924423beef09e31a747cd7dfbb2522d09dfeeff7",
-      "issued_at": "2026-11-15T16:13:54.420117Z",
-      "expiry": "2027-05-14T16:13:54.420117Z",
-      "signature": "2UevwqnxJbLDthsRcTDtJWW7ANKQW-WEPoCSF3EQdOCtnFM9xzMRXwcBZQv6-UuzggWWm8LpfOC0vKhSpZ-uDw"
+      "issued_at": "2026-11-16T18:58:06.441179Z",
+      "expiry": "2027-05-15T18:58:06.441179Z",
+      "signature": "WFOnqMG2gRA5EI_zdsFCI2cfCifHPdM1mqktzcvOubxslZQL0vRV_veyCWPyY4yUOyQ_h4AJJMboryiXw0dbBA"
      },
-     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjU0LjQyMDExN1oiLCJoZ25jX2lkIjo0Mjg0LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE1VDE2OjEzOjU0LjQyMDExN1oiLCJzaWduYXR1cmUiOiIyVWV2d3FueEpiTER0aHNSY1REdEpXVzdBTktRVy1XRVBvQ1NGM0VRZE9DdG5GTTl4ek1SWHdjQlpRdjYtVXV6Z2dXV204THBmT0MwdktoU3BaLXVEdyIsInZhcmlhbnRfZGlnZXN0IjoiMTI3Yjk3N2IwZmI1NGI0NWE1YjBkNzA2OTI0NDIzYmVlZjA5ZTMxYTc0N2NkN2RmYmIyNTIyZDA5ZGZlZWZmNyJ9",
-     "expires_at": "2027-05-14T16:13:54.420117Z"
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE1VDE4OjU4OjA2LjQ0MTE3OVoiLCJoZ25jX2lkIjo0Mjg0LCJpc3N1ZWRfYXQiOiIyMDI2LTExLTE2VDE4OjU4OjA2LjQ0MTE3OVoiLCJzaWduYXR1cmUiOiJXRk9ucU1HMmdSQTVFSV96ZHNGQ0kyY2ZDaWZIUGRNMW1xa3R6Y3ZPdWJ4c2xaUUwwdlJWX3ZleUNXUHlZNHlVT3lRX2g0QUpKTWJvcnlpWHcwZGJCQSIsInZhcmlhbnRfZGlnZXN0IjoiMTI3Yjk3N2IwZmI1NGI0NWE1YjBkNzA2OTI0NDIzYmVlZjA5ZTMxYTc0N2NkN2RmYmIyNTIyZDA5ZGZlZWZmNyJ9",
+     "expires_at": "2027-05-15T18:58:06.441179Z"
     }
+   },
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-841ba5fa6c90d53103ffff03",
+      "consent-48e12e9c5ec7958518ecda2f"
+     ],
+     "audit_event_id": "audit-75084cd23daa8900"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-bd0d5eea3c47",
+      "to": "V4A",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:07.285035Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages_ar": [
+    {
+     "id": "msg-bd0d5eea3c47",
+     "to": "V4A",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:07.285035Z"
+    },
+    {
+     "id": "msg-4a55a31b2888",
+     "to": "V4A",
+     "lang": "ar",
+     "kind": "explainer",
+     "text": "نتائجك الخاصة بالتغيّرات الجينية. هي خاصة بك ولا تظهر إلا لك. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. لديك نسخة واحدة متغيّرة من جين GJB2. لا يمكن حساب رقم لهذا الجين من البيانات المتوفرة، لذلك لا يظهر رقم. يمكنك التحدث عن ذلك بشكل خاص مع مستشار وراثي إن رغبت. لديك نسخة واحدة متغيّرة من جين MEFV. لا يمكن حساب رقم لهذا الجين من البيانات المتوفرة، لذلك لا يظهر رقم. يمكنك التحدث عن ذلك بشكل خاص مع مستشار وراثي إن رغبت. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [
+      "ba31b9edecf93af1bda9f9845b36e5f988c1eabfa99608276d0354564134628a",
+      "94731b5013c892e7b16f7bb801e380fa62f35d5d24f5249739ff44c01791c1ea"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:07.310166Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
    }
   },
   "V4B": {
@@ -2378,15 +3244,15 @@
      "compatible": true,
      "shared_hgnc_ids": [],
      "consent_ids": [
-      "consent-5ccb873c51a6af08ab35a68d",
-      "consent-692b7d5905ad3d985d9803f5"
+      "consent-a92efc02f6a6ebe75e9ed2bb",
+      "consent-f0e995af7ea03b6f5dc1bcf4"
      ],
-     "audit_event_id": "audit-db6a172cbb677573"
+     "audit_event_id": "audit-482bce89465dc286"
     },
     "records": [],
     "messages": [
      {
-      "id": "msg-1bbf792e5599",
+      "id": "msg-6b4818560003",
       "to": "V4B",
       "lang": "en",
       "kind": "result",
@@ -2402,14 +3268,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:54.839638Z"
+      "created_at": "2026-11-16T18:58:06.741375Z"
      }
     ],
     "review_required": false
    },
    "messages": [
     {
-     "id": "msg-1bbf792e5599",
+     "id": "msg-6b4818560003",
      "to": "V4B",
      "lang": "en",
      "kind": "result",
@@ -2425,10 +3291,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:54.839638Z"
+     "created_at": "2026-11-16T18:58:06.741375Z"
     },
     {
-     "id": "msg-9ec9255a1abc",
+     "id": "msg-767af23142a1",
      "to": "V4B",
      "lang": "en",
      "kind": "explainer",
@@ -2446,7 +3312,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:54.859734Z"
+     "created_at": "2026-11-16T18:58:06.756355Z"
     }
    ],
    "care_plan_pre": {
@@ -2501,12 +3367,12 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:54.783418Z",
+       "ts": "2026-11-16T18:58:06.702035Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:54.859805Z",
+       "ts": "2026-11-16T18:58:06.756428Z",
        "actor_role": "system"
       }
      ]
@@ -2555,32 +3421,32 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-48c8349e9754",
-     "ts": "2026-11-15T16:13:54.859856Z",
+     "id": "ntf-e9fcae882f94",
+     "ts": "2026-11-16T18:58:06.756480Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-e13a15e33fe3",
-     "ts": "2026-11-15T16:13:54.839700Z",
+     "id": "ntf-22d6c0bf6207",
+     "ts": "2026-11-16T18:58:06.741427Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-038e75b944f4",
-     "ts": "2026-11-15T16:13:54.783486Z",
+     "id": "ntf-3b1db74b3235",
+     "ts": "2026-11-16T18:58:06.702091Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-a45beebe88e4",
-     "ts": "2026-11-15T16:13:53.997259Z",
+     "id": "ntf-fd2fb77d853c",
+     "ts": "2026-11-16T18:58:06.205551Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -2621,13 +3487,120 @@
      "token": {
       "hgnc_id": 34,
       "variant_digest": "b385ab4fcd0e67e9e07116c5710f4b4556a27867854d2c03fe715d347abccf25",
-      "issued_at": "2026-11-15T16:13:54.888174Z",
-      "expiry": "2027-05-14T16:13:54.888174Z",
-      "signature": "dQoBClsKnsE2_hLrRVCTDUOYVSNJNvqK4S-hzHU8LvrciI4eup83QHfeKxSf5QzPFRIcgGhEjCQ32wJ1l3_2Bg"
+      "issued_at": "2026-11-16T18:58:06.810562Z",
+      "expiry": "2027-05-15T18:58:06.810562Z",
+      "signature": "u2mA4jcT-hRnYwytOoW9QnLwHfa739hoErtZ5cjNW-3jGqwYXEns_s1Tm8lUFl_0_Y-tTPJS99Xyy0v7OEsyAA"
      },
-     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE0VDE2OjEzOjU0Ljg4ODE3NFoiLCJoZ25jX2lkIjozNCwiaXNzdWVkX2F0IjoiMjAyNi0xMS0xNVQxNjoxMzo1NC44ODgxNzRaIiwic2lnbmF0dXJlIjoiZFFvQkNsc0tuc0UyX2hMclJWQ1REVU9ZVlNOSk52cUs0Uy1oekhVOEx2cmNpSTRldXA4M1FIZmVLeFNmNVF6UEZSSWNnR2hFakNRMzJ3SjFsM18yQmciLCJ2YXJpYW50X2RpZ2VzdCI6ImIzODVhYjRmY2QwZTY3ZTllMDcxMTZjNTcxMGY0YjQ1NTZhMjc4Njc4NTRkMmMwM2ZlNzE1ZDM0N2FiY2NmMjUifQ",
-     "expires_at": "2027-05-14T16:13:54.888174Z"
+     "qr_payload": "IDR-CST1.eyJleHBpcnkiOiIyMDI3LTA1LTE1VDE4OjU4OjA2LjgxMDU2MloiLCJoZ25jX2lkIjozNCwiaXNzdWVkX2F0IjoiMjAyNi0xMS0xNlQxODo1ODowNi44MTA1NjJaIiwic2lnbmF0dXJlIjoidTJtQTRqY1QtaFJuWXd5dE9vVzlRbkx3SGZhNzM5aG9FcnRaNWNqTlctM2pHcXdZWEVuc19zMVRtOGxVRmxfMF9ZLXRUUEpTOTlYeXkwdjdPRXN5QUEiLCJ2YXJpYW50X2RpZ2VzdCI6ImIzODVhYjRmY2QwZTY3ZTllMDcxMTZjNTcxMGY0YjQ1NTZhMjc4Njc4NTRkMmMwM2ZlNzE1ZDM0N2FiY2NmMjUifQ",
+     "expires_at": "2027-05-15T18:58:06.810562Z"
     }
+   },
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-841ba5fa6c90d53103ffff03",
+      "consent-48e12e9c5ec7958518ecda2f"
+     ],
+     "audit_event_id": "audit-79aed9ed68eb24ec"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-0cdde88d30b8",
+      "to": "V4B",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:07.635799Z"
+     }
+    ],
+    "review_required": false
+   },
+   "messages_ar": [
+    {
+     "id": "msg-0cdde88d30b8",
+     "to": "V4B",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: لم يُعثر على جين يحمل فيه كلاكما تغيّراً، ضمن الجينات التي شملها الفحص (متوافقان). الفحص لا يكشف كل الحالات، لذلك هذه النتيجة ليست ضماناً. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:07.635799Z"
+    },
+    {
+     "id": "msg-5bbed7e00680",
+     "to": "V4B",
+     "lang": "ar",
+     "kind": "explainer",
+     "text": "نتائجك الخاصة بالتغيّرات الجينية. هي خاصة بك ولا تظهر إلا لك. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. لديك نسخة واحدة متغيّرة من جين ABCA4. لا يمكن حساب رقم لهذا الجين من البيانات المتوفرة، لذلك لا يظهر رقم. يمكنك التحدث عن ذلك بشكل خاص مع مستشار وراثي إن رغبت. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [
+      "3b932544dfc74a92a087c87f4b330a4e96de7b83391ec3468d5ca20ae2c99cac"
+     ],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:07.650140Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
    }
   },
   "V5A": {
@@ -2662,15 +3635,15 @@
      "compatible": true,
      "shared_hgnc_ids": [],
      "consent_ids": [
-      "consent-7982f9f8cabb1c0f1b3fbf24",
-      "consent-f0314d8964a8f320e53ec144"
+      "consent-f21caeb2b744b07d1a2d4d13",
+      "consent-21ffc1a83d065e9007153626"
      ],
-     "audit_event_id": "audit-7aa08628d88142ac"
+     "audit_event_id": "audit-231802d42aa86f9e"
     },
     "records": [],
     "messages": [
      {
-      "id": "msg-64ab24c88a90",
+      "id": "msg-e12999072f84",
       "to": "V5A",
       "lang": "en",
       "kind": "result",
@@ -2686,10 +3659,10 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:55.244234Z"
+      "created_at": "2026-11-16T18:58:07.923301Z"
      },
      {
-      "id": "msg-54ffbe02931b",
+      "id": "msg-b0609d75c5e3",
       "to": "V5A",
       "lang": "en",
       "kind": "escalation",
@@ -2705,14 +3678,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:55.246604Z"
+      "created_at": "2026-11-16T18:58:07.925879Z"
      }
     ],
     "review_required": true
    },
    "messages": [
     {
-     "id": "msg-64ab24c88a90",
+     "id": "msg-e12999072f84",
      "to": "V5A",
      "lang": "en",
      "kind": "result",
@@ -2728,10 +3701,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:55.244234Z"
+     "created_at": "2026-11-16T18:58:07.923301Z"
     },
     {
-     "id": "msg-54ffbe02931b",
+     "id": "msg-b0609d75c5e3",
      "to": "V5A",
      "lang": "en",
      "kind": "escalation",
@@ -2747,7 +3720,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:55.246604Z"
+     "created_at": "2026-11-16T18:58:07.925879Z"
     }
    ],
    "care_plan_pre": {
@@ -2797,12 +3770,12 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:55.230019Z",
+       "ts": "2026-11-16T18:58:07.912749Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:55.262265Z",
+       "ts": "2026-11-16T18:58:07.936833Z",
        "actor_role": "system"
       }
      ]
@@ -2846,40 +3819,40 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-3efcf260d447",
-     "ts": "2026-11-15T16:13:55.262286Z",
+     "id": "ntf-a68840cbd721",
+     "ts": "2026-11-16T18:58:07.936850Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-6b9637138f95",
-     "ts": "2026-11-15T16:13:55.246629Z",
+     "id": "ntf-b88c5e6e5142",
+     "ts": "2026-11-16T18:58:07.925930Z",
      "kind": "escalation",
      "title_key": "notif.counselor_contact",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-cdfa428c0509",
-     "ts": "2026-11-15T16:13:55.244286Z",
+     "id": "ntf-2867a3d937eb",
+     "ts": "2026-11-16T18:58:07.923381Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-580ca88a1b34",
-     "ts": "2026-11-15T16:13:55.230035Z",
+     "id": "ntf-7562b7bd73c4",
+     "ts": "2026-11-16T18:58:07.912776Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-84978eb7fe07",
-     "ts": "2026-11-15T16:13:55.139614Z",
+     "id": "ntf-f1ff40202765",
+     "ts": "2026-11-16T18:58:07.831419Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -2915,7 +3888,131 @@
     ],
     "answer_format": "list of booleans in order, or {id: bool}"
    },
-   "family_tokens": {}
+   "family_tokens": {},
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-01510d96e3b280d550b0d209",
+      "consent-55582f419c3645cbafcfdb63"
+     ],
+     "audit_event_id": "audit-6e06c3fd1b18278c"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-8f12af43a3e6",
+      "to": "V5A",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: بعض النتائج تحتاج إلى مراجعة مستشار وراثي قبل إعطاء نتيجة للزوجين، لذلك لا تظهر نتيجة الآن. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:08.348368Z"
+     },
+     {
+      "id": "msg-cd7e7f57f761",
+      "to": "V5A",
+      "lang": "ar",
+      "kind": "escalation",
+      "text": "بعض نتائجك تحتاج إلى مراجعة مستشار وراثي. سيتواصل معك مستشار.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:08.349906Z"
+     }
+    ],
+    "review_required": true
+   },
+   "messages_ar": [
+    {
+     "id": "msg-8f12af43a3e6",
+     "to": "V5A",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: بعض النتائج تحتاج إلى مراجعة مستشار وراثي قبل إعطاء نتيجة للزوجين، لذلك لا تظهر نتيجة الآن. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:08.348368Z"
+    },
+    {
+     "id": "msg-cd7e7f57f761",
+     "to": "V5A",
+     "lang": "ar",
+     "kind": "escalation",
+     "text": "بعض نتائجك تحتاج إلى مراجعة مستشار وراثي. سيتواصل معك مستشار.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:08.349906Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   }
   },
   "V5B": {
    "couple_id": "V5",
@@ -2949,15 +4046,15 @@
      "compatible": true,
      "shared_hgnc_ids": [],
      "consent_ids": [
-      "consent-7982f9f8cabb1c0f1b3fbf24",
-      "consent-f0314d8964a8f320e53ec144"
+      "consent-f21caeb2b744b07d1a2d4d13",
+      "consent-21ffc1a83d065e9007153626"
      ],
-     "audit_event_id": "audit-3da570cef72697ec"
+     "audit_event_id": "audit-924880d6f84f4f9d"
     },
     "records": [],
     "messages": [
      {
-      "id": "msg-98103e1ca496",
+      "id": "msg-0dcf3e8cddc4",
       "to": "V5B",
       "lang": "en",
       "kind": "result",
@@ -2973,10 +4070,10 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:55.494995Z"
+      "created_at": "2026-11-16T18:58:08.100518Z"
      },
      {
-      "id": "msg-f9730eb5d39c",
+      "id": "msg-0ad15a82120c",
       "to": "V5B",
       "lang": "en",
       "kind": "escalation",
@@ -2992,14 +4089,14 @@
        ]
       },
       "simulated": true,
-      "created_at": "2026-11-15T16:13:55.499186Z"
+      "created_at": "2026-11-16T18:58:08.102187Z"
      }
     ],
     "review_required": true
    },
    "messages": [
     {
-     "id": "msg-98103e1ca496",
+     "id": "msg-0dcf3e8cddc4",
      "to": "V5B",
      "lang": "en",
      "kind": "result",
@@ -3015,10 +4112,10 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:55.494995Z"
+     "created_at": "2026-11-16T18:58:08.100518Z"
     },
     {
-     "id": "msg-f9730eb5d39c",
+     "id": "msg-0ad15a82120c",
      "to": "V5B",
      "lang": "en",
      "kind": "escalation",
@@ -3034,7 +4131,7 @@
       ]
      },
      "simulated": true,
-     "created_at": "2026-11-15T16:13:55.499186Z"
+     "created_at": "2026-11-16T18:58:08.102187Z"
     }
    ],
    "care_plan_pre": {
@@ -3084,12 +4181,12 @@
      "history": [
       {
        "state": "ResultIssued",
-       "ts": "2026-11-15T16:13:55.459361Z",
+       "ts": "2026-11-16T18:58:08.075084Z",
        "actor_role": "system"
       },
       {
        "state": "PatientNotified",
-       "ts": "2026-11-15T16:13:55.499314Z",
+       "ts": "2026-11-16T18:58:08.102224Z",
        "actor_role": "system"
       }
      ]
@@ -3133,40 +4230,40 @@
    "notifications_pre": [],
    "notifications_post": [
     {
-     "id": "ntf-eae1f14753d7",
-     "ts": "2026-11-15T16:13:55.499364Z",
+     "id": "ntf-95221c193c31",
+     "ts": "2026-11-16T18:58:08.102245Z",
      "kind": "care",
      "title_key": "notif.loop.PatientNotified",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-f14172f2f822",
-     "ts": "2026-11-15T16:13:55.499266Z",
+     "id": "ntf-dd1f201f01c7",
+     "ts": "2026-11-16T18:58:08.102207Z",
      "kind": "escalation",
      "title_key": "notif.counselor_contact",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-301b19f51784",
-     "ts": "2026-11-15T16:13:55.495074Z",
+     "id": "ntf-b3245fd3be04",
+     "ts": "2026-11-16T18:58:08.100557Z",
      "kind": "result",
      "title_key": "notif.result_ready",
      "href": "/results",
      "read": false
     },
     {
-     "id": "ntf-743191355045",
-     "ts": "2026-11-15T16:13:55.459426Z",
+     "id": "ntf-744d2e473a38",
+     "ts": "2026-11-16T18:58:08.075382Z",
      "kind": "care",
      "title_key": "notif.loop.ResultIssued",
      "href": "/care-plan",
      "read": false
     },
     {
-     "id": "ntf-c8b2694334c2",
-     "ts": "2026-11-15T16:13:55.116263Z",
+     "id": "ntf-05302e44e994",
+     "ts": "2026-11-16T18:58:07.813328Z",
      "kind": "consent",
      "title_key": "notif.consent_received",
      "href": "/compatibility",
@@ -3202,7 +4299,131 @@
     ],
     "answer_format": "list of booleans in order, or {id: bool}"
    },
-   "family_tokens": {}
+   "family_tokens": {},
+   "compatibility_ar": {
+    "apsi": {
+     "contract_version": "1.0.0",
+     "status": "ok",
+     "compatible": true,
+     "shared_hgnc_ids": [],
+     "consent_ids": [
+      "consent-01510d96e3b280d550b0d209",
+      "consent-55582f419c3645cbafcfdb63"
+     ],
+     "audit_event_id": "audit-5b4f1ef1b16f786d"
+    },
+    "records": [],
+    "messages": [
+     {
+      "id": "msg-2de01defa6e6",
+      "to": "V5B",
+      "lang": "ar",
+      "kind": "result",
+      "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: بعض النتائج تحتاج إلى مراجعة مستشار وراثي قبل إعطاء نتيجة للزوجين، لذلك لا تظهر نتيجة الآن. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:08.479742Z"
+     },
+     {
+      "id": "msg-1fd57b2e72cd",
+      "to": "V5B",
+      "lang": "ar",
+      "kind": "escalation",
+      "text": "بعض نتائجك تحتاج إلى مراجعة مستشار وراثي. سيتواصل معك مستشار.",
+      "locked_digests": [],
+      "gate": {
+       "passed": true,
+       "rules": [
+        "numeric",
+        "leakage",
+        "nondirective",
+        "uae_law"
+       ]
+      },
+      "simulated": true,
+      "created_at": "2026-11-16T18:58:08.481269Z"
+     }
+    ],
+    "review_required": true
+   },
+   "messages_ar": [
+    {
+     "id": "msg-2de01defa6e6",
+     "to": "V5B",
+     "lang": "ar",
+     "kind": "result",
+     "text": "نتيجة الفحص الخاصة بكما كزوجين مقبلين على الزواج. هذه المعلومات للمساعدة في اتخاذ القرار، وليست تشخيصاً ولا نصيحة طبية. فحص التوافق: بعض النتائج تحتاج إلى مراجعة مستشار وراثي قبل إعطاء نتيجة للزوجين، لذلك لا تظهر نتيجة الآن. كون الشخص حاملاً للتغيّر الجيني لا يعني تشخيصه بمرض. يراجع مستشار وراثي كل نتيجة، ويمكنه أن يناقشها معك. تُصدر الشهادة الصحية للزواج وتُرسل إلى دائرة القضاء في أبوظبي بغض النظر عن نتائج فحوصك الجينية. لا يوجد خيار صحيح أو خطأ هنا. القرارات المتعلقة بالزواج والأسرة قراراتكما أنتما، ويمكن لمستشار وراثي أن يناقش معكما الخيارات المتاحة.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:08.479742Z"
+    },
+    {
+     "id": "msg-1fd57b2e72cd",
+     "to": "V5B",
+     "lang": "ar",
+     "kind": "escalation",
+     "text": "بعض نتائجك تحتاج إلى مراجعة مستشار وراثي. سيتواصل معك مستشار.",
+     "locked_digests": [],
+     "gate": {
+      "passed": true,
+      "rules": [
+       "numeric",
+       "leakage",
+       "nondirective",
+       "uae_law"
+      ]
+     },
+     "simulated": true,
+     "created_at": "2026-11-16T18:58:08.481269Z"
+    }
+   ],
+   "teachback_ar": {
+    "questions": [
+     {
+      "id": "tb1",
+      "key": "teachback.q.carrier_not_diagnosis",
+      "statement": "كون الشخص حاملاً للتغيّر الجيني يعني أنه يعاني من المرض.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb2",
+      "key": "teachback.q.each_pregnancy",
+      "statement": "عندما يحمل كلٌّ من الخاطبين تغيّراً في الجين نفسه، ينطبق الاحتمال على كل حمل بشكل منفصل.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb3",
+      "key": "teachback.q.negative_not_zero",
+      "statement": "قد يبقى احتمال صغير أن يكون الشخص حاملاً للتغيّر الجيني حتى لو كانت نتيجة فحصه سلبية.",
+      "answer_type": "boolean"
+     },
+     {
+      "id": "tb4",
+      "key": "teachback.q.you_decide",
+      "statement": "القرارات المتعلقة بالزواج والأسرة قراراتي أنا.",
+      "answer_type": "boolean"
+     }
+    ],
+    "answer_format": "list of booleans in order, or {id: bool}"
+   }
   }
  },
  "teachback_key": {

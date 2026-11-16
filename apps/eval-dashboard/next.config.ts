@@ -23,6 +23,8 @@ const csp = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  // Separate output dir lets a verification build run beside a live `next dev` (same pattern as citizen/counselor).
+  distDir: process.env.NEXT_DIST_DIR ?? ".next",
   transpilePackages: ["@evolve/ui"],
   turbopack: {
     root: ROOT,

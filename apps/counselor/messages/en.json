@@ -6,7 +6,6 @@
   "chrome": {
     "envLabel": "Simulated environment",
     "envDetail": "Synthetic data only · no real patients · integrations are simulated",
-    "arPending": "Arabic text is being prepared. Some text is shown in English for now.",
     "brandDescriptor": "Counselor workbench",
     "compliance": "Decision support for the counselor, not a diagnosis. The premarital health certificate is issued regardless of any genetic result.",
     "footerEnv": "SIMULATED environment · synthetic data",

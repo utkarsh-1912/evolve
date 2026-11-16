@@ -9,6 +9,12 @@ import { cn } from "../lib/cn";
 import { useUI } from "../provider";
 
 const INPUT_FIELDS = ["F", "prior_carrier_b", "detection_rate", "posterior_carrier_b", "offspring_risk"] as const;
+const AR_FIELD: Partial<Record<LockedField, keyof RiskOutput>> = {
+  offspring_risk_one_in: "offspring_risk_one_in_ar",
+  posterior_carrier_b_one_in: "posterior_carrier_b_one_in_ar",
+  reference_unrelated_one_in: "reference_unrelated_one_in_ar",
+  relative_to_unrelated_display: "relative_to_unrelated_display_ar",
+};
 
 /** Central formatter for locked values (DECISIONS #29). Strings pass through verbatim. */
 export function formatLocked(value: string | number, format: "raw" | "percent", locale: string): string {
@@ -39,7 +45,11 @@ export function LockedNumber({
   const { labels, locale } = useUI();
   const [open, setOpen] = useState(false);
   const panelId = useId();
-  const value = record[field];
+  // ar locale: the engine's Arabic display string for this field, if the record has one (else EN).
+  const arField = AR_FIELD[field];
+  const arValue = locale === "ar" && arField ? record[arField] : null;
+  const value = arValue ?? record[field];
+  const isAr = typeof arValue === "string";
 
   let body: ReactNode;
   if (value === null || value === undefined) {
@@ -50,7 +60,7 @@ export function LockedNumber({
     );
   } else {
     const text = formatLocked(value, format, locale);
-    const m = size !== "inline" ? /^(1 in)\s+(.+)$/.exec(text) : null;
+    const m = size !== "inline" ? /^(1 in|1 من كل)\s+(.+)$/.exec(text) : null;
     body = m ? (
       <>
         <span className="align-baseline text-[0.38em] font-normal">{m[1]}</span>{" "}
@@ -71,7 +81,7 @@ export function LockedNumber({
   return (
     <span className={cn(size === "inline" ? "inline" : "block", className)}>
       {label ? <span className="mb-2 block text-sm text-ink-2">{label}</span> : null}
-      <span className={cn(sizeCls, "text-ink")} data-locked-field={field} data-locked-digest={record.digest} data-testid={`locked-${field}`} dir="ltr">
+      <span className={cn(sizeCls, "text-ink")} data-locked-field={field} data-locked-digest={record.digest} data-testid={`locked-${field}`} dir={isAr ? "rtl" : "ltr"} lang={isAr ? "ar" : undefined}>
         {body}
       </span>
       {provenance ? (
